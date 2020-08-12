@@ -1,0 +1,51 @@
+.main {
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.04);
+
+  hr{
+     box-sizing: border-box;
+     margin-bottom: 20px;
+     background: #FFF;
+     border: 1px solid #EDEDED;
+     border-radius: 10px;
+   }
+  &__application {
+    max-height: 270px;
+    margin-bottom: 28px;
+  }
+
+  &__about {
+   margin-bottom: 32px;
+  }
+
+  &__proceed {
+    margin-bottom: 32px;
+  }
+
+  &__steps {
+    margin-bottom: 32px;
+  }
+
+  &__card-container {
+    max-height: 50%;
+  }
+
+  &__button-container {
+    max-width: 152px;
+    margin-top:20px;
+    margin-bottom: 28px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    font-family: Ubuntu,sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    color: #000;
+  }
+
+}
+

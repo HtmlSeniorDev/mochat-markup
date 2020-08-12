@@ -1,0 +1,91 @@
+//
+// Разное
+@import 'tools/all';
+@import 'other/all';
+@import 'fonts';
+
+//
+// Либы
+// @import '../vendors/custom/smart-grid/smart-grid';
+//
+// Общие блоки
+@import '../blocks/**/*.scss';
+
+// Главная страница
+@import './../pug/pages/home/index.scss';
+// @import '../blocks/content-width/content.scss';
+// @import "../blocks/header/styles";
+// @import "../blocks/header/styles";
+.content-width {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.primary-title {
+  margin-top: 40px;
+  margin-bottom: 14px;
+  font-family: Ubuntu;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  color: #000;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -8px;
+  margin-left: -8px;
+
+
+  &__col-1-2 {
+    flex: 0 0 50%;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  &__col-1-3 {
+    flex: 0 0 33.33%;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  &__col-1-4 {
+    flex: 0 0 25%;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  &__col-1-6 {
+    flex: 0 0 25%;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  &__col-1-10 {
+    flex: 0 0 16.66%;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  &__col-3-10 {
+    flex: 0 0 30%;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  &__col-7-10 {
+    flex: 0 0 70%;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  &__d-flex {
+    display: flex;
+  }
+
+}
+
+
+@import '_fix';

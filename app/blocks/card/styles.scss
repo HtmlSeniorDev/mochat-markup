@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #F1F4F8;
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 50%;
+  max-height: 180px;
+  margin-bottom: 16px;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-decoration: none;
+
+  // bem modifiers
+  &--height {
+    height: 100%;
+  }
+
+  &__text {
+    font-family: Etelka Light Pro;
+    margin: auto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #000000;
+  }
+
+  &__image {
+    margin: auto;
+    svg{
+      fill: #92BC58;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+mixin Card(text,height,img)
+  +b.A.card(class = height && 'card--height' href="#")
+    if (img)
+      +e.image
+       +icon(img,29,39)
+    +e.text #{text}

@@ -1,0 +1,24 @@
+.Button {
+    display: flex;
+    flex-direction: row;
+    padding: 14px 26px;
+    background: #92BC58;
+    border-radius: 2px;
+    text-decoration: none;
+  &__title {
+    font-family: DIN Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    align-self: center;
+  }
+
+}

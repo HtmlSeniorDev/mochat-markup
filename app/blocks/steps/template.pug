@@ -1,0 +1,7 @@
+mixin steps(title,articles)
+  +b.steps
+    +e.title #{title}
+    each txt in articles
+      +e.article #{txt.article}
+      if (txt.text != '')
+       +e.text #{txt.text}
