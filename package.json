@@ -150,11 +150,6 @@
     "vide": "^0.5.1"
   },
 
-//  "husky": {
-//    "hooks": {
-//      "pre-commit": "warning"
-//    }
-//  },
   "lint-staged": {
     "*.(css|scss|js)": [
       "yarn code-format",
