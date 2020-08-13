@@ -40,13 +40,13 @@ module.exports = [
   }),
   parts.page({
     title: 'home',
-    path: 'pages/home',
+    path: 'pages/expert-dom',
     entry: {
-      markup_home: path.join(paths.app, 'pug/pages/home')
+      markup_home: path.join(paths.app, 'pug/pages/expert-dom')
     },
-    template: path.join(paths.app, 'pug/pages/home/index.pug'),
+    template: path.join(paths.app, 'pug/pages/expert-dom/index.pug'),
 
     // Подключаемые зависимости на страницу
-    chunks: ['runtime', 'vendors', 'app', 'markup_home']
+    chunks: ['runtime', 'vendors', 'app', 'expert_dom']
   }),
 ]
