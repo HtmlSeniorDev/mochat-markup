@@ -39,14 +39,14 @@ module.exports = [
     chunks: ['runtime', 'update-browser']
   }),
   parts.page({
-    title: 'home',
-    path: 'pages/expert-dom',
+    title: 'dom-expert',
+    path: 'pages/dom-expert',
     entry: {
-      markup_home: path.join(paths.app, 'pug/pages/expert-dom')
+      markup_dom: path.join(paths.app, 'pug/pages/dom-expert')
     },
-    template: path.join(paths.app, 'pug/pages/expert-dom/index.pug'),
+    template: path.join(paths.app, 'pug/pages/dom-expert/index.pug'),
 
     // Подключаемые зависимости на страницу
-    chunks: ['runtime', 'vendors', 'app', 'expert_dom']
+    chunks: ['runtime', 'vendors', 'app', 'dom_expert']
   }),
 ]
