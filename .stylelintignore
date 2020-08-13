@@ -4,4 +4,4 @@ dist-ui/
 app/vendors/**/*
 app/static/**/*
 app/fonts/**/*
-app/blocks/**/*
+
