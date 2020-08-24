@@ -10,6 +10,7 @@
   margin-bottom: 16px;
   text-align: left;
   text-decoration: none;
+  height: calc(100% - 16px);
 
   &__content {
     margin-left: 24px;
@@ -95,7 +96,6 @@
     line-height: 24px;
     letter-spacing: 0.01em;
     color: #000000;
-
   }
 
 }
