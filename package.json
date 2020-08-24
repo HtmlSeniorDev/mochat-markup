@@ -99,21 +99,22 @@
     "webpack-stats-plugin": "0.2.1"
   },
   "dependencies": {
-    "axios-mock-adapter": "^1.16.0",
-    "faker": "^4.1.0",
     "@babel/polyfill": "^7.0.0",
     "@mdi/font": "^3.6.95",
     "air-datepicker": "^2.2.3",
     "axios": "^0.18.0",
+    "axios-mock-adapter": "^1.16.0",
     "blazy": "^1.8.2",
     "bootstrap": "^4.1.1",
     "bulma": "^0.7.4",
     "cleave.js": "^1.5.0",
     "devbridge-autocomplete": "https://github.com/devbridge/jQuery-Autocomplete",
     "dropzone": "^5.4.0",
+    "faker": "^4.1.0",
     "family.scss": "^1.0.8",
     "fancybox": "2.1.7",
     "flag-icon-css": "^3.0.0",
+    "flexboxgrid": "^6.3.1",
     "fontfaceobserver": "^2.0.13",
     "frappe-charts": "^1.1.0",
     "highlight.js": "^9.12.0",
@@ -149,7 +150,6 @@
     "tooltipster": "^4.2.6",
     "vide": "^0.5.1"
   },
-
   "lint-staged": {
     "*.(css|scss|js)": [
       "yarn code-format",
