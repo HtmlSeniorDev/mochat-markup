@@ -1,0 +1,16 @@
+.two-rows-content {
+  height: 100%;
+
+  @include media-md {
+    height: inherit;
+  }
+
+  .row {
+    height: 50%;
+
+    @include media-md {
+      height: inherit;
+    }
+  }
+}
+

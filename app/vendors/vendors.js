@@ -257,3 +257,8 @@ import 'babel-loader!expose-loader?objectFitImages!object-fit-images'
 // Ленивая загрузка изображений и прочего
 // Подключаем Styles
 // import './custom/hamburgers/hamburgers.scss'
+
+// flex-box grid - http://flexboxgrid.com/ (https://github.com/kristoferjoseph/flexboxgrid)
+// Сетка из бутстрапа
+// Подключаем Styles
+import 'flexboxgrid/dist/flexboxgrid.min.css';
