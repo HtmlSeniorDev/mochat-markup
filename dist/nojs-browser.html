@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Как включить поддержку JavaScript</title>
+    <meta name="author" content="www.sitesoft.ru">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-TextLayoutMetrics" content="gdi">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="theme-color" content="#fff">
+    <link type="image/x-icon" href="static/img/favicon.ico" rel="icon">
+    <link type="image/x-icon" href="static/img/favicon.ico" rel="shortcut icon">
+  <link href="styles/nojs-browser.1a57.css" rel="stylesheet"></head>
+  <body>
+    <!--noindex-->
+    <noscript>
+      <div style="padding: 24px; color: #fff; width: 100%; background-color: #dd5656; font-weight: 700; text-align: center; position: fixed; z-index: 999999">Для корректной работы сайта необходимо<a href="nojs-browser.html">включить поддержку JavaScript</a></div>
+    </noscript>
+    <div id="outdated">
+      <h6>Ваш браузер устарел!</h6>
+      <p>Обновите ваш браузер для правильного отображения этого сайта.<a id="btnUpdateBrowser" href="update-browser.html">Обновить мой браузер</a></p>
+      <link rel="stylesheet" type="text/css" href="static/libs/outdatedbrowser/outdatedbrowser.min.css">
+      <script src="static/libs/outdatedbrowser/outdatedbrowser.min.js"></script>
+      <script>
+        window.onload = function() {
+          $(function() {
+            if (!!window.outdatedBrowser) {
+              $("#outdated").css("display") == "block" ? $("#outdated").nextAll('*').remove() : $("#outdated").remove()
+            }
+          })
+        }
+        
+        //Проверка на IE10+
+        outdatedBrowser({lowerThan: "transform", languagePath: ""})
+      </script>
+    </div>
+    <!--noindex-->
+    <div class="app" id="app">
+      <div class="browser-warning">
+        <div class="browser-warning__wrapper">
+          <div class="browser-warning__container">
+            <div class="browser-warning__title">В вашем браузере отключен JavaScript  
+            </div>
+            <p class="browser-warning__description">Для корректной работы сайта необходимо включить поддержку JavaScript.<br>Выберите браузер
+            </p>
+            <div class="browser-warning__content">
+              <div class="browser-warning__content-wrapper">
+                <label><input class="browser-warning__info-checker browser-warning__info-checker--chrome" type="radio" name="browser" value="Chrome" checked=""/>
+                  <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--chrome" data-name="Chrome">
+                  </div>
+                  <div class="browser-warning__info browser-warning__info--chrome">
+                    <div class="browser-warning__info-text browser-warning__info-text--chrome">
+                      <div class="browser-warning__info-text-title">Google Chrome:
+                      </div>
+                      <p class="browser-warning__info-text-description browser-warning__info-text-description--hide-on-mobile">Откройте «Настройки содержимого» (chrome://settings/content) или «Настройки» (chrome://settings/) → «Показать дополнительные настройки» → «Настройки контента» и включите рекомендуемую опцию «Разрешить всем сайтам использовать JavaScript».
+                      </p>
+                      <p class="browser-warning__info-text-description browser-warning__info-text-description--show-on-mobile">Откройте «Настройки» → Выберите «Настройки сайта» → JavaScript и установите переключатель в  рекомендуемый режим «Разрешено».
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <label><input class="browser-warning__info-checker browser-warning__info-checker--opera" type="radio" name="browser" value="Opera"/>
+                  <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--opera" data-name="Opera">
+                  </div>
+                  <div class="browser-warning__info browser-warning__info--opera">
+                    <div class="browser-warning__info-text browser-warning__info-text--opera">
+                      <div class="browser-warning__info-text-title">Opera:
+                      </div>
+                      <p class="browser-warning__info-text-description">Меню «Инструменты» → «Настройки…» → «Дополнительно» → «Содержимое» → флаг «Включить JavaScript».
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <label><input class="browser-warning__info-checker browser-warning__info-checker--ff" type="radio" name="browser" value="Firefox"/>
+                  <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--ff" data-name="Firefox">
+                  </div>
+                  <div class="browser-warning__info browser-warning__info--ff">
+                    <div class="browser-warning__info-text browser-warning__info-text--ff">
+                      <div class="browser-warning__info-text-title">Mozilla Firefox:
+                      </div>
+                      <p class="browser-warning__info-text-description">Меню «Инструменты» → «Настройки…» → «Содержимое» → флаг «Использовать JavaScript».
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <label><input class="browser-warning__info-checker browser-warning__info-checker--ya" type="radio" name="browser" value="Yandex"/>
+                  <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--ya" data-name="Yandex">
+                  </div>
+                  <div class="browser-warning__info browser-warning__info--ya">
+                    <div class="browser-warning__info-text browser-warning__info-text--ya">
+                      <div class="browser-warning__info-text-title">Yandex:
+                      </div>
+                      <p class="browser-warning__info-text-description">«Настройки» → «Показать дополнительные настройки» → В блоке «Защита личных данных» выбрать «Настройки содержимого» → включить опцию «Разрешить JavaScript на всех сайтах».
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <label><input class="browser-warning__info-checker browser-warning__info-checker--safari" type="radio" name="browser" value="Safari"/>
+                  <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--safari" data-name="Safari">
+                  </div>
+                  <div class="browser-warning__info browser-warning__info--safari">
+                    <div class="browser-warning__info-text browser-warning__info-text--safari">
+                      <div class="browser-warning__info-text-title">Apple Safari:
+                      </div>
+                      <p class="browser-warning__info-text-description browser-warning__info-text-description--hide-on-mobile">Меню «Safari» → «Свойства» → «Безопасность» → флаг «Включить JavaScript».
+                      </p>
+                      <p class="browser-warning__info-text-description browser-warning__info-text-description--show-on-mobile">Откройте приложение «Настройки» → Выберите Safari → Дополнения → Включите переключатель JavaScript.
+                      </p>
+                    </div>
+                  </div>
+                </label>
+                <label><input class="browser-warning__info-checker browser-warning__info-checker--ie" type="radio" name="browser" value="Internet Explorer"/>
+                  <div class="browser-warning__info-checker-icon browser-warning__info-checker-icon--ie" data-name="Internet Explorer">
+                  </div>
+                  <div class="browser-warning__info browser-warning__info--ie">
+                    <div class="browser-warning__info-text browser-warning__info-text--ie">
+                      <div class="browser-warning__info-text-title">Internet Explorer:
+                      </div>
+                      <p class="browser-warning__info-text-description">Меню «Сервис» → «Свойства обозревателя» → «Безопасность» → кнопка «Другой» → строчка «Включить» в пункте «Активные сценарии».
+                      </p>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <div class="browser-warning__content-footer browser-warning__content-footer--no-js">По завершении <a class="browser-warning__link" href="/" rel="nofollow">обновите страницу</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"></script>
+    <!--JS файлы которые начинаются с markup_ и example_ используются ТОЛЬКО в верстке, к себе не тянуть и не подключать!-->
+  <script type="text/javascript" src="scripts/runtime.afed.js"></script><script type="text/javascript" src="scripts/nojs-browser.2ccd.js"></script></body>
+</html>
