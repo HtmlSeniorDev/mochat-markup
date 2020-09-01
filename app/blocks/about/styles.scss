@@ -7,33 +7,33 @@
   }
 
   &__title {
+    margin-bottom: 16px;
     font-family: Ubuntu;
+    font-size: 22px;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
     line-height: 30px;
-    color: #000000;
-    margin-bottom: 16px;
+    color: #000;
   }
 
   &__prefix {
     font-family: Etelka Medium Pro;
+    font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
     line-height: 24px;
+    color: #000;
     letter-spacing: 0.01em;
-    color: #000000;
   }
 
  &__text {
    font-family: Etelka Light Pro;
+   font-size: 14px;
    font-style: normal;
    font-weight: 300;
-   font-size: 14px;
    line-height: 24px;
+   color: #000;
    letter-spacing: 0.01em;
-   color: #000000;
 
  }
 }

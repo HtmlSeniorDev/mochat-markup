@@ -1,11 +1,11 @@
 .block-applications {
-  display: flex;
   position: relative;
+  display: flex;
+  padding-bottom: 44px;
   background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0) 100%), url(../../static/img/applications-background.png);
   background-blend-mode: normal, multiply;
-  box-shadow: 0 0 9px rgba(0, 0, 0, 0.04);
   border-radius: 20px;
-  padding-bottom: 44px;
+  box-shadow: 0 0 9px rgba(0, 0, 0, 0.04);
 
 
   &__wrap {
@@ -14,18 +14,18 @@
 
   &__container {
     max-width: 300px;
-    margin-left: 63px;
     margin-top: 50px;
+    margin-left: 63px;
 
     @include media-sm {
-      max-width: 100%;
-      margin-left: 0;
-      padding-left: 32px;
-      padding-right: 32px;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      max-width: 100%;
+      padding-right: 32px;
+      padding-left: 32px;
+      margin-left: 0;
     }
   }
 
@@ -54,9 +54,9 @@
 
   &__image {
     position: absolute;
-    z-index:2;
-    right: 0;
     top:0;
+    right: 0;
+    z-index:2;
 
     @include media-sm {
       display: none;
@@ -65,11 +65,11 @@
 
   &__glass-img {
     position: absolute;
+    right: 110px;
+    bottom:25px;
     z-index: 3;
     width: 194px;
     height: 140px;
-    right: 110px;
-    bottom:25px;
     background:  url(../../static/img/application-glasses.png);
 
     @include media-sm {
@@ -79,13 +79,13 @@
 
   &__end-line {
     position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
     width: 26px;
     height: 270px;
-    border-radius: 0 15px 15px 0;
-    right: 0;
-    top:0;
-    bottom:0;
     background: linear-gradient(180deg, #A9D56F 12.79%, #437008 100%), #90BC56;
+    border-radius: 0 15px 15px 0;
 
     @include media-sm {
       display: none;

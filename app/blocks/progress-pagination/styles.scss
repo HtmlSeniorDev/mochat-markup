@@ -1,0 +1,21 @@
+.progress-pagination {
+  display: inline-flex;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  background: #D6D6D6;
+  border-radius: 8px;
+
+  &__item {
+    margin-right: auto;
+    margin-left: auto;
+    font-family: Ubuntu,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 20px;
+    color: #FFF;
+    text-align: center;
+
+  }
+}

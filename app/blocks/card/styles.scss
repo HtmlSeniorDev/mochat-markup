@@ -1,27 +1,27 @@
 .card {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  background: #F1F4F8;
-  border-radius: 4px;
-  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - 8px);
   padding-top: 20px;
+  padding-right: 4px;
   padding-bottom: 20px;
   padding-left: 4px;
-  padding-right: 4px;
-  text-decoration: none;
-  height: calc(100% - 8px);
   margin-top: 8px;
-  width: 100%;
+  text-decoration: none;
+  background: #F1F4F8;
+  border-radius: 4px;
 
   &__text {
-    font-family: Etelka Light Pro;
     margin: auto;
+    font-family: Etelka Light Pro;
+    font-size: 14px;
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
+    color: #000;
     text-align: center;
     letter-spacing: 0.01em;
-    color: #000000;
   }
 
   &__image {
@@ -32,7 +32,7 @@
   }
 
   @include media-sm {
-    padding-left: 8px;
     padding-right: 8px;
+    padding-left: 8px;
   }
 }

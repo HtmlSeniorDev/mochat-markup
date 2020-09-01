@@ -15,7 +15,7 @@
     "lint:js": "eslint --ext .js ./app/ --fix",
     "lint:js-debug": "eslint --ext .js ./app/",
     "lint:style": "stylelint  ./app/**/*.css ./app/**/*.scss  --fix",
-    "lint:style-debug": "stylelint ./app/**/*.css, ./app/**/*.scss, ./app/**/*.vue"
+    "lint:style-debug": "stylelint ./app/**/*.css, ./app/**/*.scss"
   },
   "keywords": [
     "boilerplate",

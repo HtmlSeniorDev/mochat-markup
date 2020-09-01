@@ -1,37 +1,38 @@
 .steps {
   margin-bottom: 36px;
+
   &__title {
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
     display: flex;
     align-items: center;
-    color: #92BC58;
     margin-bottom: 13px;
+    font-family: Ubuntu,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    color: #92BC58;
   }
 
   &__article {
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 20px;
     display: flex;
     align-items: center;
-    color: #000000;
     margin-bottom: 13px;
+    font-family: Ubuntu,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000;
   }
 
   &__text {
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 20px;
     display: flex;
     align-items: center;
-    color: #000000;
+    font-family: Ubuntu,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 20px;
+    color: #000;
   }
 }

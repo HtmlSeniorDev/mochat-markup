@@ -1,0 +1,47 @@
+extends ../../layout/layout
+include ../../../blocks/common/checkbox/checkbox
+include ../../../blocks/common/input/input  
+  
+block variables
+  - var title = 'Опрос Вовлеченности';
+    
+block content
+  .content-width
+    +b.MAIN.engagement-survey
+      +e.progress-wrapper
+        include ../../../blocks/progress-steps/template
+      .row
+        .col-md-6.col-sm-6.col-xs-12
+          .col-xs-12
+            .row.middle-xs
+              +b.progress-pagination.mr-sm
+                +e.item 1
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+          .row
+            .col-xs-12
+              +b.input-text
+                +e.INPUT.control(placeholder="Ваш комментарий")
+        .col-md-6.col-sm-6.col-xs-12
+          .col-xs-12
+            .row.middle-xs
+              +b.progress-pagination.mr-sm
+                +e.item 2
+              +b.survey-text
+                p Мой руководитель часто хвалит меня за хорошо выполненную работу *
+          .row
+            .col-xs-12
+              +input({
+                placeholder:"Ваш комментарий",
+                labelText:'',
+                errorText:'',
+                isDisabled:true
+              })
+              +checkbox({
+                title:"Стабильность компании, уверенность в завтрашнем дне"
+              })
+    
+      
+      
+        
+
