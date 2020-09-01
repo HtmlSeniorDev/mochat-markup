@@ -3,14 +3,16 @@
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  justify-content: space-between;
   margin-top: 10px;
 
   &__center {
     position: relative;
     display: flex;
     flex-direction: column;
-
-    &::before {
+    justify-content: center;
+  //
+    &::after {
     position: absolute;
     top:3px;
     left: 3px;
@@ -21,15 +23,9 @@
     background: #DBE9C8;
     border-radius: 20px;
     }
-
-    &:first-child::before{
+  //
+    &:first-child::after{
     display: none;
-    }
-    &:nth-last-child(n) {
-      width: 70px;
-    }
-    &:last-child::before {
-      left: 0.9px;
     }
   }
 
@@ -84,7 +80,9 @@
     border: 1px solid #CAC84A;
     border-radius: 50%;
   }
-
+  &__center + &_center {
+    margin-left: 40px;
+  }
   input {
     display: none;
   }
