@@ -1,7 +1,8 @@
 extends ../../layout/layout
 include ../../../blocks/common/checkbox/checkbox
-include ../../../blocks/common/input/input  
-  
+include ../../../blocks/common/input/input
+include ../../../blocks/button/template
+
 block variables
   - var title = 'Опрос Вовлеченности';
     
@@ -13,36 +14,272 @@ block content
       .row
         .col-md-6.col-sm-6.col-xs-12
           .col-xs-12
-            .row.middle-xs
-              +b.progress-pagination.mr-sm
-                +e.item 1
-              +b.survey-text.mr-sm
-                p Непосредственный руководитель ставит мне четкие цели и задачи
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 1
+                +b.survey-text.mr-sm
+                  p Непосредственный руководитель ставит мне четкие цели и задачи
           .row
             .col-xs-12
-              +b.input-text
-                +e.INPUT.control(placeholder="Ваш комментарий")
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 3
+                +b.survey-text.mr-sm
+                  p Я часто получаю обратную связь о своей работе от руководителя
+          .row
+            .col-xs-12
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 5
+                +b.survey-text.mr-sm
+                  p Рабочие совещания нашей команды и руководителя проходят эффективно
+          .row
+            .col-xs-12
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 7
+                +b.survey-text.mr-sm
+                  p Я знаю стратегию компании и четкий план действий на ближайший год      
+          .row
+            .col-xs-12
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 9
+                +b.survey-text.mr-sm
+                  p Я согласен с тем, что для достижения успеха моя компания может пересматривать стратегические цели и изменять направление моей работы
+          .row
+            .col-xs-12
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий *",
+                labelText: '',
+                errorText: 'Поле обязательно для заполнения',
+                isDisabled: false
+              })
         .col-md-6.col-sm-6.col-xs-12
           .col-xs-12
-            .row.middle-xs
-              +b.progress-pagination.mr-sm
-                +e.item 2
-              +b.survey-text
-                p Мой руководитель часто хвалит меня за хорошо выполненную работу *
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 2
+                +b.survey-text.mr-sm
+                  p Мой руководитель часто хвалит меня за хорошо выполненную работу *
+          .row
+            .col-xs-12
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 4
+                +b.survey-text.mr-sm
+                  p Мой руководитель активно участвует в моем профессиональном развитии
+          .row
+            .col-xs-12
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 6
+                +b.survey-text.mr-sm
+                  p Рабочие совещания нашей команды и руководителя проходят эффективно
+          .row
+            .col-xs-12
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 8
+                +b.survey-text.mr-sm
+                  p Я согласен, что ценности нашей компании и ее деятельность тесно взаимосвязаны между собой и дополняют друг друга
+          .row
+            .col-xs-12
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 10
+                +b.survey-text.mr-sm
+                  p Я понимаю, как моя работа соотносится со стратегическими целями и приоритетами нашей компании, каких результатов ждут от моей работы 
+          .row
+            .col-xs-12
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+              // Section Checkboxes
+      .row
+        .col-md-6.col-sm-6.col-xs-12
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 11
+                +b.survey-text.mr-sm
+                  p Когда я выбирал нашу компанию в качестве работодателя, меня привлекло (до 4 вариантов)
+      .row
+        .col-md-6.col-sm-6.col-xs-12
+          +checkbox({title:'Уровень дохода'})
+          +checkbox({title: 'Известность, бренд компании'})
+          +checkbox({title: 'Социальный пакет (льготы)'})
+          +checkbox({title: 'Возможность профессионального развития, получение нового опыта'})
+          +checkbox({title: 'Возможность карьерного роста (повышение в должности)'})
+          +checkbox({title: 'Условия труда (график, загруженность и т.д.)'})
+          +checkbox({title: 'Личность непосредственного руководителя'})
+        .col-md-6.col-sm-6.col-xs-12.mb-md
+          +checkbox({title: 'Стабильность компании, уверенность в завтрашнем дне'})
+          +checkbox({title: 'Интересная, содержательная работа'})
+          +checkbox({title: 'Высшее руководство - это значимые и уважаемые люди'})
+          +checkbox({title: 'Удобство расположения офиса'})
+          +checkbox({title: 'Рекомендации друзей, знакомых, которые здесь работают'})
+          +checkbox({title: 'Динамика развития компании, интенсивный рост'})
+          +checkbox({title: 'Не было других вариантов трудоустройства'})
+      .row
+        .col-md-6.col-sm-6.col-xs-12.mb-sm    
+          +input({
+            placeholder: "Ваш ответ",
+            labelText: 'Другое (свободный ответ)',
+            errorText: '',
+            isDisabled: false
+          })
+      .row
+        .col-md-6.col-sm-6.col-xs-12
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 12
+                +b.survey-text.mr-sm
+                  p Непосредственный руководитель ставит мне четкие цели и задачи
+          .row
+            .col-xs-12
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 14
+                +b.survey-text.mr-sm
+                  p Я часто получаю обратную связь о своей работе от руководителя
+          .row
+            .col-xs-12.mb-md
+              include ../../../blocks/progress-rating/progress-rating
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })
+        .col-md-6.col-sm-6.col-xs-12
+          .col-xs-12.mb-extra-xs
+            .row
+              +e.align-items-wrapper.mb-sm
+                +b.progress-pagination.mr-sm
+                  +e.item 13
+                +b.survey-text.mr-mb
+                  p Что необходимо сделать, чтобы ваша команда стала еще более сплоченной и успешной?
           .row
             .col-xs-12
               +input({
-                placeholder:"Ваш комментарий",
-                labelText:'',
-                errorText:'',
-                isDisabled:false
+                placeholder: "Ваш ответ",
+                labelText: 'Свободный ответ',
+                errorText: '',
+                isDisabled: false
               })
-              +checkbox({
-                title:"Стабильность компании, уверенность в завтрашнем дне"
-              })
+          .col-xs-12
+            .row
+              +e.align-items-wrapper
+                +b.progress-pagination.mr-sm
+                  +e.item 15
+                +b.survey-text.mr-sm
+                  p Непосредственный руководитель ставит мне четкие цели и задачи
+          .row
+            .col-xs-12
               include ../../../blocks/progress-rating/progress-rating
-    
-      
-      
-        
-
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false
+              })    
+      .row
+        .col-md-6.col-sm-6.col-xs-12
+          .row.mb-xs
+            .col-xs-3
+              +Button('далее')
+            .col-xs-3
+              +Button('назад')  
+             

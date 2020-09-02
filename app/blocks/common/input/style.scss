@@ -10,6 +10,7 @@
   }
 
   &__error-text {
+    margin-top:8px;
     font-family: Etelka Light Pro,sans-serif;
     font-size: 14px;
     font-style: normal;
@@ -20,6 +21,8 @@
   }
 
   &__label-text {
+    display: inline-block;
+    margin-bottom: 8px;
     font-family: Ubuntu,sans-serif;
     font-size: 14px;
     font-style: normal;
@@ -30,10 +33,10 @@
 
   &__control {
     width: 100%;
-    height: 44px !important;
-    padding: 13px 23px !important;
-    margin-bottom: 0 !important;
-    font-size: 12px !important;
+    height: 44px;
+    padding: 13px 23px;
+    margin-bottom: 0 ;
+    font-size: 12px ;
     line-height: 1.33;
     letter-spacing: 0.1px;
     background-color: #F1F4F8;

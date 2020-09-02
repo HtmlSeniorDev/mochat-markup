@@ -1,8 +1,8 @@
 .progress-pagination {
   display: inline-flex;
   align-items: center;
-  width: 28px;
-  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
   background: #D6D6D6;
   border-radius: 8px;
 
