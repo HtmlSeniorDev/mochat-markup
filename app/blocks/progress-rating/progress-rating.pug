@@ -1,42 +1,24 @@
-+b.rating
-  +e.center(data-value='10')
-    +e.INPUT#10-stars(type='radio', name='rating', value='10')
-    +e.LABEL(for='10-stars' data-required=4)
-      p 10       
-  +e.center(data-value='9')
-    +e.INPUT#9-stars(type='radio', name='rating', value='9')
-    +e.LABEL(for='9-stars')
-      p 9       
-  +e.center(data-value='8')
-    +e.INPUT#8-stars(type='radio', name='rating', value='8')
-    +e.LABEL(for='8-stars')
-      p 8       
-  +e.center(data-value='7')
-    +e.INPUT#7-stars(type='radio', name='rating', value='7')
-    +e.LABEL(for='7-stars')
-      p 7       
-  +e.center(data-value='6')
-    +e.INPUT#6-stars(type='radio', name='rating', value='6')
-    +e.LABEL(for='6-stars')
-      p 6           
-  +e.center(data-value='5')
-    +e.INPUT#5-stars(type='radio', name='rating', value='5')
-    +e.LABEL(for='5-stars')
-     p 5
-  +e.center(data-value='4')
-    +e.INPUT#4-stars(type='radio', name='rating', value='4')
-    +e.LABEL(for='4-stars')
-      p 4
-  +e.center(data-value='3')
-    +e.INPUT#3-stars(type='radio', name='rating', value='3')
-    +e.LABEL(for='3-stars')
-      p 3    
-  +e.center(data-value='2')
-    +e.INPUT#2-stars(type='radio', name='rating', value='2')
-    +e.LABEL(for='2-stars')
-      p 2   
-  +e.center(data-value='1')
-    +e.INPUT#1-stars(type='radio', name='rating', value='1')
-    +e.LABEL(for='1-stars')
-      p 1       
+//-
+    name: rating-scale
+    description: Шкала рейтинга
+    arguments:
+        - {object} props - Свойства блока.
+        - {Array.isArray=True} props.range - Количество баллов рейтинга
   
+mixin rating-scale(props = {})
+    - const nameId = generateRandomId();
+    - const starList = props.range
+    +b.rating(data-scale=nameId)
+      each item in starList
+        - const randomId = generateRandomId();
+          // Убрать полосу после последнего элемента
+        if (item !== starList[0]) 
+         +e.line-val(data-value=item)
+        else
+          +e.line-val(data-value=item, style='display:none')
+        +e.center
+          +e.INPUT(type='radio', name=`rating-${nameId}`, value=item + '' id=`${randomId}-stars`)
+          +e.LABEL(for=`${randomId}-stars` data-color=item data-required=4)
+           p #{item}
+        
+     

@@ -6,7 +6,7 @@
         - {string} props.title - Заголовок флажка.
   
 mixin checkbox(props = {})
-  - const id = Math.random().toString().substr(2);
+  - const id = generateRandomId();
   +b.checkbox&attributes(attributes)
     +e.INPUT(
       type="checkbox"

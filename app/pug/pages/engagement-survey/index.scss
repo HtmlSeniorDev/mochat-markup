@@ -7,10 +7,14 @@
     margin-top: 34px;
     margin-bottom: 34px;
   }
+
   &__align-items-wrapper {
     display: flex;
     align-items: center;
     min-height: 88px;
-    max-height: 80px;
+
+    @include media-md {
+      min-height: 0;
+    }
   }
 }

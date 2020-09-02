@@ -2,7 +2,8 @@ extends ../../layout/layout
 include ../../../blocks/common/checkbox/checkbox
 include ../../../blocks/common/input/input
 include ../../../blocks/button/template
-
+include ../../../blocks/progress-rating/progress-rating
+  
 block variables
   - var title = 'Опрос Вовлеченности';
     
@@ -12,7 +13,7 @@ block content
       +e.progress-wrapper
         include ../../../blocks/progress-steps/template
       .row
-        .col-md-6.col-sm-6.col-xs-12
+        .col-lg-6.col-sm-12.col-xs-12
           .col-xs-12
             .row
               +e.align-items-wrapper
@@ -22,7 +23,7 @@ block content
                   p Непосредственный руководитель ставит мне четкие цели и задачи
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -38,7 +39,7 @@ block content
                   p Я часто получаю обратную связь о своей работе от руководителя
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -54,7 +55,7 @@ block content
                   p Рабочие совещания нашей команды и руководителя проходят эффективно
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -70,7 +71,7 @@ block content
                   p Я знаю стратегию компании и четкий план действий на ближайший год      
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -86,14 +87,14 @@ block content
                   p Я согласен с тем, что для достижения успеха моя компания может пересматривать стратегические цели и изменять направление моей работы
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий *",
                 labelText: '',
                 errorText: 'Поле обязательно для заполнения',
                 isDisabled: false
               })
-        .col-md-6.col-sm-6.col-xs-12
+        .col-lg-6.col-sm-12.col-xs-12
           .col-xs-12
             .row
               +e.align-items-wrapper
@@ -103,7 +104,7 @@ block content
                   p Мой руководитель часто хвалит меня за хорошо выполненную работу *
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -119,7 +120,7 @@ block content
                   p Мой руководитель активно участвует в моем профессиональном развитии
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -135,7 +136,7 @@ block content
                   p Рабочие совещания нашей команды и руководителя проходят эффективно
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -151,7 +152,7 @@ block content
                   p Я согласен, что ценности нашей компании и ее деятельность тесно взаимосвязаны между собой и дополняют друг друга
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -167,7 +168,7 @@ block content
                   p Я понимаю, как моя работа соотносится со стратегическими целями и приоритетами нашей компании, каких результатов ждут от моей работы 
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -176,7 +177,7 @@ block content
               })
               // Section Checkboxes
       .row
-        .col-md-6.col-sm-6.col-xs-12
+        .col-lg-6.col-sm-12.col-xs-12
           .col-xs-12
             .row
               +e.align-items-wrapper
@@ -185,7 +186,7 @@ block content
                 +b.survey-text.mr-sm
                   p Когда я выбирал нашу компанию в качестве работодателя, меня привлекло (до 4 вариантов)
       .row
-        .col-md-6.col-sm-6.col-xs-12
+        .col-lg-6.col-sm-12.col-xs-12
           +checkbox({title:'Уровень дохода'})
           +checkbox({title: 'Известность, бренд компании'})
           +checkbox({title: 'Социальный пакет (льготы)'})
@@ -193,7 +194,7 @@ block content
           +checkbox({title: 'Возможность карьерного роста (повышение в должности)'})
           +checkbox({title: 'Условия труда (график, загруженность и т.д.)'})
           +checkbox({title: 'Личность непосредственного руководителя'})
-        .col-md-6.col-sm-6.col-xs-12.mb-md
+        .col-lg-6.col-sm-12.col-xs-12.mb-md
           +checkbox({title: 'Стабильность компании, уверенность в завтрашнем дне'})
           +checkbox({title: 'Интересная, содержательная работа'})
           +checkbox({title: 'Высшее руководство - это значимые и уважаемые люди'})
@@ -202,15 +203,15 @@ block content
           +checkbox({title: 'Динамика развития компании, интенсивный рост'})
           +checkbox({title: 'Не было других вариантов трудоустройства'})
       .row
-        .col-md-6.col-sm-6.col-xs-12.mb-sm    
+        .col-md-6.col-sm-12.col-xs-12.mb-sm    
           +input({
             placeholder: "Ваш ответ",
             labelText: 'Другое (свободный ответ)',
             errorText: '',
             isDisabled: false
           })
-      .row
-        .col-md-6.col-sm-6.col-xs-12
+      .row.mb-md
+        .col-md-6.col-sm-12.col-xs-12
           .col-xs-12
             .row
               +e.align-items-wrapper
@@ -220,7 +221,7 @@ block content
                   p Непосредственный руководитель ставит мне четкие цели и задачи
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -235,15 +236,15 @@ block content
                 +b.survey-text.mr-sm
                   p Я часто получаю обратную связь о своей работе от руководителя
           .row
-            .col-xs-12.mb-md
-              include ../../../blocks/progress-rating/progress-rating
+            .col-xs-12
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
                 errorText: '',
                 isDisabled: false
               })
-        .col-md-6.col-sm-6.col-xs-12
+        .col-md-6.col-sm-12.col-xs-12
           .col-xs-12.mb-extra-xs
             .row
               +e.align-items-wrapper.mb-sm
@@ -268,7 +269,7 @@ block content
                   p Непосредственный руководитель ставит мне четкие цели и задачи
           .row
             .col-xs-12
-              include ../../../blocks/progress-rating/progress-rating
+              +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
               +input({
                 placeholder: "Ваш комментарий",
                 labelText: '',
@@ -276,10 +277,10 @@ block content
                 isDisabled: false
               })    
       .row
-        .col-md-6.col-sm-6.col-xs-12
+        .col-md-6.col-sm-12.col-xs-12
           .row.mb-xs
-            .col-xs-3
+            .col-xs-6.col-md-3
               +Button('далее')
-            .col-xs-3
+            .col-xs-6.col-md-3
               +Button('назад')  
              
