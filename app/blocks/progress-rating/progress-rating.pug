@@ -4,21 +4,39 @@
     arguments:
         - {object} props - Свойства блока.
         - {Array.isArray=True} props.range - Количество баллов рейтинга
+        - {boolean} props.error - Показывать ошибку
   
 mixin rating-scale(props = {})
-    - const nameId = generateRandomId();
-    - const starList = props.range
-    +b.rating(data-scale=nameId)
+  - const nameId = generateRandomId();
+  - const starList = props.range
+  +b.rating(data-scale=nameId)
+    if (props.error)
+     +e.error-text(style='visibility:visible')= 'Ответ на этот вопрос обязателен'
+    else
+      +e.error-text(style='visibility:hidden')= 'Ответ на этот вопрос обязателен'
+    +e.rating-wrapper
       each item in starList
         - const randomId = generateRandomId();
           // Убрать полосу после последнего элемента
         if (item !== starList[0]) 
          +e.line-val(data-value=item)
         else
-          +e.line-val(data-value=item, style='display:none')
+          +e.line-val(
+            data-value=item, 
+            style='display:none')
         +e.center
-          +e.INPUT(type='radio', name=`rating-${nameId}`, value=item + '' id=`${randomId}-stars`)
-          +e.LABEL(for=`${randomId}-stars` data-color=item data-required=4)
-           p #{item}
-        
-     
+          +e.INPUT(
+            type='radio',
+            name=`rating-${nameId}` 
+            value=item + '' 
+            id=`${randomId}-stars`)
+          +e.LABEL(
+            for=`${randomId}-stars`
+            data-color=item 
+            data-required=4)
+          if (item === starList[0])
+           p(style="margin-left:-10px") #{item}
+          else 
+            p #{item}
+          
+       

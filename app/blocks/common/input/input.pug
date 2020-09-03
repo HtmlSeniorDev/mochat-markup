@@ -20,6 +20,7 @@ mixin input(props = {})
       +e.INPUT.control(
         type='input'
         placeholder=props.placeholder
+        required=props.required
       )
     else
       +e.INPUT.control(

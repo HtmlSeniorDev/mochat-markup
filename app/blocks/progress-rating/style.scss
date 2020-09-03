@@ -1,9 +1,27 @@
 .rating {
   position: relative;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-start;
-  margin-top: 10px;
+  width: 99%;
+  margin-top: 1px;
+  margin-bottom: 29px;
+
+  &__rating-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  &__error-text {
+    display: inline;
+    margin-left: 45px;
+    margin-bottom: 20px;
+    font-family: Etelka Light Pro,sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    color: #FF7B7B;
+    letter-spacing: 0.01em;
+  }
 
   &__center {
     position: relative;
@@ -23,66 +41,88 @@
   }
 
   p {
-    padding-top: 2px;
-    padding-right: 2px;
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    left:0;
     font-family: Ubuntu,sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: bold;
     line-height: 16px;
     color: #737373;
-
-    &:first-child {
-      padding-right: 0;
-    }
   }
 
   label {
     position: relative;
     z-index: 2;
     display: inline-block;
-    padding-left: 2px;
     cursor: pointer;
   }
 
-  label::before,
-  label::after {
+
+  &__extra-after {
     position: absolute;
-    display: inline-block;
-    margin-left: 1px;
-    content: '';
-  }
-
-  label::before {
-    top: 3px;
-    left: 0;
-    box-sizing: border-box;
-    width: 3px;
-    height: 3px;
-    background-color: #90BC56;
-    border-radius: 50px;
-  }
-
-  label::after {
-    top: 0;
-    left: 0;
+    display: block;
     width: 8px;
     height: 8px;
     color: #CAC84A;
+    content: '';
     background-color: #CAC84A;
-    border: 1px solid #CAC84A;
     border-radius: 50%;
+
+    &--color-1 {
+      background-color: #EECF43;
+    }
+    &--color-2 {
+      background-color: #DBCB47;
+    }
+    &--color-3 {
+      background-color: #CAC84A;
+    }
+    &--color-4 {
+      background-color: #BBC54D;
+    }
+    &--color-5 {
+      background-color: #90BC56;
+    }
+
+  }
+  &__extra-before{
+    position: absolute;
+    top: 3px;
+    box-sizing: border-box;
+    display: block;
+    width: 3px;
+    height: 3px;
+    content: '';
+    background-color: #fff;
+    border-radius: 50px;
+  }
+
+
+  label::before {
+    position: absolute;
+    top: 3px;
+    box-sizing: border-box;
+    display: block;
+    width: 3px;
+    height: 3px;
+    content: '';
+    background-color: #90BC56;
+    border-radius: 50px;
+  }
+  &__label-color {
+    &::before {
+      background-color: white !important;
+    }
   }
 
   input {
     display: none;
   }
-  input[type='radio'] + label::after {
-    content: none;
-  }
-  input[type='radio']:checked + label::after {
-    content: '';
-  }
+
   input[type='radio']:checked + label::before {
     content: none;
   }
