@@ -9,7 +9,7 @@
 mixin rating-scale(props = {})
   - const nameId = generateRandomId();
   - const starList = props.range
-  +b.rating(data-scale=nameId)
+  +b.rating(data-scale=nameId data-required=4)
     if (props.error)
      +e.error-text(style='visibility:visible')= 'Ответ на этот вопрос обязателен'
     else
@@ -33,7 +33,7 @@ mixin rating-scale(props = {})
           +e.LABEL(
             for=`${randomId}-stars`
             data-color=item 
-            data-required=4)
+            )
           if (item === starList[0])
            p(style="margin-left:-10px") #{item}
           else 

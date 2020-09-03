@@ -8,6 +8,7 @@ $(() => {
       const centerBlock = rating.find(`[data-value=${radio.attr('value')}]`);
       const scaleRating = $(`[data-scale=${ratingId}]`);
       const checkedValue = centerBlock.attr('data-value') // значение выбранной радиокнопки
+      const dataRequired = scaleRating.attr('data-required');
       const elementsLineList = scaleRating.children('.rating__rating-wrapper').children('.rating__line-val') // cписок линий для раскраски
       const LabelList = scaleRating.children('.rating__rating-wrapper').children('.rating__center').children(`label`)  // список лейблов
       // очищаем все не выбранные лейблы
@@ -19,6 +20,13 @@ $(() => {
       })
       scaleColoring(checkedValue)
       function scaleColoring(checkedValue) {
+        // В зависимости от data-required присвоить инпуту  аттрибут required
+        if (checkedValue<dataRequired) {
+          scaleRating.siblings('.input-text').children('input').attr('required','required')
+        }
+        else {
+          scaleRating.siblings('.input-text').children('input').removeAttr('required')
+        }
         let compareObject = colorComparator(+checkedValue)
         let color = compareObject.line // цвет линии
         let labelClass = compareObject.label // класс с цветом для лейбла
