@@ -12,8 +12,8 @@
 
   &__error-text {
     display: inline;
-    margin-left: 45px;
     margin-bottom: 20px;
+    margin-left: 45px;
     font-family: Etelka Light Pro,sans-serif;
     font-size: 14px;
     font-style: normal;
@@ -55,7 +55,9 @@
   }
 
   label {
-    position: relative;
+    position: absolute;
+    top:0;
+    left:-1px;
     z-index: 2;
     display: inline-block;
     cursor: pointer;
@@ -113,6 +115,19 @@
     background-color: #90BC56;
     border-radius: 50px;
   }
+  label::after {
+    position: absolute;
+    left: -4px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    color: #CAC84A;
+    content: '';
+    background-color: #90BC56;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
   &__label-color {
     &::before {
       background-color: white !important;

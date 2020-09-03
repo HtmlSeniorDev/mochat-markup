@@ -32,74 +32,6 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-            .col-xs-12
-              .row
-                +e.align-items-wrapper
-                  +b.progress-pagination.mr-sm
-                    +e.item 3
-                  +b.survey-text.mr-sm
-                    p Я часто получаю обратную связь о своей работе от руководителя
-            .row
-              .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required:true,
-                })
-            .col-xs-12
-              .row
-                +e.align-items-wrapper
-                  +b.progress-pagination.mr-sm
-                    +e.item 5
-                  +b.survey-text.mr-sm
-                    p Рабочие совещания нашей команды и руководителя проходят эффективно
-            .row
-              .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-            .col-xs-12
-              .row
-                +e.align-items-wrapper
-                  +b.progress-pagination.mr-sm
-                    +e.item 7
-                  +b.survey-text.mr-sm
-                    p Я знаю стратегию компании и четкий план действий на ближайший год      
-            .row
-              .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-            .col-xs-12
-              .row
-                +e.align-items-wrapper
-                  +b.progress-pagination.mr-sm
-                    +e.item 9
-                  +b.survey-text.mr-sm
-                    p Я согласен с тем, что для достижения успеха моя компания может пересматривать стратегические цели и изменять направление моей работы
-            .row
-              .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий *",
-                  labelText: '',
-                  errorText: 'Поле обязательно для заполнения',
-                  isDisabled: false,
-                  required: true,
-                })
           .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
             .col-xs-12
               .row
@@ -110,7 +42,7 @@ block content
                     p Мой руководитель часто хвалит меня за хорошо выполненную работу *
             .row
               .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1],error:true})
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1], error: true})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -118,6 +50,26 @@ block content
                   isDisabled: false,
                   required: true,
                 })
+        .row
+          .col-lg-5.col-sm-12.col-xs-12
+            .col-xs-12
+              .row
+                +e.align-items-wrapper
+                  +b.progress-pagination.mr-sm
+                    +e.item 3
+                  +b.survey-text.mr-sm
+                    p Я часто получаю обратную связь о своей работе от руководителя
+            .row
+              .col-xs-12
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+                +input({
+                  placeholder: "Ваш комментарий",
+                  labelText: '',
+                  errorText: '',
+                  isDisabled: false,
+                  required: true,
+                })
+          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
             .col-xs-12
               .row
                 +e.align-items-wrapper
@@ -127,7 +79,7 @@ block content
                     p Мой руководитель активно участвует в моем профессиональном развитии
             .row
               .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -135,6 +87,26 @@ block content
                   isDisabled: false,
                   required: true,
                 })
+        .row
+          .col-lg-5.col-sm-12.col-xs-12
+            .col-xs-12
+              .row
+                +e.align-items-wrapper
+                  +b.progress-pagination.mr-sm
+                    +e.item 5
+                  +b.survey-text.mr-sm
+                    p Рабочие совещания нашей команды и руководителя проходят эффективно
+            .row
+              .col-xs-12
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+                +input({
+                  placeholder: "Ваш комментарий",
+                  labelText: '',
+                  errorText: '',
+                  isDisabled: false,
+                  required: true,
+                })
+          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
             .col-xs-12
               .row
                 +e.align-items-wrapper
@@ -144,7 +116,7 @@ block content
                     p Рабочие совещания нашей команды и руководителя проходят эффективно
             .row
               .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -152,6 +124,26 @@ block content
                   isDisabled: false,
                   required: true,
                 })
+        .row
+          .col-lg-5.col-sm-12.col-xs-12
+            .col-xs-12
+              .row
+                +e.align-items-wrapper
+                  +b.progress-pagination.mr-sm
+                    +e.item 7
+                  +b.survey-text.mr-sm
+                    p Я знаю стратегию компании и четкий план действий на ближайший год      
+            .row
+              .col-xs-12
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+                +input({
+                  placeholder: "Ваш комментарий",
+                  labelText: '',
+                  errorText: '',
+                  isDisabled: false,
+                  required: true,
+                })
+          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
             .col-xs-12
               .row
                 +e.align-items-wrapper
@@ -161,30 +153,52 @@ block content
                     p Я согласен, что ценности нашей компании и ее деятельность тесно взаимосвязаны между собой и дополняют друг друга
             .row
               .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
                   errorText: '',
                   isDisabled: false
                 })
+        .row
+          .col-lg-5.col-sm-12.col-xs-12
             .col-xs-12
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
-                    +e.item 10
+                    +e.item 9
                   +b.survey-text.mr-sm
-                    p Я понимаю, как моя работа соотносится со стратегическими целями и приоритетами нашей компании, каких результатов ждут от моей работы 
+                    p Я согласен с тем, что для достижения успеха моя компания может пересматривать стратегические цели и изменять направление моей работы
             .row
               .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
                 +input({
-                  placeholder: "Ваш комментарий",
+                  placeholder: "Ваш комментарий *",
                   labelText: '',
-                  errorText: '',
+                  errorText: 'Поле обязательно для заполнения',
                   isDisabled: false,
                   required: true,
                 })
+          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
+            .col-xs-12
+              .col-xs-12
+                .row
+                  +e.align-items-wrapper
+                    +b.progress-pagination.mr-sm
+                      +e.item 10
+                    +b.survey-text.mr-sm
+                      p Я понимаю, как моя работа соотносится со стратегическими целями и приоритетами нашей компании, каких результатов ждут от моей работы 
+              .row
+                .col-xs-12
+                  +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+                  +input({
+                    placeholder: "Ваш комментарий",
+                    labelText: '',
+                    errorText: '',
+                    isDisabled: false,
+                    required: true,
+                  })
+                  
                 // Section Checkboxes
         .row
           .col-lg-5.col-sm-12.col-xs-12
@@ -215,27 +229,10 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-            .col-xs-12
-              .row
-                +e.align-items-wrapper
-                  +b.progress-pagination.mr-sm
-                    +e.item 14
-                  +b.survey-text.mr-sm
-                    p Я часто получаю обратную связь о своей работе от руководителя
-            .row
-              .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
           .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
             .col-xs-12.mb-extra-xs
               .row
-                +e.align-items-wrapper.mb-sm
+                +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
                     +e.item 13
                   +b.survey-text.mr-mb
@@ -249,23 +246,44 @@ block content
                   isDisabled: false,
                   required: true,
                 })
+        .row.mb-md
+          .col-lg-5.col-sm-12.col-xs-12
             .col-xs-12
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
-                    +e.item 15
+                    +e.item 14
                   +b.survey-text.mr-sm
-                    p Непосредственный руководитель ставит мне четкие цели и задачи
+                    p Я часто получаю обратную связь о своей работе от руководителя
             .row
               .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
                   errorText: '',
                   isDisabled: false,
                   required: true,
-                })    
+                })
+          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
+            .col-xs-12
+              .row
+                +e.align-items-wrapper
+                  +b.progress-pagination.mr-sm
+                    +e.item 15
+                  +b.survey-text.mr-sm
+                    p Мой руководитель активно участвует в моем профессиональном развитии
+            .row
+              .col-xs-12
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+                +input({
+                  placeholder: "Ваш комментарий",
+                  labelText: '',
+                  errorText: '',
+                  isDisabled: false,
+                  required: true,
+                })
+
         .row
           .col-lg-5.col-sm-12.col-xs-12
             .row.mb-xs
@@ -273,4 +291,4 @@ block content
                 +Button({title:"далее",submit:true})
               .col-xs-6.col-md-3
                 +Button({title:"назад",submit:false})  
-               
+

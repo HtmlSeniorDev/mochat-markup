@@ -11,9 +11,7 @@ mixin rating-scale(props = {})
   - const starList = props.range
   +b.rating(data-scale=nameId data-required=4)
     if (props.error)
-     +e.error-text(style='visibility:visible')= 'Ответ на этот вопрос обязателен'
-    else
-      +e.error-text(style='visibility:hidden')= 'Ответ на этот вопрос обязателен'
+     +e.error-text()= 'Ответ на этот вопрос обязателен'
     +e.rating-wrapper
       each item in starList
         - const randomId = generateRandomId();
