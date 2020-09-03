@@ -168,7 +168,7 @@ block content
                   +b.progress-pagination.mr-sm
                     +e.item 9
                   +b.survey-text.mr-sm
-                    p Я согласен с тем, что для достижения успеха моя компания может пересматривать стратегические цели и изменять направление моей работы
+                    p Я согласен с тем, что для достижения успеха моя компания может пересматривать стратегические цели и изменять направление моей работы     
             .row
               .col-xs-12
                 +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
@@ -181,24 +181,21 @@ block content
                 })
           .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
             .col-xs-12
-              .col-xs-12
-                .row
-                  +e.align-items-wrapper
-                    +b.progress-pagination.mr-sm
-                      +e.item 10
-                    +b.survey-text.mr-sm
-                      p Я понимаю, как моя работа соотносится со стратегическими целями и приоритетами нашей компании, каких результатов ждут от моей работы 
               .row
-                .col-xs-12
-                  +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
-                  +input({
-                    placeholder: "Ваш комментарий",
-                    labelText: '',
-                    errorText: '',
-                    isDisabled: false,
-                    required: true,
-                  })
-                  
+                +e.align-items-wrapper
+                  +b.progress-pagination.mr-sm
+                    +e.item 10
+                  +b.survey-text.mr-sm
+                    p Я понимаю, как моя работа соотносится со стратегическими целями и приоритетами нашей компании, каких результатов ждут от моей работы 
+            .row
+              .col-xs-12
+                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+                +input({
+                  placeholder: "Ваш комментарий",
+                  labelText: '',
+                  errorText: '',
+                  isDisabled: false
+                })
                 // Section Checkboxes
         .row
           .col-lg-5.col-sm-12.col-xs-12
