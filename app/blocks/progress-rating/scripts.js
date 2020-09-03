@@ -35,7 +35,7 @@ $(() => {
         elementsLineList.each(function () {
           const line = $(this)
           const lineCount = +line.attr('data-value') + lineHidden
-          const dataValueElem = elementsColored(checkedValue);
+          const dataValueElem = Array.from(Array(+checkedValue),(_, i) => i + 1); //генерация массива от 1 до N
           const isInclude = dataValueElem.includes(lineCount)
           if (isInclude) {
             let labelColor = scaleRating.children('.rating__rating-wrapper').children('.rating__center').find(`[data-color=${lineCount - lineHidden}]`)
@@ -51,14 +51,6 @@ $(() => {
     })
   })
 });
-
-function elementsColored(highValue) {
-  let list = [];
-  for (let i = 1; i <= highValue; i++) {
-    list.push(i);
-  }
-  return list
-}
 
 function colorComparator(value) {
   if (value <= 2) {

@@ -1,5 +1,5 @@
 .row.mb-sm(data-required-free=4).js-checkbox-required
-  .col-lg-5.col-sm-12.col-xs-12
+  .col-lg-6.col-xs-12
     DIV(data-checkboxes-1="checkboxes")
       +checkbox({title: 'Уровень дохода'})
       +checkbox({title: 'Известность, бренд компании'})
@@ -8,7 +8,7 @@
       +checkbox({title: 'Возможность карьерного роста (повышение в должности)'})
       +checkbox({title: 'Условия труда (график, загруженность и т.д.)'})
       +checkbox({title: 'Личность непосредственного руководителя'})
-  .col-lg-5.col-sm-12.col-xs-12.mb-md.col-lg-offset-1
+  .col-lg-6.col-xs-12
     DIV(data-checkboxes-2="checkboxes")
       +checkbox({title: 'Стабильность компании, уверенность в завтрашнем дне'})
       +checkbox({title: 'Интересная, содержательная работа'})
@@ -18,11 +18,12 @@
       +checkbox({title: 'Динамика развития компании, интенсивный рост'})
       +checkbox({title: 'Не было других вариантов трудоустройства'})
 .row
-  .col-lg-5.col-sm-12.col-xs-12.mb-sm
-    DIV(data-for-free-answer="free-answer")
-      +input({
-        placeholder: "Ваш ответ",
-        labelText: 'Другое (свободный ответ)',
-        errorText: '',
-        isDisabled: false
-      })
+  .col-lg-6.col-xs-12.mb-sm
+    .col-xs-12.col-lg-11
+      DIV(data-for-free-answer="free-answer")
+        +input({
+          placeholder: "Ваш ответ",
+          labelText: 'Другое (свободный ответ)',
+          errorText: '',
+          isDisabled: false
+        })

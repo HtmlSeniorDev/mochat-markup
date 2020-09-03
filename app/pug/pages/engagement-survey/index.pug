@@ -14,8 +14,8 @@ block content
         include ../../../blocks/progress-steps/template
       form(action='')    
         .row
-          .col-lg-5.col-sm-12.col-xs-12
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -23,8 +23,8 @@ block content
                   +b.survey-text.mr-sm
                     p Непосредственный руководитель ставит мне четкие цели и задачи
             .row
-              .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range:Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -32,8 +32,8 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -41,8 +41,8 @@ block content
                   +b.SPAN.survey-text.mr-sm
                     p Мой руководитель часто хвалит меня за хорошо выполненную работу *
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1], error: true})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse(), error: true})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -51,8 +51,8 @@ block content
                   required: true,
                 })
         .row
-          .col-lg-5.col-sm-12.col-xs-12
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -60,8 +60,8 @@ block content
                   +b.survey-text.mr-sm
                     p Я часто получаю обратную связь о своей работе от руководителя
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -69,8 +69,8 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -78,8 +78,8 @@ block content
                   +b.survey-text.mr-sm
                     p Мой руководитель активно участвует в моем профессиональном развитии
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -88,8 +88,8 @@ block content
                   required: true,
                 })
         .row
-          .col-lg-5.col-sm-12.col-xs-12
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -97,8 +97,8 @@ block content
                   +b.survey-text.mr-sm
                     p Рабочие совещания нашей команды и руководителя проходят эффективно
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -106,8 +106,8 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -115,8 +115,8 @@ block content
                   +b.survey-text.mr-sm
                     p Рабочие совещания нашей команды и руководителя проходят эффективно
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -125,8 +125,8 @@ block content
                   required: true,
                 })
         .row
-          .col-lg-5.col-sm-12.col-xs-12
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -134,8 +134,8 @@ block content
                   +b.survey-text.mr-sm
                     p Я знаю стратегию компании и четкий план действий на ближайший год      
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -143,8 +143,8 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -152,8 +152,8 @@ block content
                   +b.survey-text.mr-sm
                     p Я согласен, что ценности нашей компании и ее деятельность тесно взаимосвязаны между собой и дополняют друг друга
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -161,8 +161,8 @@ block content
                   isDisabled: false
                 })
         .row
-          .col-lg-5.col-sm-12.col-xs-12
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -170,8 +170,8 @@ block content
                   +b.survey-text.mr-sm
                     p Я согласен с тем, что для достижения успеха моя компания может пересматривать стратегические цели и изменять направление моей работы     
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий *",
                   labelText: '',
@@ -179,8 +179,8 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -188,8 +188,8 @@ block content
                   +b.survey-text.mr-sm
                     p Я понимаю, как моя работа соотносится со стратегическими целями и приоритетами нашей компании, каких результатов ждут от моей работы 
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -198,8 +198,8 @@ block content
                 })
                 // Section Checkboxes
         .row
-          .col-lg-5.col-sm-12.col-xs-12
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -208,8 +208,8 @@ block content
                     p Когда я выбирал нашу компанию в качестве работодателя, меня привлекло (до 4 вариантов)
         include ../../../blocks/checkbox-area/template
         .row.mb-md
-          .col-lg-5.col-sm-12.col-xs-12
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -217,8 +217,8 @@ block content
                   +b.survey-text.mr-sm
                     p Непосредственный руководитель ставит мне четкие цели и задачи
             .row
-              .col-xs-12
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range:Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -226,8 +226,8 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
-            .col-xs-12.mb-extra-xs
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11.mb-extra-xs
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -235,7 +235,7 @@ block content
                   +b.survey-text.mr-mb
                     p Что необходимо сделать, чтобы ваша команда стала еще более сплоченной и успешной?
             .row
-              .col-xs-12
+              .col-xs-12.col-lg-11
                 +input({
                   placeholder: "Ваш ответ",
                   labelText: 'Свободный ответ',
@@ -244,8 +244,8 @@ block content
                   required: true,
                 })
         .row.mb-md
-          .col-lg-5.col-sm-12.col-xs-12
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -253,8 +253,8 @@ block content
                   +b.survey-text.mr-sm
                     p Я часто получаю обратную связь о своей работе от руководителя
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -262,8 +262,8 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-          .col-lg-5.col-sm-12.col-xs-12.col-lg-offset-1
-            .col-xs-12
+          .col-lg-6.col-sm-12.col-xs-12
+            .col-xs-12.col-lg-11
               .row
                 +e.align-items-wrapper
                   +b.progress-pagination.mr-sm
@@ -271,8 +271,8 @@ block content
                   +b.survey-text.mr-sm
                     p Мой руководитель активно участвует в моем профессиональном развитии
             .row
-              .col-xs-12
-                +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+              .col-xs-12.col-lg-11
+                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -280,7 +280,6 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-
         .row
           .col-lg-5.col-sm-12.col-xs-12
             .row.mb-xs
