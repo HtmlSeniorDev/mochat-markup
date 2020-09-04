@@ -1,0 +1,31 @@
+//-
+    name: input
+    description: Инпут
+    arguments:
+        - {object} props - Свойства блока.
+        - {string} props.labelText - Заголовок Инпута.
+        - {string} props.placeholder - Плейсхолдер
+        - {string} props.errorText - Текст ошибки
+        - {boolean} props.isDisabled  - Активный инпут?
+mixin input(props = {})
+  -
+    const classNames = [
+      (props.errorText ? 'input-text--error' : ''),
+      (props.isDisabled ? 'input-text--disabled': '')
+    ].filter(className => className !== '').join(' ')
+  +b.input-text(class=classNames)
+    if (props.labelText)
+      +e.LABEL.label-text= props.labelText
+    if (!props.isDisabled)
+      +e.INPUT.control(
+        type='input'
+        placeholder=props.placeholder
+      )
+    else
+      +e.INPUT.control(
+        disabled
+        type='input'
+        placeholder=props.placeholder
+      )
+    if (props.errorText)
+      +e.error-text= props.errorText

@@ -10,21 +10,34 @@
 //
 // Общие блоки
 @import '../blocks/**/*.scss';
+@import '_fix';
 
 // Главная страница
-@import '../pug/pages/dom-expert/index.scss';
+@import '../pug/pages/**/*.scss';
 // @import '../blocks/content-width/content.scss';
 // @import "../blocks/header/styles";
 // @import "../blocks/header/styles";
 .content-width {
-  max-width: 1250px;
+  width: 1250px;
   margin: 0 auto;
-}
 
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+button {
+  cursor: pointer;
+  border: none;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
 .primary-title {
   margin-top: 40px;
   margin-bottom: 14px;
-  font-family: Ubuntu;
+  font-family: Ubuntu,sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
@@ -84,8 +97,39 @@
   &__d-flex {
     display: flex;
   }
-
 }
 
+.mr-xs {
+  margin-right: 8px;
+}
 
-@import '_fix';
+.mr-sm {
+  margin-right: 16px;
+}
+.mr-md {
+  margin-right: 32px;
+}
+.mb-extra-xs {
+  margin-bottom: 6px;
+}
+.mb-xs {
+  margin-bottom: 8px;
+}
+
+.mb-sm {
+  margin-bottom: 16px;
+}
+.mb-md {
+  margin-bottom: 32px;
+}
+
+.mb-lg {
+  margin-bottom: 48px;
+}
+
+.mb-responsive-sm {
+  @media (max-width: 768px) {
+    margin-bottom: 16px;
+  }
+
+}

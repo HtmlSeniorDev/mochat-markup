@@ -49,4 +49,14 @@ module.exports = [
     // Подключаемые зависимости на страницу
     chunks: ['runtime', 'vendors', 'app', 'dom_expert']
   }),
+  parts.page({
+    title: 'engagement-survey',
+    path: 'pages/engagement-survey',
+    entry: {
+      markup_engagement: path.join(paths.app, 'pug/pages/engagement-survey')
+    },
+    template: path.join(paths.app, 'pug/pages/engagement-survey/index.pug'),
+    // Подключаемые зависимости на страницу
+    chunks: ['runtime', 'vendors', 'app', 'engagement-survey']
+  }),
 ]

@@ -2,24 +2,24 @@
     display: flex;
     flex-direction: column;
     padding: 14px 26px;
+    text-decoration: none;
     background: #92BC58;
     border-radius: 2px;
-    text-decoration: none;
 
   &__title {
-    font-family: DIN Pro;
+    display: flex;
+    flex: none;
+    align-items: center;
+    align-self: center;
+    order: 0;
+    font-family: DIN Pro,sans-serif;
+    font-size: 15px;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
     line-height: 20px;
-    display: flex;
-    align-items: center;
+    color: #FFF;
     text-align: center;
     text-transform: uppercase;
-    color: #FFFFFF;
-    flex: none;
-    order: 0;
-    align-self: center;
   }
 
 }

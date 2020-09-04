@@ -1,0 +1,40 @@
+//-
+    name: rating-scale
+    description: Шкала рейтинга
+    arguments:
+        - {object} props - Свойства блока.
+        - {Array<Number>} props.range - Количество баллов рейтинга
+        - {boolean} props.error - Показывать ошибку
+  
+mixin rating-scale(props = {})
+  - const nameId = generateRandomId();
+  - const starList = props.range
+  +b.rating(data-scale=nameId data-required=4)
+    if (props.error)
+     +e.error-text()= 'Ответ на этот вопрос обязателен'
+    +e.rating-wrapper
+      each item in starList
+        - const randomId = generateRandomId();
+          // Убрать полосу после последнего элемента
+        if (item !== starList[0]) 
+         +e.line-val(data-value=item)
+        else
+          +e.line-val(
+            data-value=item, 
+            style='display:none')
+        +e.center
+          +e.INPUT(
+            type='radio',
+            name=`rating-${nameId}` 
+            value=item + '' 
+            id=`${randomId}-stars`)
+          +e.LABEL(
+            for=`${randomId}-stars`
+            data-color=item 
+            )
+          if (item === starList[0])
+           p(style="margin-left:-10px") #{item}
+          else 
+            p #{item}
+          
+       

@@ -5,6 +5,7 @@ include ../../../node_modules/bemto.pug/bemto
 include ../includes/data
 include ../includes/require
 include ../mixins/icon
+- const generateRandomId = () => Math.random().toString().substr(2);
 
 block variables
 
@@ -24,7 +25,7 @@ html(lang="ru")
     //noindex
     .app#app
       block header
-        include ../../blocks/header/template
+        //include ../../blocks/header/template
       block content
       block footer
         include ../../blocks/footer/template

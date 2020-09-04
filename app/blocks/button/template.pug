@@ -1,3 +1,4 @@
-mixin Button(title)
-   +b.A.Button(href="#")
-    +e.title #{title}
+mixin Button(props = {})
+   - const type = props.submit ? 'submit': 'button'
+   +b.BUTTON.Button(href="#" type=type)
+    +e.title #{props.title}

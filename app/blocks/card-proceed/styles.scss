@@ -1,57 +1,57 @@
 .card-proceed {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  border: 1px solid #EDEDED;
-  box-sizing: border-box;
-  border-radius: 4px;
-  background: #FFF;
+  height: calc(100% - 16px);
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 16px;
   text-align: left;
   text-decoration: none;
-  height: calc(100% - 16px);
+  background: #FFF;
+  border: 1px solid #EDEDED;
+  border-radius: 4px;
 
   &__content {
-    margin-left: 24px;
     margin-right: 24px;
+    margin-left: 24px;
   }
 
   &__container {
+    position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    position: relative;
   }
 
   &__pagination {
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 20px;
     display: flex;
     align-items: center;
-    letter-spacing: 0.1px;
+    font-family: Ubuntu;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 20px;
     color: #90BC56;
+    letter-spacing: 0.1px;
   }
 
   &__line {
     position: absolute;
     left: 20px;
-    margin-left: 10px;
-    width: 43px;
-    height: 0px;
-    border: 1px solid #92BC58;
     box-sizing: border-box;
+    width: 43px;
+    height: 0;
+    margin-left: 10px;
+    border: 1px solid #92BC58;
   }
 
   &__arrow {
     position: relative;
     width: 12px;
     height: 18px;
-    cursor: pointer;
     margin-left: 51px;
+    cursor: pointer;
 
     &::after {
       position: absolute;
@@ -75,27 +75,27 @@
   }
 
   &__title {
-    font-family: Ubuntu;
-    font-style: normal;
-    font-weight: 300;
-    margin-bottom: 20px;
-    font-size: 22px;
-    line-height: 20px;
     display: flex;
     align-items: center;
-    letter-spacing: 0.1px;
+    margin-bottom: 20px;
+    font-family: Ubuntu;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
     color: #90BC56;
+    letter-spacing: 0.1px;
 
   }
 
   &__text {
     font-family: Etelka Light Pro;
+    font-size: 14px;
     font-style: normal;
     font-weight: 300;
-    font-size: 14px;
     line-height: 24px;
+    color: #000;
     letter-spacing: 0.01em;
-    color: #000000;
   }
 
 }
