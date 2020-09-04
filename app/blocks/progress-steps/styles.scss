@@ -3,10 +3,6 @@
   z-index: 0;
   display: flex;
 
-  @include media-xsm {
-    display: block;
-  }
-
   &__item {
     position: relative;
     z-index: 0;
@@ -19,6 +15,11 @@
     line-height: 1.5;
     color: $color-light-gray;
     word-spacing: 8px;
+
+    @include media-xsm {
+      padding: 14px 10px;
+      word-spacing: 0;
+    }
 
     &::after {
       position: absolute;
