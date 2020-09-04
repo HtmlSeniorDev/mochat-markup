@@ -24,7 +24,7 @@ block content
                     p Непосредственный руководитель ставит мне четкие цели и задачи
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range:Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -42,7 +42,7 @@ block content
                     p Мой руководитель часто хвалит меня за хорошо выполненную работу *
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse(), error: true})
+                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1], error: true})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -61,7 +61,7 @@ block content
                     p Я часто получаю обратную связь о своей работе от руководителя
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -79,7 +79,7 @@ block content
                     p Мой руководитель активно участвует в моем профессиональном развитии
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -98,7 +98,7 @@ block content
                     p Рабочие совещания нашей команды и руководителя проходят эффективно
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -116,7 +116,7 @@ block content
                     p Рабочие совещания нашей команды и руководителя проходят эффективно
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -135,7 +135,7 @@ block content
                     p Я знаю стратегию компании и четкий план действий на ближайший год      
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -153,7 +153,7 @@ block content
                     p Я согласен, что ценности нашей компании и ее деятельность тесно взаимосвязаны между собой и дополняют друг друга
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -171,7 +171,7 @@ block content
                     p Я согласен с тем, что для достижения успеха моя компания может пересматривать стратегические цели и изменять направление моей работы     
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий *",
                   labelText: '',
@@ -189,7 +189,7 @@ block content
                     p Я понимаю, как моя работа соотносится со стратегическими целями и приоритетами нашей компании, каких результатов ждут от моей работы 
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -218,7 +218,7 @@ block content
                     p Непосредственный руководитель ставит мне четкие цели и задачи
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range:Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -243,7 +243,7 @@ block content
                   isDisabled: false,
                   required: true,
                 })
-        .row.mb-md
+        .row.mb-sm
           .col-lg-6.col-sm-12.col-xs-12
             .col-xs-12.col-lg-11
               .row
@@ -254,7 +254,7 @@ block content
                     p Я часто получаю обратную связь о своей работе от руководителя
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
@@ -272,7 +272,7 @@ block content
                     p Мой руководитель активно участвует в моем профессиональном развитии
             .row
               .col-xs-12.col-lg-11
-                +rating-scale({range: Array.from(Array(10), (_, i) => i + 1).reverse()})
+                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
                 +input({
                   placeholder: "Ваш комментарий",
                   labelText: '',
