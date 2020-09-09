@@ -1,4 +1,5 @@
 $(() => {
+  const errorInputText = 'Поле обязательно для заполнения'
   const rating = $('.rating').children('.rating__rating-wrapper');
   const lineHidden = 1; // т.к последняя линия скрыта
   rating.find('input').each(function () {
@@ -20,12 +21,18 @@ $(() => {
       })
       scaleColoring(checkedValue)
       function scaleColoring(checkedValue) {
-        // В зависимости от data-required присвоить инпуту  аттрибут required
-        if (checkedValue<dataRequired) {
-          scaleRating.siblings('.input-text').children('input').attr('required','required')
+        if (checkedValue <= dataRequired) {
+          let textValueInput = scaleRating.siblings('.input-text').children('input')
+          if (textValueInput.val().length <= 0) {
+            scaleRating.siblings('.input-text').children('input').attr('required', 'required')
+            scaleRating.siblings('.input-text').attr('data-error', errorInputText)
+            scaleRating.siblings('.input-text').addClass('input-text--error')
+          }
         }
         else {
           scaleRating.siblings('.input-text').children('input').removeAttr('required')
+          scaleRating.siblings('.input-text').attr('data-error','')
+          scaleRating.siblings('.input-text').removeClass('input-text--error')
         }
         let compareObject = colorComparator(+checkedValue)
         let color = compareObject.line // цвет линии

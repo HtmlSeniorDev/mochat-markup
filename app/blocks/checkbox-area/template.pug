@@ -1,4 +1,4 @@
-.row.mb-sm(data-required-free=4).js-checkbox-required
+.row.mb-sm(data-required-free=0).js-checkbox-required
   .col-lg-6.col-xs-12
     DIV(data-checkboxes-1="checkboxes")
       +checkbox({title: 'Уровень дохода'})
@@ -25,5 +25,6 @@
           placeholder: "Ваш ответ",
           labelText: 'Другое (свободный ответ)',
           errorText: '',
-          isDisabled: false
+          isDisabled: false,
+          required:true,
         })
