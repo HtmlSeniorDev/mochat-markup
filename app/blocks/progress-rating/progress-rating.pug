@@ -32,6 +32,10 @@ mixin rating-scale(props = {})
             for=`${randomId}-stars`
             data-color=item 
             )
-          p #{item}
+          if (item === starList[0])
+            p(style="margin-left:-10px") #{item}
+          else
+            p #{item}
+          
           
        
