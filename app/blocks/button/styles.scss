@@ -1,10 +1,26 @@
 .Button {
+    &::before{
+      position: absolute;
+      top:-25px;
+      left: 0;
+      font-family: Etelka Light Pro, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px;
+      color: #FF7B7B;
+      letter-spacing: 0.01em;
+      content: attr(error-submit);
+    }
+
+  &__wrapper {
     display: flex;
     flex-direction: column;
     padding: 14px 26px;
     text-decoration: none;
     background: #92BC58;
     border-radius: 2px;
+  }
 
   &__title {
     display: flex;

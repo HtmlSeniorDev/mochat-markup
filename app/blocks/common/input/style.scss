@@ -3,6 +3,19 @@
 
   $r: &;
 
+  &::after {
+    margin-top: 8px;
+    font-family: Etelka Light Pro, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    color: #FF7B7B;
+    letter-spacing: 0.01em;
+    content: attr(data-error);
+  }
+
+
   &--error {
   #{$r}__control {
     border: 1px solid $color-wild-watermelon;
@@ -19,6 +32,8 @@
     color: #FF7B7B;
     letter-spacing: 0.01em;
   }
+
+
 
   &__label-text {
     display: inline-block;

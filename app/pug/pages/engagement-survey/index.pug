@@ -30,7 +30,7 @@ block content
                   labelText: '',
                   errorText: '',
                   isDisabled: false,
-                  required: true,
+                  required:true,
                 })
           .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
             .col-xs-12.col-lg-11
@@ -158,7 +158,8 @@ block content
                   placeholder: "Ваш комментарий",
                   labelText: '',
                   errorText: '',
-                  isDisabled: false
+                  isDisabled: false,
+                  required: true,
                 })
         .row
           .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
@@ -173,9 +174,9 @@ block content
               .col-xs-12.col-lg-11
                 +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
                 +input({
-                  placeholder: "Ваш комментарий *",
+                  placeholder: "Ваш комментарий",
                   labelText: '',
-                  errorText: 'Поле обязательно для заполнения',
+                  errorText: '',
                   isDisabled: false,
                   required: true,
                 })
@@ -194,7 +195,8 @@ block content
                   placeholder: "Ваш комментарий",
                   labelText: '',
                   errorText: '',
-                  isDisabled: false
+                  isDisabled: false,
+                  required: true,
                 })
                 // Section Checkboxes
         .row
@@ -279,12 +281,7 @@ block content
                   errorText: '',
                   isDisabled: false,
                   required: true,
+                        
                 })
-        .row
-          .col-lg-5.col-sm-12.col-xs-12
-            .row.mb-xs
-              .col-xs-6.col-md-3
-                +Button({title:"далее",submit:true})
-              .col-xs-6.col-md-3
-                +Button({title:"назад",submit:false})  
+        include ../../../blocks/form-submit/template
 
