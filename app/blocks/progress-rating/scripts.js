@@ -21,20 +21,13 @@ $(() => {
       })
       scaleColoring(checkedValue)
       function scaleColoring(checkedValue) {
-        // В зависимости от data-required присвоить инпуту  аттрибут required
-        scaleRating.siblings('.input-text').children('input').on('change',function () {
-          const input = $(this);
-          let len = (input.val())
-          if (len.length > 0 ) {
-            scaleRating.siblings('.input-text').children('input').removeAttr('required')
-            scaleRating.siblings('.input-text').attr('data-error','')
-            scaleRating.siblings('.input-text').removeClass('input-text--error')
-          }
-        })
         if (checkedValue <= dataRequired) {
-          scaleRating.siblings('.input-text').children('input').attr('required','required')
-          scaleRating.siblings('.input-text').attr('data-error',errorInputText)
-          scaleRating.siblings('.input-text').addClass('input-text--error')
+          let textValueInput = scaleRating.siblings('.input-text').children('input')
+          if (textValueInput.val().length <= 0) {
+            scaleRating.siblings('.input-text').children('input').attr('required', 'required')
+            scaleRating.siblings('.input-text').attr('data-error', errorInputText)
+            scaleRating.siblings('.input-text').addClass('input-text--error')
+          }
         }
         else {
           scaleRating.siblings('.input-text').children('input').removeAttr('required')
