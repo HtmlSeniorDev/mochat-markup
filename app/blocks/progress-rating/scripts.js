@@ -6,28 +6,28 @@ $(() => {
     const radio = $(this);
     radio.on('click', function () {
       const ratingId = $(this).closest('.rating').attr('data-scale') // текущая шкала с рейтингом
-      const centerBlock = rating.find(`[data-value=${radio.attr('value')}]`);
+      const centerBlock = rating.find(`[data-value=${radio.attr('checked-value')}]`);
       const scaleRating = $(`[data-scale=${ratingId}]`);
       const checkedValue = centerBlock.attr('data-value') // значение выбранной радиокнопки
       const dataRequired = scaleRating.attr('data-required');
       const elementsLineList = scaleRating.children('.rating__rating-wrapper').children('.rating__line-val') // cписок линий для раскраски
       const LabelList = scaleRating.children('.rating__rating-wrapper').children('.rating__center').children(`label`)  // список лейблов
+      const textValueInput = scaleRating.siblings('.input-text').children('input')
       // очищаем все не выбранные лейблы
       LabelList.each(function () {
         const label = $(this)
-        if (radio.attr('value') !== label.attr('data-color')) {
+        if (radio.attr('checked-value') !== label.attr('data-color')) {
           label.removeClass('rating__extra-after rating__extra-after--color-1')
         }
       })
       scaleColoring(checkedValue)
       function scaleColoring(checkedValue) {
-        if (checkedValue <= dataRequired) {
-          let textValueInput = scaleRating.siblings('.input-text').children('input')
-          if (textValueInput.val().length <= 0) {
+        let inputIsNotEmpty = textValueInput.val().length <= 0 //  инпут пустой?
+        let checkedLessRequire = +checkedValue <= +dataRequired //  checked <= значения из аттрибута data-required?
+        if (checkedLessRequire && inputIsNotEmpty) {
             scaleRating.siblings('.input-text').children('input').attr('required', 'required')
             scaleRating.siblings('.input-text').attr('data-error', errorInputText)
             scaleRating.siblings('.input-text').addClass('input-text--error')
-          }
         }
         else {
           scaleRating.siblings('.input-text').children('input').removeAttr('required')
