@@ -1,4 +1,4 @@
-.checkbox {
+.sp-checkbox {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -40,8 +40,8 @@
   }
   //  создаем границу чекбокса
   label::before {
-    top: 3px;
-    left: 0;
+    top: 4px;
+    left: 1px;
     box-sizing: border-box;
     width: 20px;
     height: 20px;

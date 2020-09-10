@@ -26,7 +26,8 @@ mixin rating-scale(props = {})
           +e.INPUT(
             type='radio',
             name=`rating-${nameId}` 
-            value=item + '' 
+            value=''
+            checked-value=item + ''
             id=`${randomId}-stars`)
           +e.LABEL(
             for=`${randomId}-stars`
