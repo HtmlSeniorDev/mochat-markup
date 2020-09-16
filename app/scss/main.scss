@@ -25,6 +25,21 @@
     width: 100%;
   }
 }
+
+.parsley-errors-list {
+ display: none;
+}
+
+.parsley-errors-list li {
+  display: none;
+}
+.parsley-required{
+  display: none;
+}
+
+.parsley-error {
+  display: none;
+}
 button {
   cursor: pointer;
   background-color: #fff;
