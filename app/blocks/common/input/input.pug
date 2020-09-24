@@ -8,12 +8,13 @@
         - {string} props.errorText - Текст ошибки
         - {boolean} props.isDisabled  - Активный инпут?
         - {boolean} props.required  - Обязательный?
-  
+        - {boolean} props.big  - большой инпут
 mixin input(props = {})
   -
     const classNames = [
       (props.errorText ? 'input-text--error' : ''),
-      (props.isDisabled ? 'input-text--disabled': '')
+      (props.isDisabled ? 'input-text--disabled': ''),
+      (props.isBig ? 'input-text--big' : '')
     ].filter(className => className !== '').join(' ')
   +b.input-text(class=classNames data-error = "")
     if (props.labelText)

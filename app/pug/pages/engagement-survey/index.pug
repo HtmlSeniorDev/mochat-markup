@@ -12,276 +12,274 @@ block content
     +b.MAIN.engagement-survey
       +e.progress-wrapper
         include ../../../blocks/progress-steps/template
-      form(action='')    
-        .row
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 1
-                  +b.survey-text.mr-sm
-                    p Непосредственный руководитель ставит мне четкие цели и задачи
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required:true,
-                })
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 2
-                  +b.SPAN.survey-text.mr-sm
-                    p Мой руководитель часто хвалит меня за хорошо выполненную работу *
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1], error: true})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-        .row
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 3
-                  +b.survey-text.mr-sm
-                    p Я часто получаю обратную связь о своей работе от руководителя
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 4
-                  +b.survey-text.mr-sm
-                    p Мой руководитель активно участвует в моем профессиональном развитии
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-        .row
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 5
-                  +b.survey-text.mr-sm
-                    p Рабочие совещания нашей команды и руководителя проходят эффективно
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 6
-                  +b.survey-text.mr-sm
-                    p Рабочие совещания нашей команды и руководителя проходят эффективно
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-        .row
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 7
-                  +b.survey-text.mr-sm
-                    p Я знаю стратегию компании и четкий план действий на ближайший год      
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 8
-                  +b.survey-text.mr-sm
-                    p Я согласен, что ценности нашей компании и ее деятельность тесно взаимосвязаны между собой и дополняют друг друга
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-        .row
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 9
-                  +b.survey-text.mr-sm
-                    p Я согласен с тем, что для достижения успеха моя компания может пересматривать стратегические цели и изменять направление моей работы     
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 10
-                  +b.survey-text.mr-sm
-                    p Я понимаю, как моя работа соотносится со стратегическими целями и приоритетами нашей компании, каких результатов ждут от моей работы 
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-                // Section Checkboxes
-        .row
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 11
-                  +b.survey-text.mr-sm
-                    p Когда я выбирал нашу компанию в качестве работодателя, меня привлекло (до 4 вариантов)
+      form(action='')
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 1
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required:true,
+                isBig:true
+              })
+        hr       
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 2
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })
+        hr      
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 3
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })
+        hr
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 4
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              }) hr       
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 5
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })
+        hr      
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 6
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })
+        hr
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 7
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              }) hr      
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 8
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })
+        hr
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 9
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })
+        hr
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 10
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })
+        hr
         include ../../../blocks/checkbox-area/template
-        .row.mb-md
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 12
-                  +b.survey-text.mr-sm
-                    p Непосредственный руководитель ставит мне четкие цели и задачи
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-          .col-lg-6.col-sm-12.col-xs-12
-            .col-xs-12.col-lg-11.mb-extra-xs
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 13
-                  +b.survey-text.mr-mb
-                    p Что необходимо сделать, чтобы ваша команда стала еще более сплоченной и успешной?
-            .row
-              .col-xs-12.col-lg-11
-                +input({
-                  placeholder: "Ваш ответ",
-                  labelText: 'Свободный ответ',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-        .row.mb-lg
-          .col-lg-6.col-sm-12.col-xs-12.mb-responsive-sm
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 14
-                  +b.survey-text.mr-sm
-                    p Я часто получаю обратную связь о своей работе от руководителя
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range:[10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                })
-          .col-lg-6.col-sm-12.col-xs-12
-            .col-xs-12.col-lg-11
-              .row
-                +e.align-items-wrapper.mb-responsive-sm
-                  +b.progress-pagination.mr-sm
-                    +e.item 15
-                  +b.survey-text.mr-sm
-                    p Мой руководитель активно участвует в моем профессиональном развитии
-            .row
-              .col-xs-12.col-lg-11
-                +rating-scale({range: [10,9,8,7,6,5,4,3,2,1]})
-                +input({
-                  placeholder: "Ваш комментарий",
-                  labelText: '',
-                  errorText: '',
-                  isDisabled: false,
-                  required: true,
-                        
-                })
-        include ../../../blocks/form-submit/template
+        hr
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 12
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })   
+        hr
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 13
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })   
+        hr
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 14
+              +b.survey-text.mr-sm
+                p Что необходимо сделать, чтобы ваша команда стала еще более сплоченной и успешной?
+            .ml-4    
+              +b.survey-text--small
+                p *Ответьте в поле справа
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш ответ",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })  
+        hr
+        .row.align-center
+          .col-md-6.col-xs-12
+            +e.align-items-wrapper.mb-responsive-sm
+              +b.progress-pagination.mr-sm
+                +e.item 15
+              +b.survey-text.mr-sm
+                p Непосредственный руководитель ставит мне четкие цели и задачи
+            +rating-scale({range: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]})
+          .col-md-6.col-xs-12
+            .js-for-scale
+              +input({
+                placeholder: "Ваш комментарий",
+                labelText: '',
+                errorText: '',
+                isDisabled: false,
+                required: true,
+                isBig: true
+              })
+        .mt-4     
+         include ../../../blocks/form-submit/template
 

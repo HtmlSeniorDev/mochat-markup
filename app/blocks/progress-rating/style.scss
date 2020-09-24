@@ -45,7 +45,7 @@
 
   &__line-val {
       width: 12%;
-      height: 3px;
+      height: 4px;
       padding-right: 4px;
       padding-left: 4px;
       margin-top: 3px;
@@ -65,9 +65,10 @@
 
   &__extra-after {
     position: absolute;
+    top:-1.6px !important;
     display: block;
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     color: #CAC84A;
     content: '';
     background-color: #CAC84A;
@@ -95,8 +96,8 @@
     top: 3px;
     box-sizing: border-box;
     display: block;
-    width: 3px;
-    height: 3px;
+    width: 4px;
+    height: 4px;
     content: '';
     background-color: #fff;
     border-radius: 50px;
@@ -108,8 +109,8 @@
     top: 3px;
     box-sizing: border-box;
     display: block;
-    width: 3px;
-    height: 3px;
+    width: 4px;
+    height: 4px;
     content: '';
     background-color: #90BC56;
     border-radius: 50px;

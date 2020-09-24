@@ -12,7 +12,8 @@ $(() => {
       const dataRequired = scaleRating.attr('data-required');
       const elementsLineList = scaleRating.children('.rating__rating-wrapper').children('.rating__line-val') // cписок линий для раскраски
       const LabelList = scaleRating.children('.rating__rating-wrapper').children('.rating__center').children(`label`)  // список лейблов
-      const textValueInput = scaleRating.siblings('.input-text').children('input')
+      const textValueInput = $('.js-for-scale');
+      console.log(scaleRating.closest('.engagement-survey__align-items-wrapper').find('.input-text'))
       // очищаем все не выбранные лейблы
       LabelList.each(function () {
         const label = $(this)
@@ -25,14 +26,14 @@ $(() => {
         let inputIsNotEmpty = textValueInput.val().length <= 0 //  инпут пустой?
         let checkedLessRequire = +checkedValue <= +dataRequired //  checked <= значения из аттрибута data-required?
         if (checkedLessRequire && inputIsNotEmpty) {
-            scaleRating.siblings('.input-text').children('input').attr('required', 'required')
-            scaleRating.siblings('.input-text').attr('data-error', errorInputText)
-            scaleRating.siblings('.input-text').addClass('input-text--error')
+          scaleRating.closest('.align-center').find('.input-text').children('input').attr('required', 'required')
+          scaleRating.closest('.align-center').find('.input-text').attr('data-error', errorInputText)
+          scaleRating.closest('.align-center').find('.input-text').addClass('input-text--error')
         }
         else {
-          scaleRating.siblings('.input-text').children('input').removeAttr('required')
-          scaleRating.siblings('.input-text').attr('data-error','')
-          scaleRating.siblings('.input-text').removeClass('input-text--error')
+          scaleRating.closest('.align-center').find('.input-text').removeAttr('required')
+          scaleRating.closest('.align-center').find('.input-text').attr('data-error','')
+          scaleRating.closest('.align-center').find('.input-text').removeClass('input-text--error')
         }
         let compareObject = colorComparator(+checkedValue)
         let color = compareObject.line // цвет линии
