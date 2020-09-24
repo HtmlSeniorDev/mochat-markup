@@ -1,9 +1,13 @@
 .survey-text {
   display: inline;
   font-family: Ubuntu,sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: normal;
   line-height: 20px;
   color: #737373;
+
+  &--small {
+    font-size: 14px;
+  }
 }

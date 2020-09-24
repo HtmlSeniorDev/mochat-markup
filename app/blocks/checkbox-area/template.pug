@@ -1,5 +1,11 @@
 .row.mb-sm(data-required-free=0).js-checkbox-required
-  .col-lg-6.col-xs-12
+  .col-xs-12
+    +e.align-items-wrapper.mb-responsive-sm
+      +b.progress-pagination.mr-sm
+        +e.item 11
+      +b.survey-text.mr-sm
+        p Непосредственный руководитель ставит мне четкие цели и задачи
+  .col-md-6.col-xs-12
     DIV(data-checkboxes-1="checkboxes")
       +checkbox({title: 'Уровень дохода'})
       +checkbox({title: 'Известность, бренд компании'})
@@ -8,7 +14,7 @@
       +checkbox({title: 'Возможность карьерного роста (повышение в должности)'})
       +checkbox({title: 'Условия труда (график, загруженность и т.д.)'})
       +checkbox({title: 'Личность непосредственного руководителя'})
-  .col-lg-6.col-xs-12
+  .col-md-6.col-xs-12
     DIV(data-checkboxes-2="checkboxes")
       +checkbox({title: 'Стабильность компании, уверенность в завтрашнем дне'})
       +checkbox({title: 'Интересная, содержательная работа'})

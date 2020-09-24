@@ -147,5 +147,18 @@ button {
   @media (max-width: 768px) {
     margin-bottom: 16px;
   }
+}
+.align-center {
+  align-items: center;
+}
+@for $i from 0 through 10 {
+  .ml-#{$i} {
+    margin-left: 10px * $i;
+  }
+}
 
+@for $i from 0 through 10 {
+  .mt-#{$i} {
+    margin-top: 10px * $i;
+  }
 }
