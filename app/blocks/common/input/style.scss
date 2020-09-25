@@ -14,19 +14,24 @@
     letter-spacing: 0.01em;
     content: attr(data-error);
   }
-  &--big {
+  &--area {
     #{$r}__control {
-      height: 88px;
-      padding-bottom: 40px;
+      font-family: Ubuntu,sans-serif;
+      font-style: normal;
+      font-weight: 300;
       font-size: 14px;
+      line-height: 20px;
+      resize: none;
+      height: 96px;
+      padding-top: 10px;
     }
   }
 
 
   &--error {
-  #{$r}__control {
-    border: 1px solid $color-wild-watermelon;
-  }
+    #{$r}__control {
+      border: 1px solid $color-wild-watermelon;
+    }
   }
 
   &__error-text {
@@ -76,10 +81,5 @@
       color: #A3A3A3;
     }
 
-    textarea {
-      height: auto;
-    }
   }
 }
-
-

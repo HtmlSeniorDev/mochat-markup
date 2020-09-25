@@ -8,23 +8,32 @@
         - {string} props.errorText - Текст ошибки
         - {boolean} props.isDisabled  - Активный инпут?
         - {boolean} props.required  - Обязательный?
-        - {boolean} props.big  - большой инпут
+        - {boolean} props.areaInput  - Заменяет инпут на textarea
+        - {boolean} props.multiline - Используется , когда (areaInput:true)
+
 mixin input(props = {})
   -
     const classNames = [
       (props.errorText ? 'input-text--error' : ''),
       (props.isDisabled ? 'input-text--disabled': ''),
-      (props.isBig ? 'input-text--big' : '')
+      (props.areaInput ? 'input-text--area' : '')
     ].filter(className => className !== '').join(' ')
   +b.input-text(class=classNames data-error = "")
     if (props.labelText)
       +e.LABEL.label-text= props.labelText
     if (!props.isDisabled)
-      +e.INPUT.control(
-        type='input'
-        placeholder=props.placeholder
-        required=props.required && "required"
-      )
+      if (props.multiline)
+          +e.TEXTAREA.control(
+          type='input'
+          placeholder=props.placeholder
+          required=props.required && "required"
+        )
+      else   
+        +e.INPUT.control(
+          type='input'
+          placeholder=props.placeholder
+          required=props.required && "required"
+        )
     else
       +e.INPUT.control(
         disabled
