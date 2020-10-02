@@ -26,7 +26,7 @@ $(() => {
         let inputIsNotEmpty = textValueInput.val().length <= 0 //  инпут пустой?
         let checkedLessRequire = +checkedValue <= +dataRequired //  checked <= значения из аттрибута data-required?
         if (checkedLessRequire && inputIsNotEmpty) {
-          scaleRating.closest('.align-center').find('.input-text').children('input').attr('required', 'required')
+          scaleRating.closest('.align-center').find('.input-text').children('textarea').attr('required', 'required')
           scaleRating.closest('.align-center').find('.input-text').attr('data-error', errorInputText)
           scaleRating.closest('.align-center').find('.input-text').addClass('input-text--error')
         }
