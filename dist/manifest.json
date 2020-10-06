@@ -1,7 +1,7 @@
 {
   "runtime.js": "scripts/runtime.afed.js",
-  "app.css": "styles/app.c98e.css",
-  "app.js": "scripts/app.d744.js",
+  "app.css": "styles/app.d52c.css",
+  "app.js": "scripts/app.8a16.js",
   "markup_dom.js": "scripts/markup_dom.5378.js",
   "markup_engagement.js": "scripts/markup_engagement.8c45.js",
   "markup_pageList.js": "scripts/markup_pageList.9540.js",
@@ -10,7 +10,7 @@
   "update-browser.css": "styles/update-browser.f094.css",
   "update-browser.js": "scripts/update-browser.9e41.js",
   "vendors.css": "styles/vendors.7acc.css",
-  "vendors.js": "scripts/vendors.667c.js",
+  "vendors.js": "scripts/vendors.8c1d.js",
   "../stats.json": "../stats.json",
   "dom-expert.html": "dom-expert.html",
   "engagement-survey.html": "engagement-survey.html",
