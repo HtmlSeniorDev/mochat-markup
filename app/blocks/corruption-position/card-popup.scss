@@ -1,0 +1,39 @@
+/* card-popup -- start */
+.card-popup {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.card-popup__wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.card-popup__title {
+    font-size: 22px;
+    line-height: 1.36;
+    letter-spacing: 0.1px;
+    color: #363636;
+}
+
+.card-popup__content-wrap {
+    padding-top: 26px;
+    margin-top: 26px;
+    border-top: 1px solid #EDEDED;
+}
+
+.card-popup__content {
+    padding-right: 60px;
+    max-height: 504px;
+    overflow: auto;
+}
+
+.card-popup--description {
+    width: 840px;
+}
+
+.card-popup--error {
+    width: 521px;
+}
+
+/* card-popup -- end */

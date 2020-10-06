@@ -1,0 +1,32 @@
+/* link-delete styles -- start */
+.link-delete {
+    position: relative;
+    display: inline-block;
+    padding-right: 18px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.57;
+    color: #FF7B7B;
+    background-image: url("data:image/svg+xml,%3Csvg width='9' height='9' viewBox='0 0 9 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.267327 1.51485C-0.0891089 1.15842 -0.0891089 0.623762 0.267327 0.267327C0.623762 -0.0891089 1.15842 -0.0891089 1.51485 0.267327L4.54455 3.20792L7.48515 0.267327C7.84158 -0.0891089 8.37624 -0.0891089 8.73267 0.267327C9.08911 0.623762 9.08911 1.15842 8.73267 1.51485L5.79208 4.54455L8.73267 7.48515C9.08911 7.84158 9.08911 8.37624 8.73267 8.73267C8.37624 9.08911 7.84158 9.08911 7.48515 8.73267L4.54455 5.79208L1.51485 8.73267C1.15842 9.08911 0.623762 9.08911 0.267327 8.73267C-0.0891089 8.37624 -0.0891089 7.84158 0.267327 7.48515L3.20792 4.54455L0.267327 1.51485Z' fill='%23FF7B7B'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right top 70%;
+    background-size: 9px 9px;
+}
+
+.link-delete:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 18px;
+    bottom: -1px;
+    height: 1px;
+    background-image: linear-gradient(90deg,#FF7B7B,#FF7B7B 37.5%,transparent 0,transparent 62.5%,#FF7B7B 0,#FF7B7B);
+    background-size: 8px 1px;
+}
+
+.link-delete:hover, .link-delete:active, .link-delete:focus, .link-delete:focus:hover {
+    color: #FF7B7B;
+    opacity: .8;
+}
+
+/* link-delete styles -- end */

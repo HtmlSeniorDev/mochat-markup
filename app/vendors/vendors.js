@@ -43,12 +43,12 @@ import './custom/reset/reset.scss'
 // Подключаем Styles
 // import 'fancybox/dist/css/jquery.fancybox.css';
 //
-// tingle.js - https://github.com/robinparisi/tingle (https://robinparisi.github.io/tingle/)
+// tingle - https://github.com/robinparisi/tingle (https://robinparisi.github.io/tingle/)
 // Модалка
 // Подключаем Scripts
-// import 'babel-loader!expose-loader?tingle!tingle.js/src/tingle.js'
+// import 'babel-loader!expose-loader?tingle!tingle/src/tingle'
 // Подключаем Styles
-// import './custom/tingle.js/tingle.scss'
+// import './custom/tingle/tingle.scss'
 //
 // Highlightjs - https://github.com/isagalaev/highlight.js (http://highlightjs.readthedocs.io/en/latest/)
 // Подсветка синтаксиса

@@ -1,0 +1,42 @@
+/* relatives styles -- start */
+.relatives {
+
+}
+.relatives__template {
+    display: none;
+}
+.relatives__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.relatives__item {
+    flex: 0 0 50%;
+    padding: 0 8px;
+    margin-top: 40px;
+}
+.relatives__item:nth-child(1) {
+    margin-top: 0;
+}
+.relatives__item:nth-child(2) {
+    margin-top: 0;
+}
+
+.relatives__btn-add {
+    margin-top: 22px;
+}
+
+.relatives__field {
+    margin-top: 22px;
+}
+
+.relatives__field:first-child {
+    margin-top: 0;
+}
+
+.relatives__btn-delete {
+    margin-top: 6px;
+}
+
+/* relatives styles -- end */

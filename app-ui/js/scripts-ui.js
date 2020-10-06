@@ -234,7 +234,7 @@ function renderBlock(name) {
       $(document).on('click', 'input, textarea, .jcf-select, select', function() {
         const _self = $(this)
         _self.removeClass('is-invalid')
-        _self.prev('select').removeClass('is-invalid')
+        _self.prev('select.scss').removeClass('is-invalid')
         $(`input[type='radio'][name='${_self.attr('name')}']`).removeClass('is-invalid')
       })
     })

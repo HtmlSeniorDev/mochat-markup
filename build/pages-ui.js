@@ -6,7 +6,7 @@ const paths = require('./pathsApp')
 
 module.exports = [
   parts.page({
-    title: 'index',
+    title: 'index.pug.html',
     path: 'pages/index',
     entry: {
       blockList: path.join(paths.app, 'pug/pages/index')

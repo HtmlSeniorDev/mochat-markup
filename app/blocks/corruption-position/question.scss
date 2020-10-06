@@ -1,0 +1,25 @@
+/* question styles -- start */
+.question {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.57;
+}
+
+.question__text {
+    flex-grow: 1;
+    margin-right: 54px;
+}
+
+.question__answer {
+    flex: none;
+    min-width: 23px;
+}
+
+.question--light .question__text {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+    color: #A3A3A3;
+}
+/* question styles -- end */

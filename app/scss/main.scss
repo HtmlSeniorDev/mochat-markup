@@ -3,7 +3,7 @@
 @import 'tools/all';
 @import 'other/all';
 @import 'fonts';
-
+@import '../static/libs/tingle/tingle.min.css';
 //
 // Либы
 // @import '../vendors/custom/smart-grid/smart-grid';
@@ -162,3 +162,47 @@ button {
     margin-top: 10px * $i;
   }
 }
+
+.custom_form_for_bp input[name='FIO'], .custom_form_for_bp input[name='Manager']{
+  width: 160px !important;
+  float: left;
+  margin-right: 15px;
+}
+.custom_form_for_bp a{
+  float: left;
+  font-size: 14px;
+  line-height: 28px;
+  color: #8bc540;
+  width: 91px !important;
+}
+.custom_form_for_bp .input-block span{
+  float: left;
+  margin: 0 0 15px;
+  font-size: 12px;
+}
+.custom_form_for_bp .input-block span.structure-department-head{
+  float: left;
+  position: relative;
+  margin-left: 5px;
+}
+.custom_form_for_bp .selection{
+  float: none !important;
+}
+.custom_form_for_bp .input-block .selection span{
+  float: none !important;
+}
+input[name="USERNAME"], input[name='MANAGER'] {
+  width: 100% !important;
+}
+.custom_form_for_bp input[name='MANAGER']{
+  display:none;
+}
+
+.container_hidden{
+  display: none;
+}
+
+
+
+
+
