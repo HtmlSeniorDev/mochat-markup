@@ -4,7 +4,7 @@ include ../../../blocks/about/template
 include ../../../blocks/steps/template
 
 block variables
-  - var title = 'Персонал';
+  - var title = 'Декларация конфликта интересов';
 
 block content
  .content-width
@@ -157,28 +157,28 @@ block content
                  .question
                    .question__text
                      | В активах АО «ДОМ.РФ» или организаций единого института развития в жилищной с сфере далее — АО «ДОМ.РФ» ?
-                   .question__answer
+                   .question__answer.question__answer--bold
                      | Нет
              .card-info__item
                .card-info__question
                  .question
                    .question__text
                      | В другой компании, находящейся в деловых отношениях с АО «ДОМ,РФ» контрагенте подрядчике консультанте клиенте и т.п. ?
-                   .question__answer
+                   .question__answer.question__answer--bold
                      | Нет
              .card-info__item
                .card-info__question
                  .question
                    .question__text
                      | В компании или организации, которая может быть заинтересована или ищет возможность построить деловые отношения с АО «ДОМ,РФ» или ведет такие переговоры?
-                   .question__answer
+                   .question__answer.question__answer--bold
                      | Нет
              .card-info__item
                .card-info__question
                  .question
                    .question__text
                      | В деятельности компании-конкурента или физического лица-конкурента АО «ДОМ, РФ»?
-                   .question__answer
+                   .question__answer.question__answer--bold
                      | Да
                .card-info__comment
                  | Комментарий, который указывает пользователь при положительном ответе. Комментарий, который указывает пользователь при положительном ответе.Комментарий, который указывает пользователь при положительном ответе. Комментарий, который указывает пользователь при положительном ответе. Комментарий, который указывает пользователь при положительном ответе.Комментарий, который указывает пользователь при положительном ответе.
@@ -186,14 +186,14 @@ block content
                  .question.question--light
                    .question__text
                      | Подавали ли Вы уведомление в соответствии с Порядком уведомления работодателя работниками единого института развития в жилищной сфере и его организаций о возникновении личной заинтересованности, которая приводит или может привести к конфликту интересов?
-                   .question__answer
+                   .question__answer.question__answer--bold
                      | Да
              .card-info__item
                .card-info__question
                  .question
                    .question__text
                      | В компании или организации, выступающей стороной в судебном или арбитражном разбирательстве с АО «ДОМ.РФ»?
-                   .question__answer
+                   .question__answer--bold
                      | Нет
      .declaration__block-text
        | Участвуете ли вы в настоящее время в какой-либо иной деятельности, кроме описанной выше, которая конкурирует с интересами АО «ДОМ.РФ» в любой форме, включая, но не ограничиваясь, приобретение или отчуждение каких-либо активов (имущества) или возможности развития бизнеса или бизнес-проектов?
@@ -363,17 +363,21 @@ block content
                .form-declaration__title
                  | Отправить на доработку
                .form-declaration__items
-                 .form-declaration__item
-                   .field
-                     .field__control
-                       .input-text
-                         textarea.input-text__control(placeholder='Укажите, что необходимо изменить *' rows='3' name='comment' data-rule-required='true' data-msg-required='Заполните поле' data-rule-minlength='11' data-msg-minlength='Поле должно содержать более 10 символов')
-               .form-declaration__btn-wrap
-                 button.form-declaration__btn-submit.ui-btn.ui-btn-primary(type='submit')
-                   | Согласовать
-   .bp-task-page
-     .bp-title
-       | Внесение изменений в декларацию
+                 .row
+                   .row__col-1-2
+                     .form-declaration__item
+                       .field
+                         .field__control
+                           .input-text
+                             input.input-text__control(placeholder='Укажите, что необходимо изменить *' rows='3' name='comment' data-rule-required='true' data-msg-required='Заполните поле' data-rule-minlength='11' data-msg-minlength='Поле должно содержать более 10 символов')
+                   .row__col-1-4
+                     .form-declaration__item
+                       .form-declaration__btn-wrap
+                         button.form-declaration__btn-submit.ui-btn.ui-btn-primary(type='submit')
+                           | Согласовать
+     .bp-task-page
+       .bp-title
+         | Внесение изменений в декларацию
    form.declaration.form-declaration-edit
      .declaration__btns-top
        button.declaration__btn-save.ui-btn.ui-btn-primary(type='button')
@@ -648,7 +652,7 @@ block content
                              .input-date__inner
                                .input-date__icon-wrap
                                  .input-date__icon
-                               input.input-date__control(type='text' placeholder='00.00.0000' value='22.07.2002' name='relative_1_birth_date' data-rule-required='true' data-msg-required='Выберите дату' onclick='BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});')
+                               input.input-date__control(type='text' disabled=false placeholder='00.00.0000' value='22.07.2002' name='relative_1_birth_date' data-rule-required='true' data-msg-required='Выберите дату' onclick='BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});')
                .card-info__row
                  .row
                    .row__col-1-4

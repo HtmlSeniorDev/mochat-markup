@@ -5,15 +5,15 @@
 }
 
 .card-popup__wrapper {
-    padding-left: 40px;
     padding-right: 40px;
+    padding-left: 40px;
 }
 
 .card-popup__title {
     font-size: 22px;
     line-height: 1.36;
-    letter-spacing: 0.1px;
     color: #363636;
+    letter-spacing: 0.1px;
 }
 
 .card-popup__content-wrap {
@@ -23,8 +23,8 @@
 }
 
 .card-popup__content {
-    padding-right: 60px;
     max-height: 504px;
+    padding-right: 60px;
     overflow: auto;
 }
 

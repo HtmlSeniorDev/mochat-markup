@@ -6,16 +6,16 @@
 }
 
 .form-declaration__container {
-    padding-left: 73px;
     padding-right: 32px;
+    padding-left: 73px;
 }
 
 
 .form-declaration__title {
-    font-weight: 500;
     font-size: 22px;
+    font-weight: 500;
     line-height: 1.36;
-    color: #000000;
+    color: #000;
 }
 
 .form-declaration__items {
@@ -45,8 +45,8 @@
 }
 
 .form-declaration--equal-paddings .form-declaration__container {
-    padding-left: 32px;
     padding-right: 32px;
+    padding-left: 32px;
 }
 
 .form-declaration--h-100 {

@@ -1,8 +1,8 @@
 /* card-info styles -- start */
 .card-info {
-    border: 1px solid #DDDDDD;
-    border-radius: 4px;
     padding-top: 10px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
 }
 
 .card-info__item {
@@ -19,13 +19,13 @@
 }
 
 .card-info__text {
-    margin-top: 16px;
     padding-right: 120px;
+    margin-top: 16px;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.71;
-    letter-spacing: 0.01em;
     color: #7C899A;
+    letter-spacing: 0.01em;
 }
 
 .card-info__text:first-child {
@@ -42,8 +42,8 @@
 }
 
 .card-info__field {
-    margin-top: 16px;
     width: 556px;
+    margin-top: 16px;
 }
 
 .card-info__field:first-child {
@@ -51,12 +51,12 @@
 }
 
 .card-info__comment {
-    margin-top: 16px;
     padding-right: 180px;
-    font-size: 12px;
+    margin-top: 16px;
+    font-size: 14px;
     line-height: 1.5;
-    letter-spacing: 0.1px;
     color: #A3A3A3;
+    letter-spacing: 0.1px;
 }
 
 .card-info__comment:first-child {
@@ -72,14 +72,14 @@
 }
 
 .card-info__text-common {
+    padding-top: 16px;
     padding-right: 136px;
     padding-left: 16px;
-    padding-top: 16px;
     font-size: 14px;
     font-weight: 300;
     line-height: 1.71;
-    letter-spacing: 0.01em;
     color: #7C899A;
+    letter-spacing: 0.01em;
 }
 
 .card-info__editable {
@@ -89,4 +89,5 @@
 .card-info--no-paddings {
     padding-top: 0;
 }
+
 /* card-info styles -- end */

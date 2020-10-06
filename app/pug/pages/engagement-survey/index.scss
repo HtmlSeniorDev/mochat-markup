@@ -5,10 +5,11 @@
 
 
   hr {
-    background-color:#D6D6D6;
     height: 2px;
+    background-color:#D6D6D6;
     border: none;
   }
+
   @include media-xsm() {
     width: 84%;
     padding: 40px 0;

@@ -3,8 +3,8 @@
     position: relative;
     display: inline-block;
     padding-right: 18px;
-    font-weight: 300;
     font-size: 14px;
+    font-weight: 300;
     line-height: 1.57;
     color: #FF7B7B;
     text-decoration: none;
@@ -14,13 +14,13 @@
     background-size: 9px 9px;
 }
 
-.link-delete:after {
-    content: '';
+.link-delete::after {
     position: absolute;
-    left: 0;
     right: 18px;
     bottom: -1px;
+    left: 0;
     height: 1px;
+    content: '';
     background-image: linear-gradient(90deg,#FF7B7B,#FF7B7B 37.5%,transparent 0,transparent 62.5%,#FF7B7B 0,#FF7B7B);
     background-size: 8px 1px;
 }

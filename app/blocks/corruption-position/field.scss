@@ -4,23 +4,23 @@
 }
 
 .field__label {
-    font-weight: 300;
+    margin-bottom: 7px;
     font-size: 14px;
+    font-weight: 300;
     line-height: 1.5;
     color: #737373;
-    margin-bottom: 7px;
 }
 
 .field__error {
     position: absolute;
-    background-color: #fff;
-    left: 24px;
-    top: 100%;
+    top: 0;
+    left: 46px;
     width: calc(100% - 48px);
     font-size: 12px;
     line-height: 1.33;
-    letter-spacing: 0.1px;
     color: #FF7B7B;
+    letter-spacing: 0.1px;
+    background-color: #fff;
 }
 
 

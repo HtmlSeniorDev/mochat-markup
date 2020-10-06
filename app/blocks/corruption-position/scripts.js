@@ -1,23 +1,30 @@
 import tingle from '../../static/libs/tingle/tingle.min'
 import validator from '../../static/libs/jquery-validation/jquery.validate.min.js';
 import autocomplete from '../../static/libs/jquery-autocomplete/jquery.autocomplete.min.js';
+import 'cleave.js'
+
 $(()=>{
-  /* dependencies */
-  // $('body').append('<script src="../../static/libs/jquery-validation/jquery.validate.min.js"></script>');
-  // $('body').append('<script src="../../static/libs/tingle/tingle.min.js"></script>');
-  // $('body').append('<script src="../../static/libs/jquery-autocomplete/jquery.autocomplete.min.js"></script>');
-  /* utils */
   function getScrollbarWidth() {
     return window.innerWidth - document.documentElement.clientWidth
   }
-
+  function dateValidator() {
+    new Cleave('.input-date__control', {
+      date: true,
+      delimiter: '.',
+      datePattern: ['d', 'm', 'Y']
+    });
+  }
+  dateValidator();
   /* objects */
   var Modal = function(content, options) {
+
     this.content = content;
     this.options = $.extend(
       {
         classList: ['tingle-modal--default'],
-        onOpenCallback: function() {}
+        onOpenCallback: function() {
+          console.log('open')
+        }
       },
       options
     );
@@ -269,7 +276,6 @@ $(()=>{
   new FormDeclarationEdit($('.form-declaration-edit')[0]).init();
 });
 $(()=>{
-  console.log('asd')
   $("input[name='USER_FROM']").attr('readonly','readonly');
   $("input[name='POSITION']").attr('readonly','readonly');
   $("input[name='DATE']").attr('readonly','readonly');
@@ -556,7 +562,7 @@ $(()=>{
   /* run */
   var popupDescription = new Modal($('.declaration-description').clone().html());
   var popupError = new Modal($('.declaration-error').clone().html());
-  //popupError.open();
+  // popupError.open();
 
   new Declaration($('.declaration')[0]).init();
   new Relatives($('.relatives')[0]).init();

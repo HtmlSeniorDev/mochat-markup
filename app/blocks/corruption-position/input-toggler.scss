@@ -25,14 +25,14 @@
     opacity: 0;
 }
 
-.input-toggler__control:checked~.input-toggler__mark:after {
+.input-toggler__control:checked~.input-toggler__mark::after {
     display: block;
 }
 
 .input-toggler__mark {
-    flex: none;
     position: relative;
     display: block;
+    flex: none;
     width: 20px;
     height: 20px;
     margin-right: 16px;
@@ -41,13 +41,13 @@
     transition: border-color .2s;
 }
 
-.input-toggler__mark:after {
-    display: none;
+.input-toggler__mark::after {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    display: none;
     width: 10px;
     height: 10px;
     margin: auto;
@@ -68,7 +68,7 @@
     opacity: 0.8;
 }
 
-.input-toggler--radio .input-toggler__mark,.input-toggler--radio .input-toggler__mark:after {
+.input-toggler--radio .input-toggler__mark,.input-toggler--radio .input-toggler__mark::after {
     border-radius: 50%
 }
 
@@ -87,15 +87,15 @@
 .input-toggler--agreement .input-toggler__label {
     font-size: 12px;
     line-height: 1.5;
-    color: #000000;
+    color: #000;
 }
 
 .input-toggler--form-agreement .input-toggler__label {
-    font-weight: 300;
     font-size: 14px;
+    font-weight: 300;
     line-height: 1.71;
-    letter-spacing: 0.01em;
     color: #7C899A;
+    letter-spacing: 0.01em;
 }
 
 .input-toggler--form-agreement .input-toggler__inner {
@@ -117,4 +117,5 @@
 .field--error .input-toggler__inner:hover .input-toggler__mark {
     border-color: #FF7B7B;
 }
+
 /* input-toggler styles -- end */

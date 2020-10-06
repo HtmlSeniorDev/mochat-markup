@@ -16,14 +16,14 @@
   }
   &--area {
     #{$r}__control {
-      font-family: Ubuntu,sans-serif;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 14px;
-      line-height: 20px;
-      resize: none;
       height: 96px;
       padding-top: 10px;
+      font-family: Ubuntu,sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 20px;
+      resize: none;
     }
   }
 

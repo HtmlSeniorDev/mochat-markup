@@ -14,12 +14,16 @@
 .question__answer {
     flex: none;
     min-width: 23px;
+  &--bold {
+    font-weight: bold;
+  }
 }
 
 .question--light .question__text {
     font-size: 12px;
     line-height: 1.5;
-    letter-spacing: 0.1px;
     color: #A3A3A3;
+    letter-spacing: 0.1px;
 }
+
 /* question styles -- end */
