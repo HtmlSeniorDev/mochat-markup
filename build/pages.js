@@ -6,7 +6,7 @@ const paths = require('./pathsApp')
 
 module.exports = [
   parts.page({
-    title: 'index.pug.html',
+    title: 'index.pug',
     path: 'pages/index',
     entry: {
       markup_pageList: path.join(paths.app, 'pug/pages/index')
@@ -68,5 +68,16 @@ module.exports = [
     template: path.join(paths.app, 'pug/pages/personal/index.pug'),
     // Подключаемые зависимости на страницу
     chunks: ['runtime', 'vendors', 'app', 'personal']
+  }),
+
+  parts.page({
+    title: 'corruption-position',
+    path: 'pages/corruption-position',
+    entry: {
+      markup_corruption: path.join(paths.app, 'pug/pages/corruption-position')
+    },
+    template: path.join(paths.app, 'pug/pages/corruption-position/index.pug'),
+    // Подключаемые зависимости на страницу
+    chunks: ['runtime', 'vendors', 'app', 'corruption-position']
   }),
 ]

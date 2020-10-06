@@ -1,723 +1,92 @@
 extends ../../layout/layout
-include ../../../blocks/card/template
-include ../../../blocks/about/template
-include ../../../blocks/steps/template
 
 block variables
-  - var title = 'Персонал';
+  - var title = 'Шаги';
 
 block content
-  .declaration-ajax-success(style='display: none;')
-    .card-popup.card-popup--error
-      .card-popup__header
-        .card-popup__wrapper
-          .card-popup__title
-            | Готово
-      .card-popup__content-wrap
-        .card-popup__wrapper
-          .card-popup__content
-            | Ваш ответ успешно отравлен
-  .declaration-ajax-fail(style='display: none;')
-    .card-popup.card-popup--error
-      .card-popup__header
-        .card-popup__wrapper
-          .card-popup__title
-            | Ошибка
-      .card-popup__content-wrap
-        .card-popup__wrapper
-          .card-popup__content
-            | Что-то пошло не так, попробуйте еще раз
-  .bp-task-page
-    .bp-title
-      | Декларация конфликта интересов
-  .declaration
-    .declaration__block
-      .declaration__title
-        | Декларация
-      .declaration__cards
-        .declaration__card
-          .card-info.card-info--no-paddings
-            .card-info__item
-              .row
-                .row__col-1-4
-                  .declaration__label-black
-                    | Кому:
-                  .declaration__value-light
-                    | Давыденко Сергей Денисович
-                .row__col-1-4
-                  .declaration__label-black
-                    | Должность:
-                  .declaration__value-light
-                    | Старший управляющий
-            .card-info__item
-              .row
-                .row__col-1-4
-                  .declaration__label-black
-                    | От кого:
-                  .declaration__value-light
-                    | Завьялов Михаил Андреевич
-                .row__col-1-4
-                  .declaration__label-black
-                    | Должность:
-                  .declaration__value-light
-                    | Бухгалтер
-                .row__col-1-4
-                  .declaration__label-black
-                    | Дата заполнения:
-                  .declaration__value-light
-                    | 08.06.2020
-                .row__col-1-4
-                  .declaration__label-black
-                    | Декларация охватывает период:
-                  .declaration__value-light
-                    | 08.06.2020 по 08.06.2020
-        .declaration__card
-          .card-info.card-info--no-paddings
-            .card-info__item
-              .card-info__row
-                .row
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Ф.И.О. родственника
-                    .declaration__value-light
-                      | Дмитрий Евгеньевич Завьялов
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Степень родства
-                    .declaration__value-light
-                      | Сын
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Дата рождения
-                    .declaration__value-light
-                      | 24.11.1988
-              .card-info__row
-                .row
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Наименование организации
-                    .declaration__value-light
-                      | ООО Сайтсофт
-                  .row__col-1-4
-                    .declaration__label-black
-                      | ИНН организации
-                    .declaration__value-light
-                      | 1290005689
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Должность
-                    .declaration__value-light
-                      | Дизайнер
-            .card-info__item
-              .card-info__row
-                .row
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Ф.И.О. родственника
-                    .declaration__value-light
-                      | Завьялова Елена Александровна
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Степень родства
-                    .declaration__value-light
-                      | Дочь
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Дата рождения
-                    .declaration__value-light
-                      | 24.11.1988
-              .card-info__row
-                .row
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Наименование организации
-                    .declaration__value-light
-                      | ООО Сайтсофт
-                  .row__col-1-4
-                    .declaration__label-black
-                      | ИНН организации
-                    .declaration__value-light
-                      | 1290005689
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Должность
-                    .declaration__value-light
-                      | Менеджер по продажам
-    .declaration__block
-      .declaration__title
-        | Внешние интересы или активы
-      .declaration__cards
-        .declaration__card
-          .card-info
-            .card-info__item
-              .card-info__text
-                | Владеете ли Вы или лица, действующие в Ваших интересах, прямо или как бенефициар, акциями (долями, паями)
-                | или любыми другими финансовыми интересами:
-              .card-info__question
-                .question
-                  .question__text
-                    | В активах АО «ДОМ.РФ» или организаций единого института развития в жилищной с сфере далее — АО
-                    | «ДОМ.РФ» ?
-                  .question__answer
-                    | Нет
-            .card-info__item
-              .card-info__question
-                .question
-                  .question__text
-                    | В другой компании, находящейся в деловых отношениях с АО «ДОМ,РФ» контрагенте подрядчике консультанте
-                    | клиенте и т.п. ?
-                  .question__answer
-                    | Нет
-            .card-info__item
-              .card-info__question
-                .question
-                  .question__text
-                    | В компании или организации, которая может быть заинтересована или ищет возможность построить деловые
-                    | отношения с АО «ДОМ,РФ» или ведет такие переговоры?
-                  .question__answer
-                    | Нет
-            .card-info__item
-              .card-info__question
-                .question
-                  .question__text
-                    | В деятельности компании-конкурента или физического лица-конкурента АО «ДОМ, РФ»?
-                  .question__answer
-                    | Да
-              .card-info__comment
-                | Комментарий, который указывает пользователь при положительном ответе. Комментарий, который указывает
-                | пользователь при положительном ответе.Комментарий, который указывает пользователь при положительном
-                | ответе. Комментарий, который указывает пользователь при положительном ответе. Комментарий, который
-                | указывает пользователь при положительном ответе.Комментарий, который указывает пользователь при
-                | положительном ответе.
-              .card-info__question
-                .question.question--light
-                  .question__text
-                    | Подавали ли Вы уведомление в соответствии с Порядком уведомления работодателя работниками единого
-                    | института развития в жилищной сфере и его организаций о возникновении личной заинтересованности,
-                    | которая приводит или может привести к конфликту интересов?
-                  .question__answer
-                    | Да
-            .card-info__item
-              .card-info__question
-                .question
-                  .question__text
-                    | В компании или организации, выступающей стороной в судебном или арбитражном разбирательстве с АО
-                    | «ДОМ.РФ»?
-                  .question__answer
-                    | Нет
-    .declaration__block-text
-      | Участвуете ли вы в настоящее время в какой-либо иной деятельности, кроме описанной выше, которая конкурирует с
-      | интересами АО «ДОМ.РФ» в любой форме, включая, но не ограничиваясь, приобретение или отчуждение каких-либо активов
-      | (имущества) или возможности развития бизнеса или бизнес-проектов?
-    .declaration__block
-      .declaration__title
-        | Информация об источниках доходов работинка за последние 3 года
-      .declaration__cards
-        .declaration__card
-          .card-info.card-info--no-paddings
-            .card-info__item
-              .row
-                .row__col-1-4
-                  .declaration__label-black
-                    | Наименование организации
-                  .declaration__value-light
-                    | ООО Сайтсофт
-                .row__col-1-4
-                  .declaration__label-black
-                    | ИНН организации
-                  .declaration__value-light
-                    | 1290005689
-                .row__col-1-4
-                  .declaration__label-black
-                    | Должность:
-                  .declaration__value-light
-                    | Старший управляющий
-            .card-info__item
-              .row
-                .row__col-1-4
-                  .declaration__label-black
-                    | Наименование организации
-                  .declaration__value-light
-                    | КСС Групп
-                .row__col-1-4
-                  .declaration__label-black
-                    | ИНН организации
-                  .declaration__value-light
-                    | 6590005689
-                .row__col-1-4
-                  .declaration__label-black
-                    | Должность:
-                  .declaration__value-light
-                    | Дизайнер
-    .declaration__block
-      form.form-declaration.form-agreement(action='')
-        .form-declaration__template-comment
-          .form-declaration__comment
-            .field
-              .field__control
-                .input-text
-                  textarea.input-text__control(placeholder='Комментарий: *' rows='3' data-rule-required='true' data-msg-required='Заполните поле' data-rule-minlength='11' data-msg-minlength='Поле должно содержать более 10 символов')
-        .form-declaration__container
-          .form-declaration__title
-            | Согласовать
-        .form-declaration__items
-          .form-declaration__item
-            .form-declaration__container
-              .form-declaration__choice
-                .input-toggler.input-toggler--radio.input-toggler--align-top
-                  label.input-toggler__inner
-                    input.input-toggler__control(type='radio' name='agreement_chosen' value='1' checked='')
-                    span.input-toggler__mark
-                    span.input-toggler__label Конфликт интересов не был обнаружен
-          .form-declaration__item
-            .form-declaration__container
-              .form-declaration__choice
-                .input-toggler.input-toggler--radio.input-toggler--align-top
-                  label.input-toggler__inner
-                    input.input-toggler__control(type='radio' name='agreement_chosen' value='2')
-                    span.input-toggler__mark
-                    span.input-toggler__label
-                      | Я не рассматриваю как конфликт интересов ситуацию, которая, по мнению декларировавшего их работника, создает или может создать конфликт с интересами организации
-          .form-declaration__item
-            .form-declaration__container
-              .form-declaration__choice
-                .input-toggler.input-toggler--radio.input-toggler--align-top
-                  label.input-toggler__inner
-                    input.input-toggler__control(type='radio' name='agreement_chosen' value='3')
-                    span.input-toggler__mark
-                    span.input-toggler__label
-                      | Я ограничил работнику доступ к информации организации, которая может иметь отношение к его личным частным интересам
-          .form-declaration__item
-            .form-declaration__container
-              .form-declaration__choice
-                .input-toggler.input-toggler--radio.input-toggler--align-top
-                  label.input-toggler__inner
-                    input.input-toggler__control(type='radio' name='agreement_chosen' value='4')
-                    span.input-toggler__mark
-                    span.input-toggler__label
-                      | Я отстранил (постоянно или временно) работника от участия в обсуждении и процессе принятия решений по вопросам, которые находятся или могут оказаться под влияние конфликта интересов
-          .form-declaration__item
-            .form-declaration__container
-              .form-declaration__choice
-                .input-toggler.input-toggler--radio.input-toggler--align-top
-                  label.input-toggler__inner
-                    input.input-toggler__control(type='radio' name='agreement_chosen' value='5')
-                    span.input-toggler__mark
-                    span.input-toggler__label Я пересмотрел круг обязанностей и трудовых функций работника
-          .form-declaration__item
-            .form-declaration__container
-              .form-declaration__choice
-                .input-toggler.input-toggler--radio.input-toggler--align-top
-                  label.input-toggler__inner
-                    input.input-toggler__control(type='radio' name='agreement_chosen' value='6')
-                    span.input-toggler__mark
-                    span.input-toggler__label
-                      | Я ходатайствовал перед вышестоящим руководством о временном отстранении работника от должности, исполнение обязанностей которой приводит к возникновению конфликта интересов между его должностными обязанностями и личными интересами
-          .form-declaration__item
-            .form-declaration__container
-              .form-declaration__choice
-                .input-toggler.input-toggler--radio.input-toggler--align-top
-                  label.input-toggler__inner
-                    input.input-toggler__control(type='radio' name='agreement_chosen' value='7')
-                    span.input-toggler__mark
-                    span.input-toggler__label
-                      | Я ходатайствовал о переводе работника на должность, предусматривающую выполнение служебных обязанностей, не связанных с конфликтом интересов
-          .form-declaration__item
-            .form-declaration__container
-              .form-declaration__choice
-                .input-toggler.input-toggler--radio.input-toggler--align-top
-                  label.input-toggler__inner
-                    input.input-toggler__control(type='radio' name='agreement_chosen' value='8')
-                    span.input-toggler__mark
-                    span.input-toggler__label
-                      | Я ходатайствовал перед вышестоящим руководством об увольнении работника по инициативе организации за дисциплинарные проступки согласно действующему законодательство Российской Федерации
-          .form-declaration__item
-            .form-declaration__container
-              .form-declaration__choice
-                .input-toggler.input-toggler--radio.input-toggler--align-top
-                  label.input-toggler__inner
-                    input.input-toggler__control(type='radio' name='agreement_chosen' value='9')
-                    span.input-toggler__mark
-                    span.input-toggler__label
-                      | Я передал декларацию вышестоящему руководителю для проверки и определения наилучшего способа разрешения конфликта интересов
-        .form-declaration__btn-wrap
-          .form-declaration__container
-            button.form-declaration__btn-submit.ui-btn.ui-btn-primary(type='submit')
-              | Согласовать
-    .declaration__block
-      form.form-declaration.form-return-declaration(action='')
-        .form-declaration__container
-          .form-declaration__title
-            | Отправить на доработку
-          .form-declaration__items
-            .form-declaration__item
-              .field
-                .field__control
-                  .input-text
-                    textarea.input-text__control(placeholder='Укажите, что необходимо изменить *' rows='3' name='comment' data-rule-required='true' data-msg-required='Заполните поле' data-rule-minlength='11' data-msg-minlength='Поле должно содержать более 10 символов')
-          .form-declaration__btn-wrap
-            button.form-declaration__btn-submit.ui-btn.ui-btn-primary(type='submit')
-              | Согласовать
-    .declaration__block
-      .row
-        .row__col-3-10
-          .form-declaration.form-declaration--equal-paddings.form-declaration--h-100
-            .form-declaration__container
-              .form-declaration__title
-                | Согласовать
-              .form-declaration__items
-                .form-declaration__item
-                  button.form-declaration__btn-submit.ui-btn.ui-btn-primary(type='submit')
-                    | Согласовать
-        .row__col-7-10
-          form.form-declaration.form-declaration--equal-paddings.form-declaration--h-100.form-return-declaration(action='')
-            .form-declaration__container
-              .form-declaration__title
-                | Отправить на доработку
-              .form-declaration__items
-                .form-declaration__item
+    .content-width
+      .declaration(data-initial-step='1')
+        .declaration__progress
+          .declaration__progress-item
+            | Шаг  1
+          .declaration__progress-item
+            | Шаг  2
+          .declaration__progress-item
+            | Шаг  3
+          .declaration__progress-item
+            | Шаг  4
+          .declaration__progress-item
+            | Шаг  5
+      form.declaration__steps(action='')
+        .declaration__step(style="display:block")
+          .declaration__title
+            | Информация о родственниках и их дейтельности
+          .declaration__text
+            | К родственникам относятся: Супруг/супруга; Отец; Мать; Сын; Дочь; Брат; Сестра; Двоюродный брат/сестра; Дядя/тетя; Отчим/мачеха; Пасынок/падчерица; Сожитель.
+          .declaration__relatives.relatives
+            .relatives__template
+              .relatives__item
+                .relatives__field
                   .field
+                    .field__label
+                      | Ф.И.О. родственника
                     .field__control
                       .input-text
-                        textarea.input-text__control(placeholder='Укажите, что необходимо изменить *' rows='3' name='comment' data-rule-required='true' data-msg-required='Заполните поле' data-rule-minlength='11' data-msg-minlength='Поле должно содержать более 10 символов')
-              .form-declaration__btn-wrap
-                button.form-declaration__btn-submit.ui-btn.ui-btn-primary(type='submit')
-                  | Согласовать
-  .bp-task-page
-    .bp-title
-      | Внесение изменений в декларацию
-  form.declaration.form-declaration-edit
-    .declaration__btns-top
-      button.declaration__btn-save.ui-btn.ui-btn-primary(type='button')
-        | Сохранить
-      button.declaration__btn-submit.ui-btn.ui-btn-primary(type='submit')
-        | Отправить
-    .declaration__block
-      .declaration__title
-        | Задание:
-      .declaration__mt-14
-        .row
-          .row__col-1-10
-            .declaration__text
-              | Дата заполнения:
-          .row__col-1-2
-            .declaration__text
-              | 10.07.2020
-        .row
-          .row__col-1-10
-            .declaration__text
-              | Декларация:
-          .row__col-1-2
-            a.declaration__link(href='#')
-              | media/news/dom-rf-vystavil-na-torgi-zemelnyy-uchastok-dlya-stroitelstva-zhilya-pod-omskom/
-    .declaration__block
-      .declaration__line
-    .declaration__block
-      .declaration__title
-        | Внести изменения в декларацию в соответствии с комментарием согласующего.
-      .declaration__mt-14
-        .row
-          .row__col-7-10
-            .declaration__text
-              | Нельзя восстановить истинной хронологической последовательности событий, потому что мелькание мыслей прочно
-              | диссонирует замысел. Различное расположение семантически иллюстрирует цикл. Возможно денотативное тождество
-              | языковых единиц при их сигнификативном различии, например, абстрактное высказывание стабильно.
-    .declaration__block
-      .declaration__line
-    .declaration__block
-      .declaration__title
-        | Декларация
-      .declaration__cards
-        .declaration__card
-          .card-info.card-info--no-paddings
-            .card-info__item
-              .row
-                .row__col-1-4
-                  .declaration__label-black
-                    | Кому:
-                  .card-info__editable
-                    .field
-                      .field__control
-                        .input-text
-                          input.input-text__control(type='text' placeholder='Введите должность' name='declaration_addressee' value='Давыденко Сергей Денисович' data-rule-required='true' data-msg-required='Заполните поле')
-                .row__col-1-4
-                  .declaration__label-black
-                    | Должность:
-                  .card-info__editable
-                    .field
-                      .field__control
-                        .input-text
-                          input.input-text__control(type='text' placeholder='Введите должность' name='declaration_addressee_occupation' value='Старший управляющий' data-rule-required='true' data-msg-required='Заполните поле')
-            .card-info__item
-              .row
-                .row__col-1-4
-                  .declaration__label-black
-                    | От кого:
-                  .card-info__editable
-                    .field
-                      .field__control
-                        .input-text
-                          input.input-text__control(type='text' placeholder='Введите должность' name='declaration_addresser' value='Завьялов Михаил Андреевич' data-rule-required='true' data-msg-required='Заполните поле')
-                .row__col-1-4
-                  .declaration__label-black
-                    | Должность:
-                  .card-info__editable
-                    .field
-                      .field__control
-                        .input-text
-                          input.input-text__control(type='text' placeholder='Бухгалтер' name='declaration_addresser_occupation' value='Бухгалтер' data-rule-required='true' data-msg-required='Заполните поле')
-            .card-info__item
-              .row
-                .row__col-1-4
-                  .declaration__label-black
-                    | Декларация охватывает период:
-                  .declaration__value-light
-                    | 08.06.2020 
-                    span.declaration__pre по
-                    |  08.06.2020
-                .row__col-1-4
-                  .declaration__label-black
-                    | Дата заполнения:
-                  .declaration__value-light
-                    | 08.06.2020
-                .row__col-1-4
-                  .declaration__label-black
-                    | Дата последнего изменения:
-                  .declaration__value-light
-                    | 08.06.2020
-    .declaration__block
-      .declaration__title
-        | Внешние интересы или активы
-      .declaration__cards
-        .declaration__card
-          .card-info
-            .card-info__text-common
-              | Владеете ли Вы или лица, действующие в Ваших интересах, прямо или как бенефициар, акциями (долями, паями)
-              | или любыми другими финансовыми интересами:
-            .card-info__item
-              .card-info__question
-                .question
-                  .question__text
-                    | В активах АО «ДОМ.РФ» или организаций единого института развития в жилищной с сфере далее — АО
-                    | «ДОМ.РФ» ?
-                  .question__answer
-                    .field
-                      .field__control
-                        select.select-simple(name='question_1' required='' data-msg-required='Выберите ответ')
-                          option(value='' disabled='' hidden='') —
-                          option(value='1') Да
-                          option(value='0' selected='') Нет
-            .card-info__item
-              .card-info__question
-                .question
-                  .question__text
-                    | В другой компании, находящейся в деловых отношениях с АО «ДОМ,РФ» контрагенте подрядчике консультанте
-                    | клиенте и т.п. ?
-                  .question__answer
-                    .field
-                      .field__control
-                        select.select-simple(name='question_2' required='' data-msg-required='Выберите ответ')
-                          option(value='' disabled='' hidden='') —
-                          option(value='1') Да
-                          option(value='0' selected='') Нет
-            .card-info__item
-              .card-info__question
-                .question
-                  .question__text
-                    | В компании или организации, которая может быть заинтересована или ищет возможность построить деловые
-                    | отношения с АО «ДОМ,РФ» или ведет такие переговоры?
-                  .question__answer
-                    .field
-                      .field__control
-                        select.select-simple(name='question_3' required='' data-msg-required='Выберите ответ')
-                          option(value='' disabled='' hidden='') —
-                          option(value='1') Да
-                          option(value='0' selected='') Нет
-            .card-info__item
-              .card-info__question
-                .question
-                  .question__text
-                    | В деятельности компании-конкурента или физического лица-конкурента АО «ДОМ, РФ»?
-                  .question__answer
-                    .field
-                      .field__control
-                        select.select-simple(name='question_4' required='' data-msg-required='Выберите ответ')
-                          option(value='' disabled='' hidden='') —
-                          option(value='1') Да
-                          option(value='0' selected='') Нет
-              .card-info__field.field
-                .field__control
-                  .input-text
-                    textarea.input-text__control(placeholder='Предоставьте, пожалуйста, подробную информацию *' rows='3')
-              .card-info__question
-                .question.question--light
-                  .question__text
-                    | Подавали ли Вы уведомление в соответствии с Порядком уведомления работодателя работниками единого
-                    | института развития в жилищной сфере и его организаций о возникновении личной заинтересованности,
-                    | которая приводит или может привести к конфликту интересов?
-                  .question__answer
-                    .field
-                      .field__control
-                        select.select-simple(name='question_5' required='' data-msg-required='Выберите ответ')
-                          option(value='' disabled='' hidden='') —
-                          option(value='1') Да
-                          option(value='0' selected='') Нет
-              .declaration__card
-                .card-info
-                  .card-info__text-common
-                    | Владеете ли Вы или лица, действующие в Ваших интересах, прямо или как бенефициар, акциями (долями, паями)
-                    | или любыми другими финансовыми интересами:
-                  .card-info__item
-                    .card-info__question
-                      .question
-                        .question__text
-                          | В активах АО «ДОМ.РФ» или организаций единого института развития в жилищной с сфере далее — АО
-                          | «ДОМ.РФ» ?
-                        .question__answer
-                          .field
-                            .field__control
-                              select.select-simple(name='question_1' required='' data-msg-required='Выберите ответ')
-                                option(value='' disabled='' hidden='') —
-                                option(value='1') Да
-                                option(value='0' selected='') Нет
-                  .card-info__item
-                    .card-info__question
-                      .question
-                        .question__text
-                          | В другой компании, находящейся в деловых отношениях с АО «ДОМ,РФ» контрагенте подрядчике консультанте
-                          | клиенте и т.п. ?
-                        .question__answer
-                          .field
-                            .field__control
-                              select.select-simple(name='question_2' required='' data-msg-required='Выберите ответ')
-                                option(value='' disabled='' hidden='') —
-                                option(value='1') Да
-                                option(value='0' selected='') Нет
-                  .card-info__item
-                    .card-info__question
-                      .question
-                        .question__text
-                          | В компании или организации, которая может быть заинтересована или ищет возможность построить деловые
-                          | отношения с АО «ДОМ,РФ» или ведет такие переговоры?
-                        .question__answer
-                          .field
-                            .field__control
-                              select.select-simple(name='question_3' required='' data-msg-required='Выберите ответ')
-                                option(value='' disabled='' hidden='') —
-                                option(value='1') Да
-                                option(value='0' selected='') Нет
-                  .card-info__item
-                    .card-info__question
-                      .question
-                        .question__text
-                          | В деятельности компании-конкурента или физического лица-конкурента АО «ДОМ, РФ»?
-                        .question__answer
-                          .field
-                            .field__control
-                              select.select-simple(name='question_4' required='' data-msg-required='Выберите ответ')
-                                option(value='' disabled='' hidden='') —
-                                option(value='1') Да
-                                option(value='0' selected='') Нет
-                    .card-info__field.field
-                      .field__control
-                        .input-text
-                          textarea.input-text__control(placeholder='Предоставьте, пожалуйста, подробную информацию *' rows='3')
-
-              .card-info__question
-                .question.question--light
-                  .question__text
-                    | Подавали ли Вы уведомление в соответствии с Порядком уведомления работодателя работниками единого
-                    | института развития в жилищной сфере и его организаций о возникновении личной заинтересованности,
-                    | которая приводит или может привести к конфликту интересов?
-                  .question__answer
-                    .field
-                      .field__control
-                        select.select-simple(name='question_5' required='' data-msg-required='Выберите ответ')
-                          option(value='' disabled='' hidden='') —
-                          option(value='1') Да
-                          option(value='0' selected='') Нет
-    .declaration__block
-      .declaration__title
-        | Информация об источниках доходов родственников работинка за последние 3 года
-      .declaration__cards
-        .declaration__card
-          .card-info.card-info--no-paddings
-            .card-info__item
-              .card-info__row
-                .row
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Ф.И.О. родственника
-                    .card-info__editable
-                      .field
-                        .field__control
-                          .input-text
-                            input.input-text__control(type='text' placeholder='Бухгалтер' name='relative_1_name' value='Дмитрий Евгеньевич Завьялов' data-rule-required='true' data-msg-required='Заполните поле')
-                  .row__col-1-4
-                    .declaration__label-black
+                        input.input-text__control(type='text' placeholder='Введите Ф.И.О. полностью' name='relative_name_hash' data-rule-required='true' data-msg-required='Заполните поле')
+                .relatives__field
+                  .field
+                    .field__label
                       | Степень родства
-                    .card-info__editable
-                      .field
-                        .field__control
-                          select.select(name='realative_1_type' required='' data-msg-required='Заполните поле')
-                            option(value='' disabled='' hidden='') Выберите из списка
-                            option(value='1') Мать
-                            option(value='2') Отец
-                            option(value='3' selected='') Сын
-                            option(value='4') Дочь
-                  .row__col-1-4
-                    .declaration__label-black
+                    .field__control
+                      select.select(name='relative_type_hash' required='' data-msg-required='Заполните поле')
+                        option(value='' disabled='' selected='' hidden='') Выберите вариант
+                        option(value='1') Мать
+                        option(value='2') Отец
+                        option(value='3') Сын
+                        option(value='4') Дочь
+                .relatives__field
+                  .field
+                    .field__label
                       | Дата рождения
-                    .card-info__editable
-                      .field
-                        .field__control
-                          .input-date.input-date--high
-                            .input-date__inner
-                              .input-date__icon-wrap
-                                .input-date__icon
-                              input.input-date__control(type='text' placeholder='00.00.0000' value='22.07.2002' name='relative_1_birth_date' data-rule-required='true' data-msg-required='Выберите дату' onclick='BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});')
-              .card-info__row
-                .row
-                  .row__col-1-4
-                    .declaration__label-black
+                    .field__control
+                      .input-date
+                        .input-date__inner
+                          .input-date__icon-wrap
+                            .input-date__icon
+                          input.input-date__control(type='text' placeholder='00.00.0000' name='relative_birth_date_hash' data-rule-required='true' data-msg-required='Заполните поле' onclick='BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});')
+                .relatives__field
+                  .field
+                    .field__label
                       | Наименование организации
-                    .card-info__editable
-                      .field
-                        .field__control
-                          .input-text
-                            input.input-text__control(type='text' value='ООО "Сайтсофт"' placeholder='Введите организацию' name='relative_1_company_1_name' data-rule-required='true' data-msg-required='Заполните поле')
-                  .row__col-1-4
-                    .declaration__label-black
+                    .field__control
+                      .input-text
+                        input.input-text__control(type='text' placeholder='Введите организацию' name='relative_company_hash' data-rule-required='true' data-msg-required='Заполните поле')
+                .relatives__field
+                  .field
+                    .field__label
                       | ИНН организации
-                    .card-info__editable
-                      .field
-                        .field__control
-                          .input-text
-                            input.input-text__control(type='text' placeholder='Введите ИНН' value='1290005689' name='relative_1_company_1_inn' data-rule-required='true' data-msg-required='Заполните поле' data-rule-digits='true' data-msg-digits='Поле может содержать только цифры' data-rule-rangelength='[9, 9]' data-msg-rangelength='Поле должно состоять из 9 цифр')
-                  .row__col-1-4
-                    .declaration__label-black
-                      | Должность:
-                    .card-info__editable
-                      .field
-                        .field__control
-                          .input-text
-                            input.input-text__control(type='text' value='Старший управляющий' placeholder='Введите должность' name='relative_1_company_1_occupation' data-rule-required='true' data-msg-required='Заполните поле')
-    .declaration__btns
-      button.declaration__btn-save.ui-btn.ui-btn-primary(type='button')
-        | Сохранить
-    .declaration__agreement-checkbox
-      .field
-        .field__control
-          .input-toggler.input-toggler--radio.input-toggler--form-agreement
-            label.input-toggler__inner
-              input.input-toggler__control(type='checkbox' name='agreement_informed' data-rule-required='true' data-msg-required='Необходимо согласие')
-              span.input-toggler__mark
-              span.input-toggler__label
-                | Настоящим подтверждаю, что я прочитал и понял все указанные вопросы,
-                | а мои ответы и любая пояснительная информация являются полными, правдивыми
-                | и правильными. Не возражаю против обработки АО «ДОМ.РФ» указанных в настоящей Декларации сведений, включая сбор, систематизацию, накопление, хранение, уточнение, использование, обезличивание, проверку достоверности моих персональных данных. Цель обработки: проверка и выявление конфликтов интересов, предотвращение злоупотреблений должностными полномочиями. Срок обработки: с даты предоставления данных до даты прекращения трудового договора с работником, который предоставил Декларацию.
-                | Настоящее согласие может быть отозвано мной в письменной форме. Согласие считается отозванным на 10-ый рабочий день с даты получения АО «ДОМ.РФ» письма об …
-    .declaration__btns
-      button.declaration__btn-submit.ui-btn.ui-btn-primary(type='submit')
-        | Отправить
-  
+                    .field__control
+                      .input-text
+                        input.input-text__control(type='text' placeholder='Введите ИНН' name='relative_inn_hash' data-rule-required='true' data-msg-required='Заполните поле' data-rule-digits='true' data-msg-digits='Поле может содержать только цифры' data-rule-rangelength='[9, 9]' data-msg-rangelength='Поле должно состоять из 9 цифр')
+                .relatives__field
+                  .field
+                    .field__label
+                      | Должность
+                    .field__control
+                      .input-text
+                        input.input-text__control(type='text' placeholder='Введите должность' name='relative_occupation_hash' data-rule-required='true' data-msg-required='Заполните поле')
+                .relatives__btn-delete
+                  a.link-delete(href='#')
+                    | Удалить данные о родственнике
+            .relatives__list
+            .relatives__btn-add
+              button.ui-btn.ui-btn-primary(type='button')
+                | Добавить еще родственника
+          .declaration__btns
+            button.declaration__btn-save.ui-btn.ui-btn-primary(type='button')
+              | Сохранить
+            button.declaration__btn-prev.ui-btn.ui-btn-primary(type='button')
+              | Назад
+            button.declaration__btn-next.ui-btn.ui-btn-primary(type='button')
+              | Далее
+        
