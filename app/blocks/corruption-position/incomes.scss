@@ -1,13 +1,14 @@
 /* & -- start */
 .incomes {
+  $r : &;
 
   &--horizontal {
 
-    &__list {
+    #{$r}__list {
       display: block;
     }
 
-    &__item {
+    #{$r}__item {
       display: flex;
       margin-top: 22px;
       margin-right: -8px;
@@ -18,14 +19,14 @@
       }
     }
 
-    &__btn-delete {
+    #{$r}__btn-delete {
       position: absolute;
       right: 16px;
       bottom: -20px;
       margin-top: 0;
     }
 
-    &__field {
+    #{$r}__field {
       flex: 0 0 33.33%;
       padding-right: 8px;
       padding-left: 8px;

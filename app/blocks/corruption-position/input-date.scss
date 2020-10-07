@@ -2,6 +2,13 @@
 .input-date {
   line-height: 1;
 
+  $r : &;
+
+  &--high {
+    #{$r}__inner {
+      height: 44px;
+    }
+  }
 
   &__inner {
     position: relative;
@@ -43,10 +50,10 @@
     line-height: 1.33;
     letter-spacing: 0.1px;
     border: none !important;
-  }
 
-  &__control::placeholder {
-    color: #A3A3A3;
+    &::placeholder {
+      color: #A3A3A3;
+    }
   }
 
   &__pre {
@@ -58,13 +65,6 @@
     line-height: 2.7;
     color: #000;
   }
-
-  &--high {
-    &__inner {
-      height: 44px;
-    }
-  }
-
 }
 
 .field--error .input-date__inner {

@@ -1,121 +1,121 @@
 /* input-toggler styles -- start */
 .input-toggler {
-    position: relative;
-    display: inline-flex;
+  position: relative;
+  display: inline-flex;
 }
 
 .input-toggler__inner {
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    user-select: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
 }
 
 .input-toggler__inner:hover .input-toggler__mark {
-    border-color: #90BC56;
+  border-color: #90BC56;
 }
 
 .input-toggler__control {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 0;
-    cursor: pointer;
-    opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  cursor: pointer;
+  opacity: 0;
 }
 
-.input-toggler__control:checked~.input-toggler__mark::after {
-    display: block;
+.input-toggler__control:checked~.input-toggler__mark:after {
+  display: block;
 }
 
 .input-toggler__mark {
-    position: relative;
-    display: block;
-    flex: none;
-    width: 20px;
-    height: 20px;
-    margin-right: 16px;
-    background: #fff;
-    border: 1px solid #D5D5D5;
-    transition: border-color .2s;
+  flex: none;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  background: #fff;
+  border: 1px solid #D5D5D5;
+  transition: border-color .2s;
 }
 
-.input-toggler__mark::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: none;
-    width: 10px;
-    height: 10px;
-    margin: auto;
-    content: "";
-    background-color: #90BC56;
-    transition: background-color .2s;
+.input-toggler__mark:after {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  content: "";
+  background-color: #90BC56;
+  transition: background-color .2s;
 }
 
 .input-toggler__label {
-    display: block;
+  display: block;
 }
 
 .input-toggler__link {
-    color: #92BC58;
+  color: #92BC58;
 }
 
 .input-toggler__link:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
-.input-toggler--radio .input-toggler__mark,.input-toggler--radio .input-toggler__mark::after {
-    border-radius: 50%
+.input-toggler--radio .input-toggler__mark,.input-toggler--radio .input-toggler__mark:after {
+  border-radius: 50%
 }
 
 .input-toggler--disabled {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .input-toggler--disabled .input-toggler__inner {
-    opacity: .5;
+  opacity: .5;
 }
 
 .input-toggler--disabled .input-toggler__inner {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .input-toggler--agreement .input-toggler__label {
-    font-size: 12px;
-    line-height: 1.5;
-    color: #000;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #000000;
 }
 
 .input-toggler--form-agreement .input-toggler__label {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.71;
-    color: #7C899A;
-    letter-spacing: 0.01em;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.01em;
+  color: #7C899A;
 }
 
 .input-toggler--form-agreement .input-toggler__inner {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .input-toggler--form-agreement .input-toggler__mark {
-    top: 3px;
+  top: 3px;
 }
 
 .input-toggler--align-top .input-toggler__inner {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .field--error .input-toggler__mark {
-    border-color: #FF7B7B;
+  border-color: #FF7B7B;
 }
 
 .field--error .input-toggler__inner:hover .input-toggler__mark {
-    border-color: #FF7B7B;
+  border-color: #FF7B7B;
 }
 
 /* input-toggler styles -- end */
