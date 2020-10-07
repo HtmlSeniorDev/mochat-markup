@@ -7,7 +7,7 @@
     #{$r}__mark {
       border-radius: 50%;
 
-      &:after {
+      &::after {
         border-radius: 50%;
       }
     }
@@ -17,8 +17,8 @@
     cursor: not-allowed;
 
     #{$r}__inner {
-      opacity: .5;
       pointer-events: none;
+      opacity: .5;
     }
   }
 
@@ -26,17 +26,17 @@
     #{$r}__label {
       font-size: 12px;
       line-height: 1.5;
-      color: #000000;
+      color: #000;
     }
   }
 
   &--form-agreement {
     #{$r}__label {
-      font-weight: 300;
       font-size: 14px;
+      font-weight: 300;
       line-height: 1.71;
-      letter-spacing: 0.01em;
       color: #7C899A;
+      letter-spacing: 0.01em;
     }
 
     #{$r}__inner {
@@ -91,16 +91,16 @@
     opacity: 0;
 
     &:checked ~  #{$r}__mark {
-      &:after {
+      &::after {
         display: block;
       }
     }
   }
 
   &__mark {
-    flex: none;
     position: relative;
     display: block;
+    flex: none;
     width: 20px;
     height: 20px;
     margin-right: 16px;
@@ -108,13 +108,13 @@
     border: 1px solid #D5D5D5;
     transition: border-color .2s;
 
-    &:after {
-      display: none;
+    &::after {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
+      display: none;
       width: 10px;
       height: 10px;
       margin: auto;

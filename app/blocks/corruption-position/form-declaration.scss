@@ -4,7 +4,7 @@
   background: #FAFBFC;
   border-radius: 4px;
 
-  $r : &;
+  $r: &;
 
   &--equal-paddings {
     #{$r}__container {
