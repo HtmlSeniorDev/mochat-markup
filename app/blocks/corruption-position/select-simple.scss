@@ -1,0 +1,27 @@
+/* select-yes-no styles -- start */
+.select-simple {
+  position: relative;
+  padding: 0 16px 0 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.71;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: url('../../static/img/icon-select-simple.svg');
+  background-repeat: no-repeat;
+  background-position: right top 75%;
+  background-size: 10px 14px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+
+  &:invalid {
+    color: #A3A3A3;
+  }
+}
+
+.field--error .select-simple {
+  background-image: url('../../static/img/icon-select-simple.svg');
+}
+
+/* select-yes-no styles -- end */

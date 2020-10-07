@@ -3,7 +3,7 @@
 @import 'tools/all';
 @import 'other/all';
 @import 'fonts';
-
+@import '../static/libs/tingle/tingle.min.css';
 //
 // Либы
 // @import '../vendors/custom/smart-grid/smart-grid';
@@ -11,7 +11,6 @@
 // Общие блоки
 @import '../blocks/**/*.scss';
 @import '_fix';
-
 // Главная страница
 @import '../pug/pages/**/*.scss';
 // @import '../blocks/content-width/content.scss';
@@ -27,19 +26,21 @@
 }
 
 .parsley-errors-list {
- display: none;
+  display: none;
 }
 
 .parsley-errors-list li {
   display: none;
 }
-.parsley-required{
+
+.parsley-required {
   display: none;
 }
 
 .parsley-error {
   display: none;
 }
+
 button {
   cursor: pointer;
   background-color: #fff;
@@ -50,10 +51,11 @@ button {
     box-shadow: none;
   }
 }
+
 .primary-title {
   margin-top: 40px;
   margin-bottom: 14px;
-  font-family: Ubuntu,sans-serif;
+  font-family: Ubuntu, sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
@@ -122,12 +124,15 @@ button {
 .mr-sm {
   margin-right: 16px;
 }
+
 .mr-md {
   margin-right: 32px;
 }
+
 .mb-extra-xs {
   margin-bottom: 6px;
 }
+
 .mb-xs {
   margin-bottom: 8px;
 }
@@ -135,6 +140,7 @@ button {
 .mb-sm {
   margin-bottom: 16px;
 }
+
 .mb-md {
   margin-bottom: 32px;
 }
@@ -148,9 +154,11 @@ button {
     margin-bottom: 16px;
   }
 }
+
 .align-center {
   align-items: center;
 }
+
 @for $i from 0 through 10 {
   .ml-#{$i} {
     margin-left: 10px * $i;
@@ -162,3 +170,59 @@ button {
     margin-top: 10px * $i;
   }
 }
+
+input[name="USERNAME"], input[name='MANAGER'] {
+  width: 100% !important;
+}
+
+.custom_form_for_bp {
+  input[name='MANAGER'] {
+    display: none;
+  }
+
+  input[name='FIO'],
+  input[name='Manager'] {
+    float: left;
+    width: 160px !important;
+    margin-right: 15px;
+  }
+
+  a {
+    float: left;
+    width: 91px !important;
+    font-size: 14px;
+    line-height: 28px;
+    color: #8bc540;
+  }
+
+  .input-block {
+    span {
+      float: left;
+      margin: 0 0 15px;
+      font-size: 12px;
+    }
+
+    .structure-department-head {
+      position: relative;
+      float: left;
+      margin-left: 5px;
+    }
+  }
+
+  .selection {
+    float: none !important;
+
+    span {
+      float: none !important;
+    }
+  }
+}
+
+.container_hidden {
+  display: none;
+}
+
+
+
+
+

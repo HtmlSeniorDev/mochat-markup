@@ -1,0 +1,39 @@
+/* card-popup -- start */
+.card-popup {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &--description {
+    width: 840px;
+  }
+
+  &--error {
+    width: 521px;
+  }
+
+  &__wrapper {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  &__title {
+    font-size: 22px;
+    line-height: 1.36;
+    color: #363636;
+    letter-spacing: 0.1px;
+  }
+
+  &__content-wrap {
+    padding-top: 26px;
+    margin-top: 26px;
+    border-top: 1px solid #EDEDED;
+  }
+
+  &__content {
+    max-height: 504px;
+    padding-right: 60px;
+    overflow: auto;
+  }
+}
+
+/* card-popup -- end */

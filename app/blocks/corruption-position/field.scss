@@ -1,0 +1,27 @@
+/* field -- start */
+.field {
+  position: relative;
+
+  &__label {
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #737373;
+  }
+
+  &__error {
+    position: absolute;
+    top: 100%;
+    left: 24px;
+    width: calc(100% - 48px);
+    font-size: 12px;
+    line-height: 1.33;
+    color: #FF7B7B;
+    letter-spacing: 0.1px;
+    background-color: #fff;
+  }
+}
+
+
+/* field -- end */

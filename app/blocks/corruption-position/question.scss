@@ -1,0 +1,39 @@
+/* question styles -- start */
+.question {
+  display: flex;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.57;
+
+  $r: &;
+
+  &--light {
+    #{$r}__text {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #A3A3A3;
+      letter-spacing: 0.1px;
+    }
+  }
+
+  &__text {
+    flex-grow: 1;
+    margin-right: 54px;
+  }
+
+  &__answer {
+    flex: none;
+    min-width: 23px;
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+
+  .field__error {
+    top:0;
+    left: 46px;
+  }
+}
+
+/* question styles -- end */
