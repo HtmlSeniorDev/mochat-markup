@@ -1,56 +1,58 @@
 /* form-agreement styles -- start */
 .form-declaration {
-    padding: 24px 0 32px;
-    background: #FAFBFC;
-    border-radius: 4px;
-}
+  padding: 24px 0 32px;
+  background: #FAFBFC;
+  border-radius: 4px;
 
-.form-declaration__container {
+  &--equal-paddings {
+    &__container {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+  }
+
+  &--h-100 {
+    height: 100%;
+  }
+
+  &__container {
     padding-right: 32px;
     padding-left: 73px;
-}
+  }
 
 
-.form-declaration__title {
+  &__title {
     font-size: 22px;
     font-weight: 500;
     line-height: 1.36;
     color: #000;
-}
+  }
 
-.form-declaration__items {
+  &__items {
     margin-top: 5px;
-}
+  }
 
-.form-declaration__item {
+  &__item {
     padding-top: 16px;
     padding-bottom: 16px;
     border-top: 1px solid #EDEDED;
-}
 
-.form-declaration__item:first-child {
-    border-top: none;
-}
+    &:first-child {
+      border-top: none;
+    }
+  }
 
-.form-declaration__choice {
+  &__choice {
     margin-left: -35px;
-}
+  }
 
-.form-declaration__template-comment {
+  &__template-comment {
     display: none;
-}
+  }
 
-.form-declaration__comment {
+  &__comment {
     margin-top: 16px;
-}
-
-.form-declaration--equal-paddings .form-declaration__container {
-    padding-right: 32px;
-    padding-left: 32px;
-}
-
-.form-declaration--h-100 {
-    height: 100%;
+  }
 }
 
 /* form-agreement styles -- end */

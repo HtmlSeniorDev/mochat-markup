@@ -1,24 +1,23 @@
 /* card-info styles -- start */
 .card-info {
-    padding-top: 10px;
-    border: 1px solid #DDD;
-    border-radius: 4px;
-}
+  padding-top: 10px;
+  border: 1px solid #DDD;
+  border-radius: 4px;
 
-.card-info__item {
+  &--no-paddings {
+    padding-top: 0;
+  }
+
+  &__item {
     padding: 16px;
-    border-top: 1px solid #EDEDED
-}
+    border-top: 1px solid #EDEDED;
 
-.card-info__item:first-child {
-    border-top: none;
-}
+    &:first-child {
+      border-top: none;
+    }
+  }
 
-.card-info__text-common + .card-info__item {
-    border-top: none;
-}
-
-.card-info__text {
+  &__text {
     padding-right: 120px;
     margin-top: 16px;
     font-size: 14px;
@@ -26,52 +25,56 @@
     line-height: 1.71;
     color: #7C899A;
     letter-spacing: 0.01em;
-}
 
-.card-info__text:first-child {
-    margin-top: 0;
-}
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
-.card-info__question {
+  .card-info__text-common + .card-info__item {
+    border-top: none;
+  }
+
+  &__question {
     padding-right: 100px;
     margin-top: 16px;
-}
 
-.card-info__question:first-child {
-    margin-top: 0;
-}
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
-.card-info__field {
+  &__field {
     width: 556px;
     margin-top: 16px;
-}
 
-.card-info__field:first-child {
-    margin-top: 0;
-}
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
-.card-info__comment {
+  &__comment {
     padding-right: 180px;
     margin-top: 16px;
     font-size: 14px;
     line-height: 1.5;
     color: #A3A3A3;
     letter-spacing: 0.1px;
-}
 
-.card-info__comment:first-child {
-    margin-top: 0;
-}
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
-.card-info__row {
+  &__row {
     margin-top: 20px;
-}
 
-.card-info__row:first-child {
-    margin-top: 0;
-}
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
-.card-info__text-common {
+  &__text-common {
     padding-top: 16px;
     padding-right: 136px;
     padding-left: 16px;
@@ -80,14 +83,12 @@
     line-height: 1.71;
     color: #7C899A;
     letter-spacing: 0.01em;
-}
+  }
 
-.card-info__editable {
+  &__editable {
     margin-top: 7px;
-}
+  }
 
-.card-info--no-paddings {
-    padding-top: 0;
 }
 
 /* card-info styles -- end */
