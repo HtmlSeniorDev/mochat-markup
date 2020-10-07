@@ -3,7 +3,8 @@
   padding: 24px 0 32px;
   background: #FAFBFC;
   border-radius: 4px;
-   $r : &;
+
+  $r : &;
 
   &--equal-paddings {
     #{$r}__container {
@@ -20,7 +21,6 @@
     padding-right: 32px;
     padding-left: 73px;
   }
-
 
   &__title {
     font-size: 22px;

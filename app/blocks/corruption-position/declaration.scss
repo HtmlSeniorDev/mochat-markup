@@ -36,16 +36,14 @@
         border-right: none;
       }
     }
+  }
+  .progress-item-active {
+    z-index: 1;
+    color: #90BC56;
 
-    .progress-item-active {
-      z-index: 1;
-      color: #90BC56;
-
-      &::after {
-        border-color: #90BC56;
-      }
+    &::after {
+      border-color: #90BC56;
     }
-
   }
 
   &__step {
