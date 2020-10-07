@@ -1,28 +1,23 @@
 /* tingle-modal -- start */
 .tingle-modal--default {
-    background: rgba(0,0,0,.4);
-}
+  background: rgba(0, 0, 0, .4);
 
-.tingle-modal--default .tingle-modal__close:not(:last-child){
-    display: none;
-}
-
-.tingle-modal--default::before {
+  &::before {
     backdrop-filter: none;
-}
+  }
 
-.tingle-modal--default .tingle-modal-box {
+  .tingle-modal-box {
     width: auto;
     max-width: 95%;
     border-radius: 20px;
     box-shadow: 0 0 9px rgba(0, 0, 0, 0.04);
-}
+  }
 
-.tingle-modal--default .tingle-modal-box__content {
+  .tingle-modal-box__content {
     padding: 0;
-}
+  }
 
-.tingle-modal--default .tingle-modal__close {
+  .tingle-modal__close {
     position: absolute;
     top: 30px;
     right: 40px;
@@ -34,27 +29,32 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 14px 14px;
-}
 
-.tingle-modal--default .tingle-modal__close::after {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    bottom: -5px;
-    left: -5px;
-    content: '';
-}
+    &:not(:last-child) {
+      display: none;
+    }
 
-.tingle-modal--default .tingle-modal__close:hover {
-    opacity: .8;
-}
+    &::after {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      bottom: -5px;
+      left: -5px;
+      content: '';
+    }
 
-.tingle-modal--default .tingle-modal__closeIcon {
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  .tingle-modal__closeIcon {
     display: none;
-}
+  }
 
-.tingle-modal--default .tingle-modal__closeLabel {
+  .tingle-modal__closeLabel {
     display: none;
+  }
 }
 
 /* tingle-modal -- end */
