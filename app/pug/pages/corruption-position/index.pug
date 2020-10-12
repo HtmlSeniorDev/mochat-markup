@@ -66,15 +66,16 @@ block content
                   .row__col-1-2
                     .field
                       .field__control
-                        input(type='hidden' name='addressee_id' data-rule-required='true' data-msg-required='Введено произвольное значение. Выберите сотрудника из списка.')
+                        input(type='hidden' name='addressee_id' data-rule-required='true' data-msg-required='Введено произвольное значение. Выберите сотрудника из списка.' value='2')
                       .field__control
                         .input-text
-                          input.input-text__control(type='text' placeholder='Ф.И.О. непосредственного руководителя' name='addressee_name' data-rule-required='true' data-msg-required='Заполните поле')
+                          input.input-text__control(type='text' placeholder='Ф.И.О. непосредственного руководителя' name='addressee_name' data-rule-required='true' data-msg-required='Заполните поле' autocomplete='off' aria-invalid='false')
                           .input-text__icon-loop
                           .input-text__icon-arrow
                   .row__col-1-4
                     .declaration__label Должность:
-                    .declaration__value.declaration__addressee-occupation
+                    .declaration__value.declaration__addressee-occupation 
+
             .declaration__period.field
               .field__label
                 | Декларация охватывает период времени:
@@ -83,9 +84,9 @@ block content
                   .input-date__inner
                     .input-date__icon-wrap
                       .input-date__icon
-                    input.input-date__control(type='text' disabled placeholder='00.00.0000' name='declaration_period_start_date' data-rule-required='true' data-msg-required='Выберите даты' onclick='BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});')
+                    input.input-date__control(type='text' value='10.11.2011' disabled placeholder='00.00.0000' name='declaration_period_start_date' data-rule-required='true' data-msg-required='Выберите даты' onclick='BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});')
                     .input-date__pre по
-                    input.input-date__control(type='text' disabled placeholder='00.00.0000' name='declaration_period_end_date' data-rule-required='true' data-msg-required='Выберите даты' onclick='BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});')
+                    input.input-date__control(type='text' value='10.11.2011' disabled placeholder='00.00.0000' name='declaration_period_end_date' data-rule-required='true' data-msg-required='Выберите даты' onclick='BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});')
 
             .declaration__text.declaration__agreement-text
               | Необходимо внимательно ознакомиться с приведенными ниже вопросами и ответить «да» или «нет» на каждый из вопросов. Ответ «ДА» необязательно означает наличие конфликта интересов, но выявляет вопрос, заслуживающий дальнейшего обсуждения и рассмотрения непосредственным руководителем. Необходимо дать разъяснения ко всем ответам «да» в месте, отведенном в конце первого раздела формы. При заполнении Декларации необходимо учесть, что все поставленные вопросы распространяются не только на Вас, но и на Ваших супруга(-у) (или партнера в гражданском браке), родителей (усыновителей), детей (в том числе приемных), родных и двоюродных братьев и сестер.
@@ -139,7 +140,7 @@ block content
                           .input-date__inner
                             .input-date__icon-wrap
                               .input-date__icon
-                            input.input-date__control(type='text' placeholder='00.00.0000' name='relative_birth_date_hash' data-rule-required='true' data-msg-required='Заполните поле' onclick='BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});')
+                            input.input-date__control(type='text' placeholder='00.00.0000' name='relative_birth_date_hash' data-rule-required='true' data-msg-required='Заполните поле')
                   .relatives__field
                     .field
                       .field__label

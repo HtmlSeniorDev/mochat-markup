@@ -50,7 +50,9 @@
     line-height: 1.33;
     letter-spacing: 0.1px;
     border: none !important;
-
+    &:focus {
+      outline: none !important;
+    }
     &::placeholder {
       color: #A3A3A3;
     }
