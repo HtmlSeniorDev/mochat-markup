@@ -328,9 +328,6 @@ $(()=>{
       /* документация к плагину devbridgeAutocomplete https://www.devbridge.com/sourcery/components/jquery-autocomplete/ */
       this.$inputAddresseeName.devbridgeAutocomplete({
         lookup: employees,
-        onChange: function() {
-          console.log('bla bla change')
-        },
         onSelect: function (suggestion) {
           _this.$inputAddresseeID.val(suggestion.id).closest('.field').find('.field__error').remove();
           _this.$addresseeOccupation.html(suggestion.occupation.charAt(0).toUpperCase() + suggestion.occupation.slice(1));
