@@ -3,17 +3,17 @@
   position: relative;
 
   &__control {
-    width: 100%;
-    height: 44px !important;
-    padding: 13px 23px !important;
-    margin-bottom: 0 !important;
-    font-size: 12px !important;
+    padding: 13px 23px;
+    margin-bottom: 0 ;
+    font-size: 12px ;
     line-height: 1.33;
     letter-spacing: 0.1px;
     background-color: #F1F4F8;
-    border: 1px solid #F1F4F8 !important;
-    border-radius: 20px !important;
+    border: 1px solid #F1F4F8;
+    border-radius: 20px ;
     outline: none;
+    resize: none;
+    width: 100%;
 
     &:disabled {
       cursor: not-allowed;

@@ -1,20 +1,13 @@
-import tingle from '../../static/libs/tingle/tingle.min'
-import validator from '../../static/libs/jquery-validation/jquery.validate.min.js';
-import autocomplete from '../../static/libs/jquery-autocomplete/jquery.autocomplete.min.js';
 import 'cleave.js'
+import tingle from '../../static/libs/tingle/tingle.min'
+import '../../static/libs/jquery-validation/jquery.validate.min.js';
+import '../../static/libs/jquery-autocomplete/jquery.autocomplete.js';
 
 $(()=>{
   function getScrollbarWidth() {
     return window.innerWidth - document.documentElement.clientWidth
   }
-  function dateValidator() {
-    new Cleave('.input-date__control', {
-      date: true,
-      delimiter: '.',
-      datePattern: ['d', 'm', 'Y']
-    });
-  }
-  dateValidator();
+
   /* objects */
   var Modal = function(content, options) {
 
@@ -201,49 +194,7 @@ $(()=>{
       }, 2000);
     }
   };
-  var Relatives = function(el) {
-    this.$el = $(el);
-    this.$list = this.$el.find('.relatives__list');
-    this.$itemTemplate = this.$el.find('.relatives__template .relatives__item');
-    this.$btnAdd = this.$el.find('.relatives__btn-add button');
-    this.relativesAmount = 0;
-  };
 
-  Relatives.prototype = {
-    init: function() {
-      this.bindDomEvents();
-      this.appendItem();
-    },
-    bindDomEvents: function() {
-      var _this = this;
-      this.$btnAdd.on('click', function() {
-        _this.appendItem();
-      });
-      this.$el.on('click', '.relatives__btn-delete .link-delete', function(event) {
-        event.preventDefault();
-        _this.removeItem($(this).closest('.relatives__item'));
-      });
-    },
-    appendItem: function() {
-      var hash = new Date().getTime();
-      var $newItem = this.$itemTemplate.clone();
-      var $fields = $newItem.find('.field__control input, .field__control select');
-      /* добавляю хэши, чтобы имена полей были уникальными, иначе валидация работает некорректно */
-      $fields.each(function(){
-        var $this = $(this);
-        var fieldName = $this.attr('name');
-        $this.attr('name', fieldName.replace(/hash/i, hash));
-      });
-      this.$list.append($newItem);
-      this.relativesAmount++;
-      this.$el.trigger('update_relatives_amount', {amount: this.relativesAmount});
-    },
-    removeItem: function($item) {
-      $item.remove();
-      this.relativesAmount--;
-      this.$el.trigger('update_relatives_amount', {amount: this.relativesAmount});
-    }
-  };
 
 
   /* run */
@@ -274,55 +225,11 @@ $(()=>{
     new FormReturnDeclaration(this).init();
   });
   new FormDeclarationEdit($('.form-declaration-edit')[0]).init();
-});
-$(()=>{
+
+
   $("input[name='USER_FROM']").attr('readonly','readonly');
   $("input[name='POSITION']").attr('readonly','readonly');
   $("input[name='DATE']").attr('readonly','readonly');
-  function getScrollbarWidth() {
-    return window.innerWidth - document.documentElement.clientWidth
-  }
-
-  /* objects */
-  var Modal = function(content, options) {
-    this.content = content;
-    this.options = $.extend(
-      {
-        classList: ['tingle-modal--default'],
-        onOpenCallback: function() {}
-      },
-      options
-    );
-    this.modal = new tingle.modal({
-      footer: false,
-      stickyFooter: false,
-      closeMethods: ['overlay', 'button', 'escape'],
-      closeLabel: 'Закрыть',
-      cssClass: this.options.classList,
-      beforeOpen() {
-        $('body').css({'padding-right': getScrollbarWidth()});
-        /* если тема default крестик закрытия расположить внутри */
-        if (this.cssClass.includes('tingle-modal--default')) {
-          var $modal = $('.tingle-modal--default');
-          var $closeButton = $modal.find('> .tingle-modal__close');
-          var $modalBox = $modal.find('.tingle-modal-box');
-          if ($modalBox.find('.tingle-modal__close').length === 0) {
-            $closeButton.clone().appendTo($modalBox).on('click', function() {
-              $closeButton.trigger('click');
-            });
-          }
-        }
-      },
-      onOpen: () => {
-        this.options.onOpenCallback();
-      },
-      beforeClose() {
-        $('body').css({'padding-right': getScrollbarWidth()});
-        $(this.modalBoxContent).html('');
-        return true;
-      },
-    });
-  };
 
   Modal.prototype = {
     open: function() {
@@ -347,14 +254,11 @@ $(()=>{
     this.$inputAddresseeName = this.$el.find('[name="addressee_name"]');
     this.$inputAddresseeID = this.$el.find('[name="addressee_id"]');
     this.$addresseeOccupation = this.$el.find('.declaration__addressee-occupation');
-
     this.initialStep = this.$el.data('initialStep') || 1;
     this.step = null;
-
     this.modifiers = {
       progressItemActive: 'progress-item-active'
     }
-
   }
 
   Declaration.prototype = {
@@ -367,14 +271,13 @@ $(()=>{
     },
     initPlugins: function() {
       var _this = this;
-
       /* mockup данные */
-      var employees =  [
+      let employees =  [
         {
           value: 'ФИО 1',
           id : 1,
           occupation: 'бухгалтер',
-          department: 'отдел 1'
+          department: 'отдел 1',
 
         },
         {
@@ -409,6 +312,7 @@ $(()=>{
           _this.$inputAddresseeID.val('');
         }
       });
+
 
     },
     setStep: function(step) {
@@ -561,7 +465,7 @@ $(()=>{
 
   /* run */
   var popupDescription = new Modal($('.declaration-description').clone().html());
-  var popupError = new Modal($('.declaration-error').clone().html());
+
   // popupError.open();
 
   new Declaration($('.declaration')[0]).init();
@@ -569,5 +473,16 @@ $(()=>{
   $('.incomes').each(function() {
     new Incomes(this).init();
   });
+  function dateValidator() {
+    $('.input-date__control').toArray().forEach(function(field) {
+      new Cleave(field, {
+        date: true,
+        delimiter: '.',
+        datePattern: ['d', 'm', 'Y']
+      });
+    });
+  }
+  dateValidator();
 });
+
 /* declaration script -- end */

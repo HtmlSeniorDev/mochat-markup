@@ -14,11 +14,11 @@
 mixin input(props = {})
   -
     const classNames = [
-      (props.errorText ? 'input-text--error' : ''),
-      (props.isDisabled ? 'input-text--disabled': ''),
-      (props.areaInput ? 'input-text--area' : '')
+      (props.errorText ? 'input-text-o--error' : ''),
+      (props.isDisabled ? 'input-text-o--disabled': ''),
+      (props.areaInput ? 'input-text-o--area' : '')
     ].filter(className => className !== '').join(' ')
-  +b.input-text(class=classNames data-error = "")
+  +b.input-text-o(class=classNames data-error = "")
     if (props.labelText)
       +e.LABEL.label-text= props.labelText
     if (!props.isDisabled)
