@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#fff">
     <link type="image/x-icon" href="static/img/favicon.ico" rel="icon">
     <link type="image/x-icon" href="static/img/favicon.ico" rel="shortcut icon">
-  <link href="styles/vendors.7acc.css" rel="stylesheet"><link href="styles/app.a00c.css" rel="stylesheet"></head>
+  <link href="styles/vendors.7acc.css" rel="stylesheet"><link href="styles/app.1001.css" rel="stylesheet"></head>
   <body>
     <!--noindex-->
     <noscript>
@@ -111,11 +111,11 @@
                     <div class="row__col-1-2">
                       <div class="field">
                         <div class="field__control">
-                          <input type="hidden" name="addressee_id" data-rule-required="true" data-msg-required="Введено произвольное значение. Выберите сотрудника из списка.">
+                          <input type="hidden" name="addressee_id" data-rule-required="true" data-msg-required="Введено произвольное значение. Выберите сотрудника из списка." value="2">
                         </div>
                         <div class="field__control">
                           <div class="input-text">
-                            <input class="input-text__control" type="text" placeholder="Ф.И.О. непосредственного руководителя" name="addressee_name" data-rule-required="true" data-msg-required="Заполните поле">
+                            <input class="input-text__control" type="text" placeholder="Ф.И.О. непосредственного руководителя" name="addressee_name" data-rule-required="true" data-msg-required="Заполните поле" autocomplete="off" aria-invalid="false">
                             <div class="input-text__icon-loop"></div>
                             <div class="input-text__icon-arrow"></div>
                           </div>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="row__col-1-4">
                       <div class="declaration__label">Должность:</div>
-                      <div class="declaration__value declaration__addressee-occupation"></div>
+                      <div class="declaration__value declaration__addressee-occupation"> </div>
                     </div>
                   </div>
                 </div>
@@ -137,9 +137,9 @@
                       <div class="input-date__icon-wrap">
                         <div class="input-date__icon"></div>
                       </div>
-                      <input class="input-date__control" type="text" disabled placeholder="00.00.0000" name="declaration_period_start_date" data-rule-required="true" data-msg-required="Выберите даты" onclick="BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});">
+                      <input class="input-date__control" type="text" value="10.11.2011" disabled placeholder="00.00.0000" name="declaration_period_start_date" data-rule-required="true" data-msg-required="Выберите даты" onclick="BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});">
                       <div class="input-date__pre">по</div>
-                      <input class="input-date__control" type="text" disabled placeholder="00.00.0000" name="declaration_period_end_date" data-rule-required="true" data-msg-required="Выберите даты" onclick="BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});">
+                      <input class="input-date__control" type="text" value="10.11.2011" disabled placeholder="00.00.0000" name="declaration_period_end_date" data-rule-required="true" data-msg-required="Выберите даты" onclick="BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});">
                     </div>
                   </div>
                 </div>
@@ -200,7 +200,7 @@
                               <div class="input-date__icon-wrap">
                                 <div class="input-date__icon"></div>
                               </div>
-                              <input class="input-date__control" type="text" placeholder="00.00.0000" name="relative_birth_date_hash" data-rule-required="true" data-msg-required="Заполните поле" onclick="BX.calendar({callback_after: function() {}, node:this, field:this, bTime: false, currentTime: new Date().getTime()});">
+                              <input class="input-date__control" type="text" placeholder="00.00.0000" name="relative_birth_date_hash" data-rule-required="true" data-msg-required="Заполните поле">
                             </div>
                           </div>
                         </div>
@@ -676,5 +676,5 @@
       </footer>
     </div><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"></script>
     <!--JS файлы которые начинаются с markup_ и example_ используются ТОЛЬКО в верстке, к себе не тянуть и не подключать!-->
-  <script type="text/javascript" src="scripts/runtime.afed.js"></script><script type="text/javascript" src="scripts/vendors.19c2.js"></script><script type="text/javascript" src="scripts/app.eac1.js"></script></body>
+  <script type="text/javascript" src="scripts/runtime.afed.js"></script><script type="text/javascript" src="scripts/vendors.19c2.js"></script><script type="text/javascript" src="scripts/app.c5a7.js"></script></body>
 </html>
