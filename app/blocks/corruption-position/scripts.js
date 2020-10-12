@@ -7,6 +7,7 @@ $(()=>{
   function getScrollbarWidth() {
     return window.innerWidth - document.documentElement.clientWidth
   }
+
   /* objects */
   var Modal = function(content, options) {
 
@@ -193,49 +194,7 @@ $(()=>{
       }, 2000);
     }
   };
-  var Relatives = function(el) {
-    this.$el = $(el);
-    this.$list = this.$el.find('.relatives__list');
-    this.$itemTemplate = this.$el.find('.relatives__template .relatives__item');
-    this.$btnAdd = this.$el.find('.relatives__btn-add button');
-    this.relativesAmount = 0;
-  };
 
-  Relatives.prototype = {
-    init: function() {
-      this.bindDomEvents();
-      this.appendItem();
-    },
-    bindDomEvents: function() {
-      var _this = this;
-      this.$btnAdd.on('click', function() {
-        _this.appendItem();
-      });
-      this.$el.on('click', '.relatives__btn-delete .link-delete', function(event) {
-        event.preventDefault();
-        _this.removeItem($(this).closest('.relatives__item'));
-      });
-    },
-    appendItem: function() {
-      var hash = new Date().getTime();
-      var $newItem = this.$itemTemplate.clone();
-      var $fields = $newItem.find('.field__control input, .field__control select');
-      /* добавляю хэши, чтобы имена полей были уникальными, иначе валидация работает некорректно */
-      $fields.each(function(){
-        var $this = $(this);
-        var fieldName = $this.attr('name');
-        $this.attr('name', fieldName.replace(/hash/i, hash));
-      });
-      this.$list.append($newItem);
-      this.relativesAmount++;
-      this.$el.trigger('update_relatives_amount', {amount: this.relativesAmount});
-    },
-    removeItem: function($item) {
-      $item.remove();
-      this.relativesAmount--;
-      this.$el.trigger('update_relatives_amount', {amount: this.relativesAmount});
-    }
-  };
 
 
   /* run */
@@ -271,6 +230,16 @@ $(()=>{
   $("input[name='USER_FROM']").attr('readonly','readonly');
   $("input[name='POSITION']").attr('readonly','readonly');
   $("input[name='DATE']").attr('readonly','readonly');
+
+  Modal.prototype = {
+    open: function() {
+      this.modal.setContent(this.content);
+      this.modal.open();
+    },
+    close: function() {
+      this.modal.close();
+    }
+  };
 
   var Declaration = function(el) {
     this.$el = $(el);
@@ -412,6 +381,50 @@ $(()=>{
     }
   };
 
+  var Relatives = function(el) {
+    this.$el = $(el);
+    this.$list = this.$el.find('.relatives__list');
+    this.$itemTemplate = this.$el.find('.relatives__template .relatives__item');
+    this.$btnAdd = this.$el.find('.relatives__btn-add button');
+    this.relativesAmount = 0;
+  };
+
+  Relatives.prototype = {
+    init: function() {
+      this.bindDomEvents();
+      this.appendItem();
+    },
+    bindDomEvents: function() {
+      var _this = this;
+      this.$btnAdd.on('click', function() {
+        _this.appendItem();
+      });
+      this.$el.on('click', '.relatives__btn-delete .link-delete', function(event) {
+        event.preventDefault();
+        _this.removeItem($(this).closest('.relatives__item'));
+      });
+    },
+    appendItem: function() {
+      var hash = new Date().getTime();
+      var $newItem = this.$itemTemplate.clone();
+      var $fields = $newItem.find('.field__control input, .field__control select');
+      /* добавляю хэши, чтобы имена полей были уникальными, иначе валидация работает некорректно */
+      $fields.each(function(){
+        var $this = $(this);
+        var fieldName = $this.attr('name');
+        $this.attr('name', fieldName.replace(/hash/i, hash));
+      });
+      this.$list.append($newItem);
+      this.relativesAmount++;
+      this.$el.trigger('update_relatives_amount', {amount: this.relativesAmount});
+    },
+    removeItem: function($item) {
+      $item.remove();
+      this.relativesAmount--;
+      this.$el.trigger('update_relatives_amount', {amount: this.relativesAmount});
+    }
+  };
+
   var Incomes = function(el) {
     this.$el = $(el);
     this.$list = this.$el.find('.incomes__list');
@@ -450,6 +463,10 @@ $(()=>{
     }
   };
 
+  /* run */
+  var popupDescription = new Modal($('.declaration-description').clone().html());
+
+  // popupError.open();
 
   new Declaration($('.declaration')[0]).init();
   new Relatives($('.relatives')[0]).init();
