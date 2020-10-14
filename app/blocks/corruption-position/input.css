@@ -1,0 +1,177 @@
+input {
+  font-family: DINPro, Helvetica, Arial, sans-serif;
+}
+
+input:not([type]),
+div:not(.main-ui-filter-search) > input[type="text"],
+input[type="date"] {
+  box-sizing: border-box;
+  height: 36px;
+  padding: 0 10px;
+  font-family: DINPro, Helvetica, Arial, sans-serif;
+  font-size: 0.8666666667em;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  color: #314650;
+  text-transform: none;
+  padding-bottom: 0.1538461538em;
+}
+
+input:not([type]).ui-tile-selector-input,
+input[type="text"].ui-tile-selector-input,
+input[type="date"].ui-tile-selector-input {
+  border: none;
+}
+
+.main-ui-square-search .main-ui-square-search-item {
+  border: none;
+  padding: 0;
+}
+
+input:not([type])[disabled],
+input[type="text"][disabled],
+input[type="date"][disabled] {
+  background-color: #eff1f2;
+  color: #788489;
+  border-color: #e3e3e3;
+}
+
+input:not([type]).parsley-error,
+input[type="text"].parsley-error,
+input[type="date"].parsley-error {
+  border: 1px solid #c94b5d;
+}
+
+.input-block input[type="radio"],
+.custom_form_for_bp input[name='fio'],
+.custom_form_for_bp input[name='FIO'],
+.custom_form_for_bp input[name='manager'],
+.custom_form_for_bp input[name='Manager'],
+.custom_form_for_bp input[name='fio_ul'],
+.custom_form_for_bp input[name='Sys_FIO'],
+.custom_form_for_bp input[name='sys_boss'],
+.custom_form_for_bp input[name='CLIENT']:not(.bizproc-type-control-required) {
+  display: none !important;
+}
+
+.custom_form_for_bp .input-block {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.custom_form_for_bp .input-block > .bizproc-type-control.bizproc-type-control-string.bizproc-type-control-multiple + div,
+.custom_form_for_bp .input-block > div + div {
+  width: 100%;
+}
+
+.input-block label,
+.input-block input,
+.input-block textarea {
+  display: block;
+  width: 100%;
+}
+
+.input-block input[type="submit"],
+.input-block input[type="reset"] {
+  margin-top: 20px;
+}
+
+.input-block select {
+  width: 100%;
+}
+
+.input-block input ~ .calendar-icon {
+  position: absolute;
+  right: 10px;
+}
+
+.input-block input[disabled] ~ .calendar-icon {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.input-block label + input ~ .calendar-icon {
+  top: 32px;
+}
+
+.input-block > input ~ .calendar-icon {
+  top: 15px;
+}
+
+.input_mb-0 {
+  margin-bottom: 0px !important;
+}
+
+.input_mb-0 input {
+  margin-bottom: 0px !important;
+}
+
+.input-block.__inline label,
+.input-block.__inline input,
+.input-block.__inline .posr {
+  display: inline-block;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.input-block.__inline span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-size: 0.8666666667em;
+  font-weight: 100;
+  color: #788489;
+  top: -0.1333333333em;
+}
+
+.input-block.__inline .js-input-date {
+  width: 112px;
+}
+
+.input-block.__radio label + label {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: auto;
+  top: -1px;
+  margin-right: 20px;
+  font-size: 0.8666666667em;
+  line-height: 1.3846153846em;
+  color: #28393f;
+}
+
+.input-block.__radio label {
+  margin-bottom: 10px;
+}
+
+.task-popup-inp-container.task-reminder-date.t-empty > input {
+  border: none;
+}
+
+.select2.select2-container.select2-container--default {
+  padding: 10px;
+}
+
+.intranet-user-profile-tags-input-show .intranet-user-profile-tags-input,
+.vote-block-title-wrap .vote-block-title,
+.vote-block-inp-wrap .vote-block-inp,
+.ui-tile-selector-selector input {
+  border: none;
+}
+
+.social-group-create-form-field-list-item.custom-value .social-group-create-form-field-input-text {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.social-group-copy-name-title {
+  height: 38px;
+}
+
+.sn-features-input-box .select2 {
+  display: none;
+}
