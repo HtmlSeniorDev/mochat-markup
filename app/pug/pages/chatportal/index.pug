@@ -1,0 +1,72 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Верстка ДОМ';
+block content
+  +b.MAIN.main
+    .content-width
+      +b.portal-menu
+        each item in Array(1)
+          a(href='/balance.html')
+            +e.item
+              +e.SPAN.image-wrapper
+                img(src="../../static/img/balance-icon.png" alt="баланс")
+              | Пополнить баланс
+              +e.arrow-wrapper
+                +e.arrow
+          a(href='#')
+            +e.item
+              +e.SPAN.image-wrapper
+                img(src="../../static/img/avtoritet-icon.png" alt="авторитет")
+              | Стать авторитетом
+              +e.arrow-wrapper
+                +e.arrow
+          a(href='#')    
+            +e.item
+              +e.SPAN.image-wrapper
+                img(src="../../static/img/friends-icon.png" alt="friends")
+              | Друзья
+              +e.arrow-wrapper
+                +e.arrow
+          a(href='#')
+            +e.item
+              +e.SPAN.image-wrapper
+                img(src="../../static/img/gifts-icon.png" alt="gifts")
+              | Подарки
+              +e.arrow-wrapper
+                +e.arrow
+      +b.banner
+        +b.avtoritet-item
+          +e.avatar
+            img(src="../../static/img/test.png" alt="test")
+          +e.content
+            +b.text.--normal
+              | Администратор чата
+            +b.text.--small
+              | Авторитет:
+              span(style="color:red") 10000
+        +b.avtoritet-item
+          +e.avatar
+            img(src="../../static/img/test.png" alt="test")
+          +e.content
+            +b.text.--normal
+              | mr.bomje
+            +b.text.--small
+              | Авторитет:
+              span(style="color:red") 8978
+      +b.portal-menu
+        each item in Array(1)
+          a(href='/balance.html')
+            +e.item
+              +e.SPAN.image-wrapper
+                img(src="../../static/img/balance-icon.png" alt="баланс")
+              | Виллы
+              +e.arrow-wrapper
+                +e.arrow
+          a(href='#')
+            +e.item
+              +e.SPAN.image-wrapper
+                img(src="../../static/img/avtoritet-icon.png" alt="авторитет")
+              | Стать авторитетом
+              +e.arrow-wrapper
+                +e.arrow

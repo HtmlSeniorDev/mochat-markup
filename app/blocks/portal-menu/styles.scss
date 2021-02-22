@@ -1,0 +1,73 @@
+.portal-menu {
+  &__item {
+    margin-bottom: 3px;
+    position: relative;
+    padding-top: 10px;
+    padding-right: 2px;
+    padding-bottom: 10px;
+    padding-left: 2px;
+    color:#00FF;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: #49b7ee;
+
+    }
+  }
+
+  &__image-wrapper {
+    line-height: normal;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  &__arrow-wrapper {
+    position: absolute;
+    top: 25%;
+    right: 4px;
+  }
+
+  &__arrow {
+    position: relative;
+    width: 14px;
+    height: 26px;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      bottom: 22%;
+      width: 16px;
+      height: 2px;
+      content: '';
+      background-color: #B4BBC8;
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      position: absolute;
+      top: 27%;
+      width: 16px;
+      height: 2px;
+      content: '';
+      background-color: #B4BBC8;
+      transform: rotate(45deg) translateY(50%);
+    }
+
+    &:hover {
+      cursor: pointer;
+      &::before {
+        background-color: black;
+      }
+      &::after {
+        background-color: black;
+      }
+    }
+  }
+}

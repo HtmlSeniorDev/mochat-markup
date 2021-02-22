@@ -16,16 +16,14 @@ html(lang="ru")
     title #{title}
     include ../includes/meta
     include ../includes/icons
-
-
-
+      
   body
     //noindex
     include ../includes/utils
     //noindex
     .app#app
       block header
-        //include ../../blocks/header/template
+        include ../../blocks/header/template
       block content
       block footer
         include ../../blocks/footer/template

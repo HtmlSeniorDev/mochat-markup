@@ -8,7 +8,7 @@ const globImporter = require('node-sass-glob-importer')
 const pxtoremOpts = {
   rootValue: 16,
   unitPrecision: 5,
-  propList: ['*', '!background-position'],
+  propList: ['*', '!portal-menu-position'],
   selectorBlackList: [],
   replace: true,
   mediaQuery: false,
