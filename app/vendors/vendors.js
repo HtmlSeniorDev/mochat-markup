@@ -11,9 +11,9 @@ import './custom/reset/reset.scss'
 // Bootstrap - https://github.com/twbs/bootstrap (https://getbootstrap.com)
 // CSS фреймворк
 // Подключаем Scripts
-// import 'babel-loader!bootstrap';
+import 'babel-loader!bootstrap';
 // Подключаем Styles
-// import './custom/bootstrap/bootstrap.scss'
+import './custom/bootstrap/bootstrap.scss'
 //
 // Bulma - https://github.com/jgthms/bulma (https://bulma.io)
 // CSS фреймворк

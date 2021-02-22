@@ -39,45 +39,24 @@ module.exports = [
     chunks: ['runtime', 'update-browser']
   }),
   parts.page({
-    title: 'dom-expert',
-    path: 'pages/dom-expert',
+    title: 'chatportal',
+    path: 'pages/chatportal',
     entry: {
-      markup_dom: path.join(paths.app, 'pug/pages/dom-expert')
+      markup_dom: path.join(paths.app, 'pug/pages/chatportal')
     },
-    template: path.join(paths.app, 'pug/pages/dom-expert/index.pug'),
+    template: path.join(paths.app, 'pug/pages/chatportal/index.pug'),
 
     // Подключаемые зависимости на страницу
-    chunks: ['runtime', 'vendors', 'app', 'dom_expert']
+    chunks: ['runtime', 'vendors', 'app', 'chatportal']
   }),
   parts.page({
-    title: 'engagement-survey',
-    path: 'pages/engagement-survey',
+    title: 'balance',
+    path: 'pages/balance',
     entry: {
-      markup_engagement: path.join(paths.app, 'pug/pages/engagement-survey')
+      markup_dom: path.join(paths.app, 'pug/pages/balance')
     },
-    template: path.join(paths.app, 'pug/pages/engagement-survey/index.pug'),
-    // Подключаемые зависимости на страницу
-    chunks: ['runtime', 'vendors', 'app', 'engagement-survey']
-  }),
-  parts.page({
-    title: 'personal',
-    path: 'pages/personal',
-    entry: {
-      markup_personal: path.join(paths.app, 'pug/pages/personal')
-    },
-    template: path.join(paths.app, 'pug/pages/personal/index.pug'),
-    // Подключаемые зависимости на страницу
-    chunks: ['runtime', 'vendors', 'app', 'personal']
-  }),
+    template: path.join(paths.app, 'pug/pages/balance/index.pug'),
 
-  parts.page({
-    title: 'corruption-position',
-    path: 'pages/corruption-position',
-    entry: {
-      markup_corruption: path.join(paths.app, 'pug/pages/corruption-position')
-    },
-    template: path.join(paths.app, 'pug/pages/corruption-position/index.pug'),
     // Подключаемые зависимости на страницу
-    chunks: ['runtime', 'vendors', 'app', 'corruption-position']
-  }),
-]
+    chunks: ['runtime', 'vendors', 'app', 'balance']
+  })];

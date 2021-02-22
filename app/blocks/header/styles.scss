@@ -1,3 +1,15 @@
-.sample {
-  color: red;
+.header {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background-color: #1da4ea;;
+  width: 100%;
+  border: 1px solid #275da2;
+  margin-bottom: 2px;
+
+  &__text {
+    font-weight: bold;
+    font-size: 24px;
+    color: #0f1ba2;
+    text-align: center;
+  }
 }
