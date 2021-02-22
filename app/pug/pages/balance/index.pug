@@ -1,0 +1,38 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Верстка ДОМ';
+block content
+  +b.MAIN.main
+    .content-width
+      +b.banner.mb-4
+        .row.align-items-center.justify-content-center
+          +b.text.--small
+            | у вас на счету:
+          +b.text.--big.--bold
+            | 158.0
+      .text-center
+        +b.text.--small
+          | Пополнить:
+      +b.portal-menu
+        each item in Array(1)
+          a(href='#')
+            +e.item
+              +e.SPAN.image-wrapper
+                img(src="../../static/img/sms-icon.png" alt="баланс")
+                | С мобильного счета (бонус 20%)
+              +e.arrow-wrapper
+                +e.arrow
+            +e.item
+              +e.SPAN.image-wrapper
+                img(src="../../static/img/sms-icon.png" alt="баланс")
+                | SMS
+              +e.arrow-wrapper
+                +e.arrow
+            +e.item
+              +e.SPAN.image-wrapper
+                img(src="../../static/img/qiwi-icon.png" alt="баланс")
+                | QIWI (бонус 30%)
+              +e.arrow-wrapper
+                +e.arrow
+         
