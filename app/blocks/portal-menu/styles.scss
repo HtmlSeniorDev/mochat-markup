@@ -42,9 +42,9 @@
 
     &::after {
       position: absolute;
-      bottom: 22%;
-      width: 16px;
-      height: 2px;
+      bottom: 44%;
+      width: 8px;
+      height: 1px;
       content: '';
       background-color: #B4BBC8;
       transform: rotate(-45deg);
@@ -52,9 +52,9 @@
 
     &::before {
       position: absolute;
-      top: 27%;
-      width: 16px;
-      height: 2px;
+      top: 28%;
+      width: 8px;
+      height: 1px;
       content: '';
       background-color: #B4BBC8;
       transform: rotate(45deg) translateY(50%);

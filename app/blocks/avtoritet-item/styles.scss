@@ -9,6 +9,22 @@
    width: 50px;
   }
 
+  &__star-icon {
+    text-align: left;
+    width: 15px;
+    height: 15px;
+  }
+
+  &__avatar-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   &__content {
     text-align: center;
     margin-left: auto;
