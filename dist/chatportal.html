@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Верстка ДОМ</title>
+    <title>Чат портал</title>
     <meta name="author" content="www.sitesoft.ru">
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -18,27 +18,6 @@
   <link href="styles/vendors.4aa3.css" rel="stylesheet"><link href="styles/app.4129.css" rel="stylesheet"></head>
   <body>
     <!--noindex-->
-    <noscript>
-      <div style="padding: 24px; color: #fff; width: 100%; portal-menu-color: #dd5656; font-weight: 700; text-align: center; position: fixed; z-index: 999999">Для корректной работы сайта необходимо<a href="nojs-browser.html">включить поддержку JavaScript</a></div>
-    </noscript>
-    <div id="outdated">
-      <h6>Ваш браузер устарел!</h6>
-      <p>Обновите ваш браузер для правильного отображения этого сайта.<a id="btnUpdateBrowser" href="update-browser.html">Обновить мой браузер</a></p>
-      <link rel="stylesheet" type="text/css" href="static/libs/outdatedbrowser/outdatedbrowser.min.css">
-      <script src="static/libs/outdatedbrowser/outdatedbrowser.min.js"></script>
-      <script>
-        window.onload = function() {
-          $(function() {
-            if (!!window.outdatedBrowser) {
-              $("#outdated").css("display") == "block" ? $("#outdated").nextAll('*').remove() : $("#outdated").remove()
-            }
-          })
-        }
-        
-        //Проверка на IE10+
-        outdatedBrowser({lowerThan: "transform", languagePath: ""})
-      </script>
-    </div>
     <!--noindex-->
     <div class="app" id="app">
       <header class="header">
@@ -48,25 +27,25 @@
       <main class="main" role="main">
         <div class="content-width">
           <div class="portal-menu"><a href="/balance.html">
-              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="../../static/img/balance-icon.png" alt="баланс"></span>Пополнить баланс
+              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="./static/img/balance-icon.png" alt="баланс"></span>Пополнить баланс
                 <div class="portal-menu__arrow-wrapper">
                   <div class="portal-menu__arrow">
                   </div>
                 </div>
               </div></a><a href="#">
-              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="../../static/img/avtoritet-icon.png" alt="авторитет"></span>Стать авторитетом
+              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="./static/img/avtoritet-icon.png" alt="авторитет"></span>Стать авторитетом
                 <div class="portal-menu__arrow-wrapper">
                   <div class="portal-menu__arrow">
                   </div>
                 </div>
               </div></a><a href="#">   
-              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="../../static/img/friends-icon.png" alt="friends"></span>Друзья
+              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="./static/img/friends-icon.png" alt="friends"></span>Друзья
                 <div class="portal-menu__arrow-wrapper">
                   <div class="portal-menu__arrow">
                   </div>
                 </div>
               </div></a><a href="#">
-              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="../../static/img/gifts-icon.png" alt="gifts"></span>Подарки
+              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="./static/img/gifts-icon.png" alt="gifts"></span>Подарки
                 <div class="portal-menu__arrow-wrapper">
                   <div class="portal-menu__arrow">
                   </div>
@@ -75,7 +54,7 @@
           </div>
           <div class="banner">
             <div class="avtoritet-item">
-              <div class="avtoritet-item__avatar"><img src="../../static/img/test.png" alt="test">
+              <div class="avtoritet-item__avatar"><img src="./static/img/test.png" alt="test">
               </div>
               <div class="avtoritet-item__content">
                 <div class="text text--normal">Администратор чата
@@ -85,7 +64,7 @@
               </div>
             </div>
             <div class="avtoritet-item">
-              <div class="avtoritet-item__avatar"><img src="../../static/img/test.png" alt="test">
+              <div class="avtoritet-item__avatar"><img src="./static/img/test.png" alt="test">
               </div>
               <div class="avtoritet-item__content">
                 <div class="text text--normal">mr.bomje
@@ -96,13 +75,13 @@
             </div>
           </div>
           <div class="portal-menu"><a href="/balance.html">
-              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="../../static/img/balance-icon.png" alt="баланс"></span>Виллы
+              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="./static/img/balance-icon.png" alt="баланс"></span>Виллы
                 <div class="portal-menu__arrow-wrapper">
                   <div class="portal-menu__arrow">
                   </div>
                 </div>
               </div></a><a href="#">
-              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="../../static/img/avtoritet-icon.png" alt="авторитет"></span>Стать авторитетом
+              <div class="portal-menu__item"><span class="portal-menu__image-wrapper"><img src="./static/img/avtoritet-icon.png" alt="авторитет"></span>Стать авторитетом
                 <div class="portal-menu__arrow-wrapper">
                   <div class="portal-menu__arrow">
                   </div>
