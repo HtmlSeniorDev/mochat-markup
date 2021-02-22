@@ -1,0 +1,68 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Верстка Авторитеты';
+block content
+  +b.MAIN.main
+    .content-width
+      +b.portal-menu
+        each item in Array(1)
+          a(href='#')
+            +e.item
+              +e.SPAN.image-wrapper
+                img(src="../../static/img/avtoritet-icon.png" alt="авторитет")
+                | Стать авторитетом
+              +e.arrow-wrapper
+                +e.arrow
+      section.avtoritet-section    
+        +b.banner
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.avatar-icon(src="../../static/img/queen-icon.png")
+              +e.title-wrapper
+                +e.star-icon(src="../../static/img/avtoritet-icon.png")
+                +b.text.--normal(style="color:black")
+                  | Администратор чата
+              +b.text.--small
+                | Авторитет:
+                span(style="color:red") 10000
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.avatar-icon(src="../../static/img/queen-icon.png")
+              +e.title-wrapper
+                +e.star-icon(src="../../static/img/avtoritet-icon.png")
+                +b.text.--normal(style="color:red")
+                  | Vasility
+              +b.text.--small
+                | Авторитет:
+                span(style="color:red") 7766
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.avatar-icon(src="../../static/img/queen-icon.png")
+              +e.title-wrapper
+                +e.star-icon(src="../../static/img/avtoritet-icon.png")
+                +b.text.--normal(style="color:green")
+                  | Nicnkanem1213
+              +b.text.--small
+                | Авторитет:
+                span(style="color:red") 5555
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.avatar-icon(src="../../static/img/queen-icon.png")
+              +e.title-wrapper
+                +e.star-icon(src="../../static/img/avtoritet-icon.png")
+                +b.text.--normal(style="color:yellow")
+                  | mr.bomje
+              +b.text.--small
+                | Авторитет:
+                span(style="color:red") 8978       
+                
+          
