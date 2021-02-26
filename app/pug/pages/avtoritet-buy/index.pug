@@ -1,0 +1,16 @@
+extends ../../layout/layout
+include  ../../../blocks/popup/template
+block variables
+  - var title = 'Верстка Авторитеты';
+block content
+  +b.MAIN.main
+    .content-width
+      +b.portal-menu
+        each item in ['50','100','200','300','500','1000']
+          +e.item(data-toggle-popup='confirmAvtoritet' data-price-service=item)
+            +e.SPAN.image-wrapper
+              img(src="../../static/img/avtoritet-icon.png" alt="авторитет")
+              | Купить #{item} авторитета
+            +e.arrow-wrapper
+              +e.arrow
+    +popup('confirmAvtoritet','Вы действительно хотите купить авторитет?')

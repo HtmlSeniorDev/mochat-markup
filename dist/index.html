@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Верстка ДОМ</title>
-    <meta name="author" content="www.sitesoft.ru">
+    <meta name="author" content="@Noname2">
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#fff">
     <link type="image/x-icon" href="static/img/favicon.ico" rel="icon">
     <link type="image/x-icon" href="static/img/favicon.ico" rel="shortcut icon">
-  <link href="styles/vendors.4aa3.css" rel="stylesheet"><link href="styles/app.4129.css" rel="stylesheet"></head>
+  <link href="styles/vendors.4aa3.css" rel="stylesheet"><link href="styles/app.8abe.css" rel="stylesheet"></head>
   <body>
     <!--noindex-->
     <noscript>
@@ -49,12 +49,57 @@
               <ol>
                 <li><a href="chatportal.html" target="_blank"> Чат Портал </a></li>
                 <li><a href="balance.html" target="_blank"> Баланс</a></li>
+                <li><a href="avtoritet.html" target="_blank"> Авторитет</a></li>
+                <li><a href="avtoritet-buy.html" target="_blank"> Покупка Авторитета</a></li>
               </ol>
             </div>
           </div>
         </section>
       </main>
-    </div><script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"></script>
-    <!--JS файлы которые начинаются с markup_ и example_ используются ТОЛЬКО в верстке, к себе не тянуть и не подключать!-->
-  <script type="text/javascript" src="scripts/runtime.afed.js"></script><script type="text/javascript" src="scripts/vendors.9a64.js"></script><script type="text/javascript" src="scripts/app.fceb.js"></script><script type="text/javascript" src="scripts/markup_pageList.a9b6.js"></script></body>
+    </div>
+    <div class="b-popup" id="error-popup">
+      <div class="b-popup__popup-content">
+        <div class="b-popup__title-wrapper">
+          <div class="text text--small text--red">Ошибка сервисов, попробуйте запрос позже...
+          </div>
+        </div>
+        <div class="b-popup__confirm-buttons-wrapper">
+          <div class="b-popup__button">
+            <div class="text text--small">OK
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="b-popup" id="preloader">
+      <div class="b-popup__popup-content"><div class="lds-ring">
+<div></div>
+<div></div>l
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div
+</div>
+      </div>
+    </div>
+    <div class="b-popup" id="enough-money">
+      <div class="b-popup__popup-content">
+        <div class="b-popup__title-wrapper">
+          <div class="text text--small text--red">Ошибка, пополните баланс
+          </div>
+        </div>
+        <div class="b-popup__confirm-buttons-wrapper">
+          <div class="b-popup__button">
+            <div class="text text--small">OK
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="scripts/runtime.afed.js"></script><script type="text/javascript" src="scripts/vendors.05e5.js"></script><script type="text/javascript" src="scripts/app.e443.js"></script><script type="text/javascript" src="scripts/markup_pageList.0f82.js"></script></body>
 </html>

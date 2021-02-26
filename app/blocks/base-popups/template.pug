@@ -1,0 +1,35 @@
++b.b-popup(id = 'error-popup')
+  +e.popup-content
+    +e.title-wrapper
+      +b.text.--small.--red
+        | Ошибка сервисов, попробуйте запрос позже...
+    +e.confirm-buttons-wrapper
+      +e.button
+        +b.text.--small
+          | OK
+
++b.b-popup(id = 'preloader')
+  +e.popup-content
+    <div class="lds-ring">
+    <div></div>
+    <div></div>l
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div
+    </div>
+  
++b.b-popup(id = 'enough-money')
+  +e.popup-content
+    +e.title-wrapper
+      +b.text.--small.--red
+        | Ошибка, пополните баланс
+    +e.confirm-buttons-wrapper
+      +e.button
+        +b.text.--small
+          | OK

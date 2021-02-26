@@ -81,4 +81,15 @@ module.exports = [
 
     // Подключаемые зависимости на страницу
     chunks: ['runtime', 'vendors', 'app', 'friends']
+  }),
+  parts.page({
+    title: 'avtoritet-buy',
+    path: 'pages/avtoritet-buy',
+    entry: {
+      markup_avtoritet_buy: path.join(paths.app, 'pug/pages/avtoritet-buy')
+    },
+    template: path.join(paths.app, 'pug/pages/avtoritet-buy/index.pug'),
+
+    // Подключаемые зависимости на страницу
+    chunks: ['runtime', 'vendors', 'app', 'avtoritet-buy']
   })];

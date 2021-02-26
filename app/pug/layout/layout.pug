@@ -1,6 +1,5 @@
 include ../../../node_modules/bemto.pug/bemto
 - set_bemto_settings({ modifier: "--" })
-//- - const stamp = Math.round(new Date().getTime() / 1000)
 
 include ../includes/data
 include ../includes/require
@@ -25,16 +24,9 @@ html(lang="ru")
       block header
         include ../../blocks/header/template
       block content
+        
       block footer
         include ../../blocks/footer/template
-    include ../includes/old-browsers
     include ../includes/scripts
-    if exampleScripts
-      // В файле example_###.js пример кода только для этой страницы
-      // удалить файл при натяжке, код оберунть в тег script
-      block exampleScripts
-
-
-    include ../includes/gosbar
-
-     //JS файлы которые начинаются с markup_ и example_ используются ТОЛЬКО в верстке, к себе не тянуть и не подключать!
+    include  ../../blocks/base-popups/template
+   

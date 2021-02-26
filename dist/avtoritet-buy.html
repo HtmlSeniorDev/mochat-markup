@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Верстка Друзья</title>
+    <title>Верстка Авторитеты</title>
     <meta name="author" content="@Noname2">
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -47,62 +47,62 @@
       </header>
       <main class="main" role="main">
         <div class="content-width">
-          <section class="friends-section">   
-            <div class="banner">
-              <div class="friends-item">
-                <div class="friends-item__user">
-                  <div class="text text--small" style="color:red">
-                     Вася red
-                  </div>
-                </div>
-                <div class="friends-item__icons"><svg class="svg"  style="color:red" width="15" height="15">
-<g>
-<circle cx='50' cy='50' r='25'/>
-</g>
-</svg><img class="friends-item__icon" src="../../static/img/mail-icon.png" alt="" role="presentation"/><img class="friends-item__icon" src="../../static/img/close-icon.svg" alt="" role="presentation"/>
-                </div>
-              </div>
-              <div class="friends-item">
-                <div class="friends-item__user">
-                  <div class="text text--small" style="color:green">
-                     Вася green
-                  </div>
-                </div>
-                <div class="friends-item__icons"><svg class="svg"  style="color:red" width="15" height="15">
-<g>
-<circle cx='50' cy='50' r='25'/>
-</g>
-</svg><img class="friends-item__icon" src="../../static/img/mail-icon.png" alt="" role="presentation"/><img class="friends-item__icon" src="../../static/img/close-icon.svg" alt="" role="presentation"/>
-                </div>
-              </div>
-              <div class="friends-item">
-                <div class="friends-item__user">
-                  <div class="text text--small" style="color:yellow">
-                     Вася yellow
-                  </div>
-                </div>
-                <div class="friends-item__icons"><svg class="svg"  style="color:red" width="15" height="15">
-<g>
-<circle cx='50' cy='50' r='25'/>
-</g>
-</svg><img class="friends-item__icon" src="../../static/img/mail-icon.png" alt="" role="presentation"/><img class="friends-item__icon" src="../../static/img/close-icon.svg" alt="" role="presentation"/>
-                </div>
-              </div>
-              <div class="friends-item">
-                <div class="friends-item__user">
-                  <div class="text text--small" style="color:black">
-                     Вася black
-                  </div>
-                </div>
-                <div class="friends-item__icons"><svg class="svg"  style="color:red" width="15" height="15">
-<g>
-<circle cx='50' cy='50' r='25'/>
-</g>
-</svg><img class="friends-item__icon" src="../../static/img/mail-icon.png" alt="" role="presentation"/><img class="friends-item__icon" src="../../static/img/close-icon.svg" alt="" role="presentation"/>
+          <div class="portal-menu">
+            <div class="portal-menu__item" data-toggle-popup="confirmAvtoritet" data-price-service="50"><span class="portal-menu__image-wrapper"><img src="../../static/img/avtoritet-icon.png" alt="авторитет">Купить 50 авторитета</span>
+              <div class="portal-menu__arrow-wrapper">
+                <div class="portal-menu__arrow">
                 </div>
               </div>
             </div>
-          </section>
+            <div class="portal-menu__item" data-toggle-popup="confirmAvtoritet" data-price-service="100"><span class="portal-menu__image-wrapper"><img src="../../static/img/avtoritet-icon.png" alt="авторитет">Купить 100 авторитета</span>
+              <div class="portal-menu__arrow-wrapper">
+                <div class="portal-menu__arrow">
+                </div>
+              </div>
+            </div>
+            <div class="portal-menu__item" data-toggle-popup="confirmAvtoritet" data-price-service="200"><span class="portal-menu__image-wrapper"><img src="../../static/img/avtoritet-icon.png" alt="авторитет">Купить 200 авторитета</span>
+              <div class="portal-menu__arrow-wrapper">
+                <div class="portal-menu__arrow">
+                </div>
+              </div>
+            </div>
+            <div class="portal-menu__item" data-toggle-popup="confirmAvtoritet" data-price-service="300"><span class="portal-menu__image-wrapper"><img src="../../static/img/avtoritet-icon.png" alt="авторитет">Купить 300 авторитета</span>
+              <div class="portal-menu__arrow-wrapper">
+                <div class="portal-menu__arrow">
+                </div>
+              </div>
+            </div>
+            <div class="portal-menu__item" data-toggle-popup="confirmAvtoritet" data-price-service="500"><span class="portal-menu__image-wrapper"><img src="../../static/img/avtoritet-icon.png" alt="авторитет">Купить 500 авторитета</span>
+              <div class="portal-menu__arrow-wrapper">
+                <div class="portal-menu__arrow">
+                </div>
+              </div>
+            </div>
+            <div class="portal-menu__item" data-toggle-popup="confirmAvtoritet" data-price-service="1000"><span class="portal-menu__image-wrapper"><img src="../../static/img/avtoritet-icon.png" alt="авторитет">Купить 1000 авторитета</span>
+              <div class="portal-menu__arrow-wrapper">
+                <div class="portal-menu__arrow">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="b-popup" id="confirmAvtoritet">
+          <div class="b-popup__popup-content">
+            <div class="b-popup__title-wrapper">
+              <div class="text text--small"> Вы действительно хотите купить авторитет?
+              </div>
+            </div>
+            <div class="b-popup__confirm-buttons-wrapper">
+              <div class="b-popup__button" data-confirm="true">
+                <div class="text text--small">Да
+                </div>
+              </div>
+              <div class="b-popup__button" data-confirm="false">
+                <div class="text text--small">Нет
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer class="footer">

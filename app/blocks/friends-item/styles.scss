@@ -3,8 +3,8 @@
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-left: 30px;
   margin-right: 30px;
+  margin-left: 30px;
 
  &__icons {
     display: flex;
@@ -15,8 +15,8 @@
    }
    svg {
      margin-right: 4px;
-     border-radius: 50px;
      background-color: limegreen;
+     border-radius: 50px;
    }
 
    circle {

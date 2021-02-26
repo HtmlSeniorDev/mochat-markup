@@ -1,0 +1,14 @@
+mixin popup(id,title)
+  +b.b-popup(id = id)
+    +e.popup-content
+      +e.title-wrapper
+        +b.text.--small 
+          | #{title}
+      +e.confirm-buttons-wrapper
+        +e.button(data-confirm="true")
+          +b.text.--small
+            | Да
+        +e.button(data-confirm="false")
+          +b.text.--small
+            | Нет
+
