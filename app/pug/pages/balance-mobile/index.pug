@@ -1,0 +1,42 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Мобильный 1Баланс';
+block content
+  +b.MAIN.main
+    .content-width
+      section.section-balance-mobile
+        form(action='#' method="POST")
+          +b.banner.mb-4
+            .text-center
+              +b.text.--s-normal
+                | Доступно только для российских операторов МТС,Мегафон и Билайн
+              +e.HR.hr
+              +b.text.--s-normal.mt-2
+                | Введите Ваш номер телефона в формате xxx yyy yy yy (например 9031234567)
+              +e.INPUT.input(placeholder='ваш номер' type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}")
+              +b.text.--s-normal.mt-2
+                | На данный телефон должна прийти смс с дальнейшими инструкциями по пополнению
+              +e.HR.hr
+              +b.text.--s-normal.mt-2
+                | Введите сумму пополнения
+              +e.IMG.img(src='../../../static/img/rub.png', alt="rub")
+              +e.SELECT.select
+                option 50
+                option 100
+                option 200
+              +b.text.--s-normal.mt-2
+                | Вы получите:
+              .row.align-items-center.justify-content-center
+                +b.text.--bold.--big(data-amount)
+                  | 50
+                +e.IMG.img(src='../../../static/img/chattle.png', alt="rub")
+          +b.portal-menu
+            each item in Array(1)
+              button(type="submit" style="width:100%")
+                +e.item
+                  +e.SPAN.image-wrapper
+                    img(src="../../static/img/sms-icon.png" alt="баланс")
+                    | Пополнить
+                  +e.arrow-wrapper
+                    +e.arrow

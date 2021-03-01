@@ -1,7 +1,34 @@
 .banner {
   padding: 10px;
   margin: 8px 16px;
-  background-color: rgba(141, 228, 255, 0.95);
-  border: 1px solid #2c869a;
+  background-color: rgba(201, 240, 255, 0.95);
+  border: 1px solid #4a8194;
   border-radius: 6px;
+
+  &__hr {
+    max-width: 30%;
+    border: 1px solid rgba(185, 185, 185, 0.81);
+  }
+
+  &__input {
+    max-width: 50%;
+    height: 40px;
+    border: 1px solid #0f1ba2;
+    font-size: 16px;
+    color: #0f1ba2;
+    outline: none;
+  }
+
+  &__select {
+    width: 70%;
+    height: 40px;
+    outline:none;
+    border: 1px solid #0f1ba2;
+
+  }
+
+  &__img {
+    max-width: 25px;
+    max-height: 25px;
+  }
 }

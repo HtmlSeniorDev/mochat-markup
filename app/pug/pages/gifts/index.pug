@@ -1,0 +1,139 @@
+extends ../../layout/layout
+
+block variables
+  - var title = 'Подарки';
+block content
+  +b.MAIN.main
+    .content-width
+      section.gifts-section    
+        +b.banner
+          .text-center
+            +b.text.--bold
+              | Кто дарит
+            +b.text
+              | Люди,которые за последние 5 дней подарили больше всего подарков
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.title-wrapper
+                +b.text.--normal(style="color:black")
+                  | Администратор чата
+              +b.text.--small.--bold
+                | Подарков:
+                span(style="color:red") 35
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.title-wrapper
+                +b.text.--normal(style="color:red")
+                  | Vasility
+              +b.text.--small.--bold
+                | Подарков:
+                span(style="color:red") 11
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.title-wrapper
+                +b.text.--normal(style="color:green")
+                  | Nicnkanem1213
+              +b.text.--small.--bold
+                | Подарков:
+                span(style="color:red") 5
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.title-wrapper
+                +b.text.--normal(style="color:yellow")
+                  | mr.bomje
+              +b.text.--small.--bold
+                | Подарков:
+                span(style="color:red") 4
+          .text-center
+            a(href='#')
+              | Полный список...
+        +b.banner
+          .text-center
+            +b.text.--bold
+              | Кому дарят
+            +b.text
+              | Люди,которым за последние 5 дней подарили больше всего подарков
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.title-wrapper
+                +b.text.--normal(style="color:black")
+                  | хуй геннадий петрович чата
+              +b.text.--small.--bold
+                | Подарков:
+                span(style="color:red") 25
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.title-wrapper
+                +b.text.--normal(style="color:red")
+                  | Vasility
+              +b.text.--small.--bold
+                | Подарков:
+                span(style="color:red") 11
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.title-wrapper
+                +b.text.--normal(style="color:green")
+                  | Nicnkanem1213
+              +b.text.--small.--bold
+                | Подарков:
+                span(style="color:red") 5
+          +b.avtoritet-item
+            +e.avatar
+              img(src="../../static/img/test.png" alt="test")
+            +e.content
+              +e.title-wrapper
+                +b.text.--normal(style="color:yellow")
+                  | mr.bomje
+              +b.text.--small.--bold
+                | Подарков:
+                span(style="color:red") 4
+          .text-center
+            a(href='#')
+              | Полный список...    
+        +b.banner
+          .text-center
+            +b.text.--bold
+              | Последние подарки чата
+          each val in Array(2)
+            +b.avtoritet-item.justify-content-between
+              +b.text
+                | Пользователь  
+              +b.text.--normal(style="color:black")
+                | Администратор чата
+              +b.text
+                | Подарил
+              +e.avatar
+                img(src="../../static/img/queen-icon.png" alt="test")
+            +b.avtoritet-item.justify-content-between
+              +b.text
+                | Пользователь  
+              +b.text.--normal(style="color:red")
+                | Vasility
+              +b.text
+                | Подарил
+              +e.avatar
+                img(src="../../static/img/queen-icon.png" alt="test")
+            +b.avtoritet-item.justify-content-between
+              +b.text
+                | Пользователь  
+              +b.text.--normal(style="color:green")
+                | admin
+              +b.text
+                | Подарил
+              +e.avatar
+                img(src="../../static/img/queen-icon.png" alt="test")    
+           

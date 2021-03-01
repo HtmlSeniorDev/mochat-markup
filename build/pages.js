@@ -92,4 +92,28 @@ module.exports = [
 
     // Подключаемые зависимости на страницу
     chunks: ['runtime', 'vendors', 'app', 'avtoritet-buy']
-  })];
+  }),
+  parts.page({
+    title: 'balance-mobile',
+    path: 'pages/balance-mobile',
+    entry: {
+      markup_balance_mobile: path.join(paths.app, 'pug/pages/balance-mobile')
+    },
+    template: path.join(paths.app, 'pug/pages/balance-mobile/index.pug'),
+
+    // Подключаемые зависимости на страницу
+    chunks: ['runtime', 'vendors', 'app', 'balance-mobile']
+  }),
+  parts.page({
+    title: 'gifts',
+    path: 'pages/gifts',
+    entry: {
+      markup_gifts: path.join(paths.app, 'pug/pages/gifts')
+    },
+    template: path.join(paths.app, 'pug/pages/gifts/index.pug'),
+
+    // Подключаемые зависимости на страницу
+    chunks: ['runtime', 'vendors', 'app', 'gifts']
+  }),
+
+];
